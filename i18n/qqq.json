@@ -1,0 +1,9 @@
+{
+	"@metadata": {
+		"authors": [
+			"polybuildr"
+		]
+	},
+	"smitespam": "The name of the extension's entry in Special:SpecialPages.",
+	"smitespam-desc": "Description of what SmiteSpam does."
+}

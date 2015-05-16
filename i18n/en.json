@@ -1,0 +1,9 @@
+{
+	"@metadata": {
+		"authors": [
+			"polybuildr"
+		]
+	},
+	"smitespam": "Smite Spam",
+	"smitespam-desc": "Provides a [[Special:SmiteSpam|special page]] to help administrators identify and delete spam wiki pages."
+}

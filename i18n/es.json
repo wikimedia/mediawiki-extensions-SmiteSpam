@@ -1,0 +1,10 @@
+{
+	"@metadata": {
+		"authors": [
+			"Fitoschido",
+			"Macofe"
+		]
+	},
+	"smitespam": "Smite Spam",
+	"smitespam-desc": "Proporciona una [[Special:SmiteSpam|página especial]] que ayuda a los administradores a identificar y eliminar páginas wikis de spam."
+}

@@ -1,9 +1,10 @@
 {
 	"@metadata": {
 		"authors": [
-			"Metalhead64"
+			"Metalhead64",
+			"Tiin"
 		]
 	},
 	"smitespam": "Spam bekämpfen",
-	"smitespam-desc": "Ergänzt eine [[Special:SmiteSpam|Spezialseite]], um Administratoren beim Identifizieren und Löschen von Spam-Wikiseiten zu helfen"
+	"smitespam-desc": "Bietet eine [[Special:SmiteSpam|Spezialseite]], um Administratoren beim Identifizieren und Löschen von Spam-Seiten im Wiki zu helfen"
 }

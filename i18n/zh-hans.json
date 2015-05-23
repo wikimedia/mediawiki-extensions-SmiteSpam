@@ -1,0 +1,9 @@
+{
+	"@metadata": {
+		"authors": [
+			"Liuxinyu970226"
+		]
+	},
+	"smitespam": "打击破坏",
+	"smitespam-desc": "提供一个[[Special:SmiteSpam|特殊页面]]以帮助管理员识别并删除破坏性的wiki页面。"
+}

@@ -1,0 +1,9 @@
+{
+	"@metadata": {
+		"authors": [
+			"WikiPhoenix"
+		]
+	},
+	"smitespam": "Bekämpa spam",
+	"smitespam-desc": "Tillhandahåller en [[Special:SmiteSpam|specialsida]] för att hjälpa administratörer att identifiera radera spam på wikisidor."
+}

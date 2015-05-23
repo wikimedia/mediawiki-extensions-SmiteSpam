@@ -1,0 +1,9 @@
+{
+	"@metadata": {
+		"authors": [
+			"Vitorvicentevalente"
+		]
+	},
+	"smitespam": "Eliminar Spam",
+	"smitespam-desc": "Fornece uma [[Special:SmiteSpam|página especial]] para ajudar os administradores a identificar e eliminar páginas wiki com spam."
+}

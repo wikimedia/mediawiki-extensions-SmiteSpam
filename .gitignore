@@ -1,0 +1,10 @@
+# Composer
+vendor/
+composer.lock
+
+# npm
+node_modules/
+npm-debug.log
+
+# Editors
+.*.swp

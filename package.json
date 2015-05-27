@@ -1,0 +1,19 @@
+{
+  "name": "mediwiki-smitespam",
+  "version": "0.0.0",
+  "description": "MediaWiki extension SmiteSpam",
+  "scripts": {
+    "test": "grunt test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://gerrit.wikimedia.org/r/mediawiki/extensions/SmiteSpam"
+  },
+  "author": "Vivek Ghaisas",
+  "license": "GPL-2.0",
+  "devDependencies": {
+    "grunt": "^0.4.5",
+    "grunt-banana-checker": "^0.2.1",
+    "grunt-cli": "^0.1.13"
+  }
+}

@@ -1,0 +1,9 @@
+{
+	"@metadata": {
+		"authors": [
+			"Elisardojm"
+		]
+	},
+	"smitespam": "Eliminar publicidade",
+	"smitespam-desc": "Proporciona unha [[Special:SmiteSpam|páxina especial]] que axuda ós administradores a identificar e eliminar páxinas wiki de publicidade."
+}

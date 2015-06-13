@@ -5,5 +5,14 @@
 		]
 	},
 	"smitespam": "Smite Spam",
-	"smitespam-desc": "Provides a [[Special:SmiteSpam|special page]] to help administrators identify and delete spam wiki pages."
+	"smitespam-desc": "Provides a [[Special:SmiteSpam|special page]] to help administrators identify and delete spam wiki pages.",
+	"smitespam-spam-pages-list-heading": "Possible spam pages",
+	"smitespam-delete-page-success-msg": "Deleted page",
+	"smitespam-delete-page-failure-msg": "Failed to delete page",
+	"smitespam-page": "Page",
+	"smitespam-delete": "Delete",
+	"smitespam-probability": "Probability",
+	"smitespam-delete-selected": "Delete selected",
+	"smitespam-deleted-reason": "Identified as spam by Extension:SmiteSpam.",
+	"action-smitespam": "smite spam"
 }

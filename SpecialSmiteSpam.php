@@ -51,14 +51,19 @@ class SpecialSmiteSpam extends SpecialPage {
 				)
 			)
 		);
-		$out->addHTML( Html::openElement( 'table' ) );
+		$out->addHTML( Html::openElement( 'table', array( 'class' => 'wikitable' ) ) );
 		$out->addHTML( '<tr><th>'
 			. $this->msg( 'smitespam-page' )->text()
 			. '</th><th>'
 			. $this->msg( 'smitespam-probability' )->text()
 			. '</th><th>'
+			. $this->msg( 'smitespam-created-by' )->text()
+			. '</th><th>'
+			. $this->msg( 'smitespam-preview-text' )->text()
+			. '</th><th>'
 			. $this->msg( 'smitespam-delete' )->text()
-			. '</th></tr>' );
+			. '</th></tr>'
+		);
 		foreach ( $spamPages as $page ) {
 			$title = $page->getTitle();
 			$out->addHTML( '<tr>' );
@@ -87,6 +92,29 @@ class SpecialSmiteSpam extends SpecialPage {
 				$out->addHTML( 'High' );
 			} else {
 				$out->addHTML( 'Very high' );
+			}
+			$out->addHTML( '</td>' );
+			$out->addHTML( '<td>' );
+			$oldestRevision = $page->getOldestRevision();
+			if ( $oldestRevision ) {
+				$creator = $oldestRevision->getUserText( Revision::RAW );
+				$out->addHTML(
+					Linker::link(
+						SpecialPage::getTitleFor( 'Contributions', $creator ),
+						Sanitizer::escapeHtmlAllowEntities( $creator ),
+						array( 'target' => '_blank' )
+					)
+				);
+			}
+			else {
+				$out->addHTML( '-' );
+			}
+			$out->addHTML( '</td>' );
+			$out->addHTML( '<td>' );
+			$previewText = substr( $page->getMetadata( 'content' ), 0, 50 );
+			$out->addHTML( Sanitizer::escapeHtmlAllowEntities( $previewText ) );
+			if ( strlen( $page->getMetadata( 'content' ) ) > 50  ) {
+				$out->addHTML( '...' );
 			}
 			$out->addHTML( '</td>' );
 			$out->addHTML( '<td>' );

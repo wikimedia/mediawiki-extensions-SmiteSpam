@@ -1,7 +1,8 @@
 {
 	"@metadata": {
 		"authors": [
-			"polybuildr"
+			"polybuildr",
+			"Liuxinyu970226"
 		]
 	},
 	"smitespam": "The name of the extension's entry in Special:SpecialPages.",
@@ -9,8 +10,8 @@
 	"smitespam-spam-pages-list-heading": "Heading for the list of possible spam pages.",
 	"smitespam-delete-page-success-msg": "Message to indicate successful deletion of page.",
 	"smitespam-delete-page-failure-msg": "Message to indicate failure to delete page",
-	"smitespam-page": "A wiki page",
-	"smitespam-delete": "The verb 'delete'.",
+	"smitespam-page": "A wiki page\n{{Identical|Page}}",
+	"smitespam-delete": "The verb 'delete'.\n{{Identical|Delete}}",
 	"smitespam-probability": "The word for 'probability'.",
 	"smitespam-delete-selected": "The phrase for 'delete selected'",
 	"smitespam-deleted-reason": "Reason to give for deletion of a page",

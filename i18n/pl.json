@@ -1,0 +1,13 @@
+{
+	"@metadata": {
+		"authors": [
+			"Chrumps"
+		]
+	},
+	"smitespam-spam-pages-list-heading": "Możliwe strony ze spamem",
+	"smitespam-delete-page-success-msg": "Usunięta strona",
+	"smitespam-delete-page-failure-msg": "Nie udało się usunąć strony",
+	"smitespam-page": "Strona",
+	"smitespam-delete": "Usuń",
+	"smitespam-probability": "Prawdopodobieństwo"
+}

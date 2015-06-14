@@ -1,9 +1,19 @@
 {
 	"@metadata": {
 		"authors": [
-			"Liuxinyu970226"
+			"Liuxinyu970226",
+			"御坂美琴"
 		]
 	},
 	"smitespam": "打击破坏",
-	"smitespam-desc": "提供一个[[Special:SmiteSpam|特殊页面]]以帮助管理员识别并删除破坏性的wiki页面。"
+	"smitespam-desc": "提供一个[[Special:SmiteSpam|特殊页面]]以帮助管理员识别并删除破坏性的wiki页面。",
+	"smitespam-spam-pages-list-heading": "可能是破坏页面",
+	"smitespam-delete-page-success-msg": "已删除页面",
+	"smitespam-delete-page-failure-msg": "删除页面失败",
+	"smitespam-page": "页面",
+	"smitespam-delete": "删除",
+	"smitespam-probability": "可能性",
+	"smitespam-delete-selected": "删除所选",
+	"smitespam-deleted-reason": "被Extension:SmiteSpam识别为破坏。",
+	"action-smitespam": "打击破坏"
 }

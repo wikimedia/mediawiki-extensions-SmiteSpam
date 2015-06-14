@@ -1,0 +1,13 @@
+{
+	"@metadata": {
+		"authors": [
+			"Robby"
+		]
+	},
+	"smitespam-delete-page-success-msg": "Geläscht Säit",
+	"smitespam-delete-page-failure-msg": "Säit konnt net geläscht ginn",
+	"smitespam-page": "Säit",
+	"smitespam-delete": "Läschen",
+	"smitespam-probability": "Wahrscheinlechkeet",
+	"smitespam-delete-selected": "Ugewielt läschen"
+}

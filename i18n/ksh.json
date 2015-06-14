@@ -5,5 +5,14 @@
 		]
 	},
 	"smitespam": "Jähje der <i lang=\"en\" xml:lang=\"en\" dir=\"ltr\" title=\"„för jewöhnlesch angmaß övverdrahre Nohreeschte udder Meddeijlonge, di wä se kritt jaa nit han well,“\">SPAM</i>",
-	"smitespam-desc": "Brängg_ene [[Special:SmiteSpam|{{int:speciapage}}]] en et Wikki, öm de Wikki_Köhbeße ze hällve, Sigge met <i lang=\"en\" xml:lang=\"en\" dir=\"ltr\" title=\"„för jewöhnlesch angmaß övverdrahre Nohreeschte udder Meddeijlonge, di wä se kritt jaa nit han well,“\">SPAM</i> ze fenge un fott ze schmihße."
+	"smitespam-desc": "Brängg_ene [[Special:SmiteSpam|{{int:speciapage}}]] en et Wikki, öm de Wikki_Köhbeße ze hällve, Sigge met <i lang=\"en\" xml:lang=\"en\" dir=\"ltr\" title=\"„för jewöhnlesch angmaß övverdrahre Nohreeschte udder Meddeijlonge, di wä se kritt jaa nit han well,“\">SPAM</i> ze fenge un fott ze schmihße.",
+	"smitespam-spam-pages-list-heading": "Müjjejesche Sigge met <i lang=\"en\" xml:lang=\"en\" dir=\"ltr\" title=\"„för jewöhnlesch angmaß övverdrahre Nohreeschte udder Meddeijlonge, di wä se kritt jaa nit han well,“\">SPAM</i>",
+	"smitespam-delete-page-success-msg": "Di Sigg es fottjeschmeße",
+	"smitespam-delete-page-failure-msg": "Mer kunnte di Sigg nit fott schmiiße.",
+	"smitespam-page": "Sigg",
+	"smitespam-delete": "Fottschmiiße",
+	"smitespam-probability": "Waschainleschkeijt",
+	"smitespam-delete-selected": "Donn de Ußjewählte fottschmiiße",
+	"smitespam-deleted-reason": "Vum Zohsazprorjamm jähje der <i lang=\"en\" xml:lang=\"en\" dir=\"ltr\" title=\"„för jewöhnlesch angmaß övverdrahre Nohreeschte udder Meddeijlonge, di wä se kritt jaa nit han well,“\">SPAM</i> als <i lang=\"en\" xml:lang=\"en\" dir=\"ltr\" title=\"„för jewöhnlesch angmaß övverdrahre Nohreeschte udder Meddeijlonge, di wä se kritt jaa nit han well,“\">SPAM</i> ennjeschtohf.",
+	"action-smitespam": "jähje der <i lang=\"en\" xml:lang=\"en\" dir=\"ltr\" title=\"„för jewöhnlesch angmaß övverdrahre Nohreeschte udder Meddeijlonge, di wä se kritt jaa nit han well,“\">SPAM</i>"
 }

@@ -5,5 +5,14 @@
 		]
 	},
 	"smitespam": "Борба со спам",
-	"smitespam-desc": "Дава [[Special:SmiteSpam|службена страница]] која им помага на администраторите да препознаваат и бришат спам-страници на викито."
+	"smitespam-desc": "Дава [[Special:SmiteSpam|службена страница]] која им помага на администраторите да препознаваат и бришат спам-страници на викито.",
+	"smitespam-spam-pages-list-heading": "Можни страници со спам",
+	"smitespam-delete-page-success-msg": "Избриши страница",
+	"smitespam-delete-page-failure-msg": "Не успеав да ја избришам страницата.",
+	"smitespam-page": "Страница",
+	"smitespam-delete": "Избриши",
+	"smitespam-probability": "Веројатност",
+	"smitespam-delete-selected": "Избриши ги избраните",
+	"smitespam-deleted-reason": "Најдено дека е спам од додатокот „Борба со спам“.",
+	"action-smitespam": "Борба со спам"
 }

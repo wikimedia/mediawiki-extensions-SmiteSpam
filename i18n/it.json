@@ -1,0 +1,13 @@
+{
+	"@metadata": {
+		"authors": [
+			"Alexmar983"
+		]
+	},
+	"smitespam-spam-pages-list-heading": "Possibili pagine di spam",
+	"smitespam-delete-page-success-msg": "Pagina cancellata",
+	"smitespam-page": "Pagina",
+	"smitespam-delete": "Cancella",
+	"smitespam-delete-selected": "Cancella ciò che è selezionato",
+	"smitespam-deleted-reason": "Identificato come spam da Estensione:SmiteSpam."
+}

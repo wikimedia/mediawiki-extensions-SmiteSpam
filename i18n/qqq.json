@@ -13,6 +13,8 @@
 	"smitespam-page": "A wiki page\n{{Identical|Page}}",
 	"smitespam-delete": "The verb 'delete'.\n{{Identical|Delete}}",
 	"smitespam-probability": "The word for 'probability'.",
+	"smitespam-created-by": "The author of the first revision of a page.",
+	"smitespam-preview-text": "Preview text of a page's content.",
 	"smitespam-delete-selected": "The phrase for 'delete selected'",
 	"smitespam-deleted-reason": "Reason to give for deletion of a page",
 	"action-smitespam": "Action for work done by Extesions:SmiteSpam"

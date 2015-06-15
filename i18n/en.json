@@ -12,6 +12,8 @@
 	"smitespam-page": "Page",
 	"smitespam-delete": "Delete",
 	"smitespam-probability": "Probability",
+	"smitespam-created-by": "Created by",
+	"smitespam-preview-text": "Preview text",
 	"smitespam-delete-selected": "Delete selected",
 	"smitespam-deleted-reason": "Identified as spam by Extension:SmiteSpam.",
 	"action-smitespam": "smite spam"

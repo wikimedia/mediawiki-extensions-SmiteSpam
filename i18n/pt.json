@@ -5,5 +5,13 @@
 		]
 	},
 	"smitespam": "Eliminar Spam",
-	"smitespam-desc": "Fornece uma [[Special:SmiteSpam|página especial]] para ajudar os administradores a identificar e eliminar páginas wiki com spam."
+	"smitespam-desc": "Fornece uma [[Special:SmiteSpam|página especial]] para ajudar os administradores a identificar e eliminar páginas wiki com spam.",
+	"smitespam-spam-pages-list-heading": "Possíveis páginas de spam",
+	"smitespam-delete-page-success-msg": "Página eliminada",
+	"smitespam-delete-page-failure-msg": "Falha ao eliminar a página",
+	"smitespam-page": "Página",
+	"smitespam-delete": "Eliminar",
+	"smitespam-probability": "Probabilidade",
+	"smitespam-delete-selected": "Eliminar selecionadas",
+	"smitespam-deleted-reason": "Identificado como spam pela Extensão:SmiteSpam."
 }

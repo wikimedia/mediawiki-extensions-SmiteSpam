@@ -13,6 +13,8 @@
 	"smitespam-page": "Seite",
 	"smitespam-delete": "Löschen",
 	"smitespam-probability": "Wahrscheinlichkeit",
+	"smitespam-created-by": "Erstellt von",
+	"smitespam-preview-text": "Text vorschauen",
 	"smitespam-delete-selected": "Ausgewählte löschen",
 	"smitespam-deleted-reason": "Von der Erweiterung „SmiteSpam“ als Spam identifiziert",
 	"action-smitespam": "Spam zu bekämpfen"

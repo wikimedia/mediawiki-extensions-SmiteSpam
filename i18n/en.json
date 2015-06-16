@@ -16,5 +16,9 @@
 	"smitespam-preview-text": "Preview text",
 	"smitespam-delete-selected": "Delete selected",
 	"smitespam-deleted-reason": "Identified as spam by Extension:SmiteSpam.",
-	"action-smitespam": "smite spam"
+	"action-smitespam": "smite spam",
+	"smitespam-probability-low": "Low",
+	"smitespam-probability-medium": "Medium",
+	"smitespam-probability-high": "High",
+	"smitespam-probability-very-high": "Very high"
 }

@@ -24,15 +24,28 @@ $wgSpecialPages['SmiteSpam'] = 'SpecialSmiteSpam';
 $wgAvailableRights[] = 'smitespam';
 $wgGroupPermissions['sysop']['smitespam'] = true;
 
+$wgAPIModules['smitespamanalyze'] = 'SmiteSpamApiQuery';
+
+$wgResourceModules['ext.SmiteSpam.retriever'] = array(
+	'scripts' => 'js/ext.smitespam.retriever.js',
+	'localBasePath' => "$ssRoot/static",
+	'remoteExtPath' => 'SmiteSpam/static',
+	'dependencies' => array(
+		'mediawiki.jqueryMsg',
+	),
+	'messages' => array(
+		'smitespam-page',
+		'smitespam-probability',
+		'smitespam-created-by',
+		'smitespam-preview-text',
+		'smitespam-delete',
+		'table_pager_prev',
+		'table_pager_next',
+		'smitespam-loading',
+	),
+);
+
 // Config options
-
-// Maximum number of pages SmiteSpam should process in one run
-// Necessary to prevent timeouts, etc.
-$wgSmiteSpamQueryLimit = 1000;
-
-// Should SmiteSpam select random pages?
-// Should be set to false if $wgSmiteSpamQueryLimit is higher than number of pages
-$wgSmiteSpamRandomize = true;
 
 // List of enabled checkers and respective weights
 $wgSmiteSpamCheckers = array(
@@ -50,3 +63,9 @@ $wgSmiteSpamThreshold = 0.7;
 // Should SmiteSpam ignore all pages that don't have any external links
 // outside of template calls?
 $wgSmiteSpamIgnorePagesWithNoExternalLinks = true;
+
+// Number of pages to analyze in one AJAX request
+$wgQueryPageSize = 500;
+
+// Number of pages to display in one paginated page
+$wgDisplayPageSize = 250;

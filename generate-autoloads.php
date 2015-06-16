@@ -6,5 +6,6 @@ $gen = new AutoloadGenerator( __DIR__ );
 
 $gen->readFile( __DIR__ . '/SpecialSmiteSpam.php' );
 $gen->readDir( __DIR__ . '/includes' );
+$gen->readDir( __DIR__ . '/api' );
 
 $gen->generateAutoload();

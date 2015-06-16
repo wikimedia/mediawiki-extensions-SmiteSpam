@@ -17,5 +17,9 @@
 	"smitespam-preview-text": "Preview text of a page's content.",
 	"smitespam-delete-selected": "The phrase for 'delete selected'",
 	"smitespam-deleted-reason": "Reason to give for deletion of a page",
-	"action-smitespam": "Action for work done by Extesions:SmiteSpam"
+	"action-smitespam": "Action for work done by Extesions:SmiteSpam",
+	"smitespam-probability-low": "Low probability",
+	"smitespam-probability-medium": "Medium probability",
+	"smitespam-probability-high": "High probability",
+	"smitespam-probability-very-high": "Very high probability"
 }

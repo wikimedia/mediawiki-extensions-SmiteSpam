@@ -16,9 +16,11 @@ class SpecialSmiteSpam extends SpecialPage {
 		$this->setHeaders();
 		$out = $this->getOutput();
 		$out->setPageTitle( $this->msg( 'smitespam' )->text() );
+
+		$numPages = SiteStats::pages();
+
 		$request = $this->getRequest();
 
-		$ss = new SmiteSpamAnalyzer();
 		if ( $request->wasPosted() ) {
 			$ssDeleter = new SmiteSpamDeleter();
 			$pageIDs = $request->getArray( 'delete' );
@@ -41,98 +43,34 @@ class SpecialSmiteSpam extends SpecialPage {
 			}
 		}
 
-		$spamPages = $ss->run();
-
 		$out->addHTML( '<h2>' . $this->msg( 'smitespam-spam-pages-list-heading' )->text() . '</h2>' );
+
+		$out->addHTML( '<div id="pagination"></div>' );
 
 		$out->addHTML(
 			Html::openElement( 'form', array(
-					'method' => 'post'
+					'method' => 'post',
+					'id' => 'smitespam-delete-pages',
 				)
 			)
 		);
-		$out->addHTML( Html::openElement( 'table', array( 'class' => 'wikitable' ) ) );
-		$out->addHTML( '<tr><th>'
-			. $this->msg( 'smitespam-page' )->text()
-			. '</th><th>'
-			. $this->msg( 'smitespam-probability' )->text()
-			. '</th><th>'
-			. $this->msg( 'smitespam-created-by' )->text()
-			. '</th><th>'
-			. $this->msg( 'smitespam-preview-text' )->text()
-			. '</th><th>'
-			. $this->msg( 'smitespam-delete' )->text()
-			. '</th></tr>'
-		);
-		foreach ( $spamPages as $page ) {
-			$title = $page->getTitle();
-			$out->addHTML( '<tr>' );
-			$out->addHTML( '<td>' );
-			$out->addHTML(
-				Html::openElement( 'a', array(
-						'href' => $title->getLocalUrl(),
-						'target' => '_blank',
-					)
-				)
-			);
-			$nsText = $title->getNsText();
-			if ( $nsText ) {
-				$out->addHTML( Sanitizer::escapeHtmlAllowEntities( $nsText ) . ':' );
-			}
-			$out->addHTML( Sanitizer::escapeHtmlAllowEntities( $title->getText() ) );
-			$out->addHTML( '</a>' );
-			$out->addHTML( '</td>' );
-			$out->addHTML( '<td>' );
-			// @todo Colour code
-			if ( $page->spamProbability <= 0.5 ) {
-				$out->addHTML( 'Low' );
-			} elseif ( $page->spamProbability <= 1 ) {
-				$out->addHTML( 'Medium' );
-			} elseif ( $page->spamProbability <= 2 ) {
-				$out->addHTML( 'High' );
-			} else {
-				$out->addHTML( 'Very high' );
-			}
-			$out->addHTML( '</td>' );
-			$out->addHTML( '<td>' );
-			$oldestRevision = $page->getOldestRevision();
-			if ( $oldestRevision ) {
-				$creator = $oldestRevision->getUserText( Revision::RAW );
-				$out->addHTML(
-					Linker::link(
-						SpecialPage::getTitleFor( 'Contributions', $creator ),
-						Sanitizer::escapeHtmlAllowEntities( $creator ),
-						array( 'target' => '_blank' )
-					)
-				);
-			}
-			else {
-				$out->addHTML( '-' );
-			}
-			$out->addHTML( '</td>' );
-			$out->addHTML( '<td>' );
-			$previewText = substr( $page->getMetadata( 'content' ), 0, 50 );
-			$out->addHTML( Sanitizer::escapeHtmlAllowEntities( $previewText ) );
-			if ( strlen( $page->getMetadata( 'content' ) ) > 50  ) {
-				$out->addHTML( '...' );
-			}
-			$out->addHTML( '</td>' );
-			$out->addHTML( '<td>' );
-			$out->addHTML( Html::check(
-				'delete[]', false, array(
-					'value' => $page->getID(),
-				)
-			) );
-			$out->addHTML( '</td>' );
-			$out->addHTML( Html::closeElement( 'tr' ) );
-		}
+		$out->addHTML( Html::openElement( 'table', array(
+			'class' => 'wikitable',
+			'id' => 'smitespam-page-list',
+		) ) );
 
 		$out->addHTML( Html::closeElement( 'table' ) );
-		$out->addHTML( Html::element( 'input', array(
-			'type' => 'submit',
-			'value' => $this->msg( 'smitespam-delete-selected' )->text()
-		) ) );
+		$out->addHTML( '<input type="submit" value="'
+			. $this->msg( 'smitespam-delete-selected' ) . '">' );
 		$out->addHTML( Html::closeElement( 'form' ) );
+
+		$out->addModules( 'ext.SmiteSpam.retriever' );
+		global $wgQueryPageSize, $wgDisplayPageSize;
+		$out->addJsConfigVars( array(
+			'numPages' => $numPages,
+			'queryPageSize' => $wgQueryPageSize,
+			'displayPageSize' => $wgDisplayPageSize,
+		) );
 	}
 
 	function getGroupName() {

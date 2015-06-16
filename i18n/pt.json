@@ -12,6 +12,8 @@
 	"smitespam-page": "Página",
 	"smitespam-delete": "Eliminar",
 	"smitespam-probability": "Probabilidade",
+	"smitespam-created-by": "Criada por",
+	"smitespam-preview-text": "Pré-visualizar texto",
 	"smitespam-delete-selected": "Eliminar selecionadas",
 	"smitespam-deleted-reason": "Identificado como spam pela Extensão:SmiteSpam."
 }

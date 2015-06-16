@@ -9,5 +9,6 @@
 	"smitespam-delete-page-failure-msg": "Nie udało się usunąć strony",
 	"smitespam-page": "Strona",
 	"smitespam-delete": "Usuń",
-	"smitespam-probability": "Prawdopodobieństwo"
+	"smitespam-probability": "Prawdopodobieństwo",
+	"smitespam-preview-text": "Podgląd tekstu"
 }

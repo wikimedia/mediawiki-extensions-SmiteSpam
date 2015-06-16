@@ -12,6 +12,8 @@
 	"smitespam-page": "Страница",
 	"smitespam-delete": "Избриши",
 	"smitespam-probability": "Веројатност",
+	"smitespam-created-by": "Создавач:",
+	"smitespam-preview-text": "Преглед на текстот",
 	"smitespam-delete-selected": "Избриши ги избраните",
 	"smitespam-deleted-reason": "Најдено дека е спам од додатокот „Борба со спам“.",
 	"action-smitespam": "Борба со спам"

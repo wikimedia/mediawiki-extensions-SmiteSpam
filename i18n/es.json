@@ -13,5 +13,7 @@
 	"smitespam-page": "Página",
 	"smitespam-delete": "Eliminar",
 	"smitespam-probability": "Probabilidad",
+	"smitespam-created-by": "Creado por",
+	"smitespam-preview-text": "Vista previa del texto",
 	"smitespam-delete-selected": "Eliminar seleccionados"
 }

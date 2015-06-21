@@ -12,11 +12,13 @@ class SmiteSpamAnalyzer {
 	public function __construct() {
 		global $wgSmiteSpamQueryLimit, $wgSmiteSpamRandomize;
 		global $wgSmiteSpamCheckers, $wgSmiteSpamThreshold;
+		global $wgSmiteSpamIgnorePagesWithNoExternalLinks;
 		$this->config = array(
 			'checkers' => $wgSmiteSpamCheckers,
 			'threshold' => $wgSmiteSpamThreshold,
 			'queryLimit' => $wgSmiteSpamQueryLimit,
 			'randomize' => $wgSmiteSpamRandomize,
+			'ignorePagesWithNoExternalLinks' => $wgSmiteSpamIgnorePagesWithNoExternalLinks,
 		);
 	}
 	/**
@@ -79,6 +81,12 @@ class SmiteSpamAnalyzer {
 				// or cannot get content
 				continue;
 			}
+
+			if ( $this->config['ignorePagesWithNoExternalLinks']
+			    && count( $page->getMetadata( 'externalLinks' ) ) == 0 ) {
+			    continue;
+			}
+
 			if ( count( $page->getMetadata( 'externalLinks' ) ) == 0
 				&& strlen( $page->getMetadata( 'content' ) ) < 500 ) {
 				// Ignore small pages with no external links

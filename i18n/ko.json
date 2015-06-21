@@ -1,0 +1,14 @@
+{
+	"@metadata": {
+		"authors": [
+			"Alex00728"
+		]
+	},
+	"smitespam-delete-page-success-msg": "삭제된 문서",
+	"smitespam-delete-page-failure-msg": "문서 삭제에 실패했습니다",
+	"smitespam-delete": "삭제",
+	"smitespam-created-by": "최초 작성자:",
+	"smitespam-preview-text": "텍스트 미리 보기",
+	"smitespam-delete-selected": "선택한 것을 삭제",
+	"smitespam-deleted-reason": "SmiteSpam 확장 기능에 의해 스팸으로 판별되었습니다."
+}

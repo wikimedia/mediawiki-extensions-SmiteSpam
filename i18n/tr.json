@@ -1,9 +1,11 @@
 {
 	"@metadata": {
 		"authors": [
-			"Uğurkent"
+			"Uğurkent",
+			"Watermelon juice"
 		]
 	},
 	"smitespam-page": "Sayfa",
-	"smitespam-delete": "Sil"
+	"smitespam-delete": "Sil",
+	"smitespam-created-by": "Oluşturan"
 }

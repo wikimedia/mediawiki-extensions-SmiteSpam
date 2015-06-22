@@ -8,6 +8,7 @@
 	"smitespam": "Eliminar publicidade",
 	"smitespam-desc": "Proporciona unha [[Special:SmiteSpam|páxina especial]] que axuda ós administradores a identificar e eliminar páxinas wiki de publicidade.",
 	"smitespam-delete-page-success-msg": "Páxina borrada",
+	"smitespam-delete-page-failure-msg": "Fallou a eliminación da páxina",
 	"smitespam-page": "Páxina",
 	"smitespam-delete": "Borrar",
 	"smitespam-probability": "Probabilidade",

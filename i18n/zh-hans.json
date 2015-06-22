@@ -13,6 +13,8 @@
 	"smitespam-page": "页面",
 	"smitespam-delete": "删除",
 	"smitespam-probability": "可能性",
+	"smitespam-created-by": "创建由",
+	"smitespam-preview-text": "上一段文字",
 	"smitespam-delete-selected": "删除所选",
 	"smitespam-deleted-reason": "被Extension:SmiteSpam识别为破坏。",
 	"action-smitespam": "打击破坏"

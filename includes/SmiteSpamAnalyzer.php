@@ -10,61 +10,41 @@ class SmiteSpamAnalyzer {
 	protected $config;
 
 	public function __construct() {
-		global $wgSmiteSpamQueryLimit, $wgSmiteSpamRandomize;
 		global $wgSmiteSpamCheckers, $wgSmiteSpamThreshold;
 		global $wgSmiteSpamIgnorePagesWithNoExternalLinks;
 		$this->config = array(
 			'checkers' => $wgSmiteSpamCheckers,
 			'threshold' => $wgSmiteSpamThreshold,
-			'queryLimit' => $wgSmiteSpamQueryLimit,
-			'randomize' => $wgSmiteSpamRandomize,
 			'ignorePagesWithNoExternalLinks' => $wgSmiteSpamIgnorePagesWithNoExternalLinks,
 		);
 	}
 	/**
-	 * This function retrieves a list of all the pages in the wiki and runs
-	 * checks on each of them. Pages whose value exceeds the threshold defined in
-	 * the configuration are returned as an array.
+	 * Retrieves a list of pages in the wiki based on the offset and limit
+	 * and runs checks on each of them. Pages whose evaluated value exceeds the
+	 * threshold defined in the configuration are returned as an array.
 	 * @todo Perform DB queries in batches, else prone to timeouts
 	 *
 	 * @return array
 	 */
-	public function run() {
+	public function run( $offset = 0, $limit = 500 ) {
 		$dbr = wfGetDB( DB_SLAVE );
-		$limit = $this->config['queryLimit'];
-		// add a tiny bias towards the centre
 
-		if ( $this->config['randomize'] ) {
-			$random = ( wfRandom() + wfRandom() )/2;
-			$result = $dbr->select(
-				array( 'page' ),
-				'page_id',
-				array(
-					'page_is_redirect = 0',
-					"page_random >= $random",
-				),
-				__METHOD__,
-				array(
-					'ORDER BY' => 'page_random',
-					"LIMIT" => $limit,
-				)
-			);
-		} else {
-			$result = $dbr->select(
-				array( 'page' ),
-				'page_id',
-				array(
-					'page_is_redirect = 0',
-				),
-				__METHOD__,
-				array(
-					"LIMIT" => $limit,
-				)
-			);
-		}
+		$result = $dbr->select(
+			array( 'page' ),
+			'page_id',
+			array(
+				'page_is_redirect = 0',
+			),
+			__METHOD__,
+			array(
+				"ORDER BY" => "page_id ASC",
+				"OFFSET" => $offset,
+				"LIMIT" => $limit,
+			)
+		);
 
 		$checkers = $this->config['checkers'];
-		$totalWeight = array_sum( $checkers );
+
 		$spamPages = array();
 
 		foreach ( $result as $row ) {
@@ -119,7 +99,6 @@ class SmiteSpamAnalyzer {
 				return $pageA->spamProbability < $pageB->spamProbability;
 			}
 		);
-		// Return only top 20% of $wgSmiteSpamQueryLimit pages
-		return array_slice( $spamPages, 0, floor( $this->config['queryLimit']/5 ) );
+		return $spamPages;
 	}
 }

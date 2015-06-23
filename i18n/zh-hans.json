@@ -17,5 +17,9 @@
 	"smitespam-preview-text": "上一段文字",
 	"smitespam-delete-selected": "删除所选",
 	"smitespam-deleted-reason": "被Extension:SmiteSpam识别为破坏。",
-	"action-smitespam": "打击破坏"
+	"action-smitespam": "打击破坏",
+	"smitespam-probability-low": "低",
+	"smitespam-probability-medium": "中",
+	"smitespam-probability-high": "高",
+	"smitespam-probability-very-high": "非常高"
 }

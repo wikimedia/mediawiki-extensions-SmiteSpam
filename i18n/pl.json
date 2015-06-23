@@ -1,7 +1,8 @@
 {
 	"@metadata": {
 		"authors": [
-			"Chrumps"
+			"Chrumps",
+			"Mbkgacek"
 		]
 	},
 	"smitespam-spam-pages-list-heading": "Możliwe strony ze spamem",
@@ -10,5 +11,9 @@
 	"smitespam-page": "Strona",
 	"smitespam-delete": "Usuń",
 	"smitespam-probability": "Prawdopodobieństwo",
-	"smitespam-preview-text": "Podgląd tekstu"
+	"smitespam-preview-text": "Podgląd tekstu",
+	"smitespam-probability-low": "Niskie",
+	"smitespam-probability-medium": "Średnie",
+	"smitespam-probability-high": "Wysokie",
+	"smitespam-probability-very-high": "Bardzo duże"
 }

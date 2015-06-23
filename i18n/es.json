@@ -15,5 +15,9 @@
 	"smitespam-probability": "Probabilidad",
 	"smitespam-created-by": "Creado por",
 	"smitespam-preview-text": "Vista previa del texto",
-	"smitespam-delete-selected": "Eliminar seleccionados"
+	"smitespam-delete-selected": "Eliminar seleccionados",
+	"smitespam-probability-low": "Baja",
+	"smitespam-probability-medium": "Media",
+	"smitespam-probability-high": "Alta",
+	"smitespam-probability-very-high": "Muy alta"
 }

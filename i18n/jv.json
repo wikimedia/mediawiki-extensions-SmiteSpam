@@ -1,0 +1,11 @@
+{
+	"@metadata": {
+		"authors": [
+			"Jadinegara"
+		]
+	},
+	"smitespam-probability-low": "Asor",
+	"smitespam-probability-medium": "Madya",
+	"smitespam-probability-high": "Dhuwur",
+	"smitespam-probability-very-high": "Dhuwur wlas"
+}

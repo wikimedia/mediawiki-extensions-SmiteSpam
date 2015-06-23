@@ -10,5 +10,9 @@
 	"smitespam-delete": "Läschen",
 	"smitespam-probability": "Wahrscheinlechkeet",
 	"smitespam-preview-text": "Text kucken ouni ze späicheren",
-	"smitespam-delete-selected": "Ugewielt läschen"
+	"smitespam-delete-selected": "Ugewielt läschen",
+	"smitespam-probability-low": "Niddereg",
+	"smitespam-probability-medium": "Mëttel",
+	"smitespam-probability-high": "Héich",
+	"smitespam-probability-very-high": "Ganz héich"
 }

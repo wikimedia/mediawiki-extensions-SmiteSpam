@@ -2,7 +2,8 @@
 	"@metadata": {
 		"authors": [
 			"polybuildr",
-			"Liuxinyu970226"
+			"Liuxinyu970226",
+			"Robby"
 		]
 	},
 	"smitespam": "The name of the extension's entry in Special:SpecialPages.",
@@ -18,8 +19,8 @@
 	"smitespam-delete-selected": "The phrase for 'delete selected'",
 	"smitespam-deleted-reason": "Reason to give for deletion of a page",
 	"action-smitespam": "Action for work done by Extesions:SmiteSpam",
-	"smitespam-probability-low": "Low probability",
-	"smitespam-probability-medium": "Medium probability",
-	"smitespam-probability-high": "High probability",
+	"smitespam-probability-low": "Low probability\n{{Identical|Low}}",
+	"smitespam-probability-medium": "Medium probability\n{{Identical|Medium}}",
+	"smitespam-probability-high": "High probability\n{{Identical|High}}",
 	"smitespam-probability-very-high": "Very high probability"
 }

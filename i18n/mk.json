@@ -16,5 +16,9 @@
 	"smitespam-preview-text": "Преглед на текстот",
 	"smitespam-delete-selected": "Избриши ги избраните",
 	"smitespam-deleted-reason": "Најдено дека е спам од додатокот „Борба со спам“.",
-	"action-smitespam": "Борба со спам"
+	"action-smitespam": "Борба со спам",
+	"smitespam-probability-low": "Мала",
+	"smitespam-probability-medium": "Средна",
+	"smitespam-probability-high": "Голема",
+	"smitespam-probability-very-high": "Многу голема"
 }

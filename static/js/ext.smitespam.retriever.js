@@ -1,35 +1,33 @@
-( function( $ ) {
-	var Counter = function() {
+( function ( $ ) {
+	var Counter = function () {
 		var value = 0;
-		this.update = function( newValue ) {
+		this.update = function ( newValue ) {
 			value = newValue;
-			if ( typeof this.onUpdate == 'function' ) {
+			if ( typeof this.onUpdate === 'function' ) {
 				this.onUpdate();
 			}
-		}
+		};
 
-		this.getValue = function() {
+		this.getValue = function () {
 			return value;
-		}
+		};
 
-		this.increment = function( by ) {
+		this.increment = function ( by ) {
 			if ( by ) {
 				this.update( value + by );
-			}
-			else {
+			} else {
 				this.update( value + 1 );
 			}
-		}
+		};
 
-		this.decrement = function( by ) {
+		this.decrement = function ( by ) {
 			if ( by ) {
 				this.update( value - by );
-			}
-			else {
+			} else {
 				this.update( value - 1 );
 			}
-		}
-	}
+		};
+	};
 
 	var queriesSent = new Counter();
 
@@ -40,24 +38,23 @@
 	results.push( [] );
 
 	var resultPageToDisplay = new Counter();
-	resultPageToDisplay.notify = function() {
-		if ( queriesSent.getValue() * queryPageSize >= numPages
-			|| results[this.getValue()].length >= displayPageSize ) {
+	resultPageToDisplay.notify = function () {
+		if ( queriesSent.getValue() * queryPageSize >= numPages ||
+			results[this.getValue()].length >= displayPageSize ) {
 			$( '#results-loading' ).hide();
 			pagination.refresh();
-		}
-		else {
+		} else {
 			$( '#results-loading' ).show();
 			sendNextQuery();
 		}
-	}
+	};
 	resultPageToDisplay.onUpdate = resultPageToDisplay.notify;
 
 	function sendNextQuery() {
 		var url = mw.config.get( 'wgScriptPath' ) + '/api.php?action=smitespamanalyze&format=json';
-		$.getJSON( url
-			+ '&offset=' + queriesSent.getValue() * queryPageSize
-			+ '&limit=' + queryPageSize,
+		$.getJSON( url +
+			'&offset=' + queriesSent.getValue() * queryPageSize +
+			'&limit=' + queryPageSize,
 			processResponse );
 		queriesSent.increment();
 	}
@@ -67,13 +64,13 @@
 
 		while ( receivedPages.length ) {
 			var remaining = displayPageSize - results[results.length - 1].length;
-			var toAppend = receivedPages.slice(0, remaining);
-			for (var i = 0; i < toAppend.length; i++) {
+			var toAppend = receivedPages.slice( 0, remaining );
+			for ( var i = 0; i < toAppend.length; i++ ) {
 				results[results.length - 1].push( toAppend[i] );
 			}
 			receivedPages = receivedPages.splice( remaining );
-			if ( results[results.length - 1].length == displayPageSize ) {
-				results[results.length - 1].sort( function( a, b ) {
+			if ( results[results.length - 1].length === displayPageSize ) {
+				results[results.length - 1].sort( function ( a, b ) {
 					return b['spam-probability-value'] - a['spam-probability-value'];
 				} );
 				results.push( [] );
@@ -87,7 +84,7 @@
 			pagesToDelete: []
 		},
 		handlersAttached: false,
-		attachHandlers: function() {
+		attachHandlers: function () {
 			if ( pagination.handlersAttached ) {
 				return;
 			}
@@ -96,69 +93,66 @@
 			$( '<button>', { id: 'smitespam-pagination-prev' } )
 				.html( '&lt;&lt; ' + mw.msg( 'table_pager_prev' ) )
 				.appendTo( '#pagination' );
-			$( '#smitespam-pagination-prev' ).on( 'click', function() {
+			$( '#smitespam-pagination-prev' ).on( 'click', function () {
 				resultPageToDisplay.decrement();
 			} );
 
 			$( '<button>', { id: 'smitespam-pagination-next' } )
 				.html( mw.msg( 'table_pager_next' ) + ' &gt;&gt;' )
 				.appendTo( '#pagination' );
-			$( '#smitespam-pagination-next' ).on( 'click', function() {
-				resultPageToDisplay.increment()
+			$( '#smitespam-pagination-next' ).on( 'click', function () {
+				resultPageToDisplay.increment();
 			} );
 			pagination.handlersAttached = true;
 		},
-		refresh: function() {
+		refresh: function () {
 			pagination.attachHandlers();
-			if ( resultPageToDisplay.getValue() == 0 ) {
+			if ( resultPageToDisplay.getValue() === 0 ) {
 				$( '#smitespam-pagination-prev' ).attr( 'disabled', 'disabled' );
-			}
-			else {
+			} else {
 				$( '#smitespam-pagination-prev' ).removeAttr( 'disabled' );
 			}
 
-			if ( queriesSent.getValue() * queryPageSize >= numPages
-				&& resultPageToDisplay.getValue() == results.length - 1 ) {
+			if ( queriesSent.getValue() * queryPageSize >= numPages &&
+				resultPageToDisplay.getValue() === results.length - 1 ) {
 				$( '#pagination #smitespam-pagination-next' ).attr( 'disabled', 'disabled' );
-			}
-			else {
+			} else {
 				$( '#pagination #smitespam-pagination-next' ).removeAttr( 'disabled' );
 			}
 			pagination.displayResults();
 			$( '#displayed-page-number' ).text( resultPageToDisplay.getValue() + 1 );
 		},
-		displayResults: function() {
-			offset = resultPageToDisplay.getValue();
-			$('#smitespam-page-list').empty();
-			$('#smitespam-page-list').append( '<tr>'
-				+ '<th>' + mw.msg( 'smitespam-page' ) + '</th>'
-				+ '<th>' + mw.msg( 'smitespam-probability' ) + '</th>'
-				+ '<th>' + mw.msg( 'smitespam-created-by') + '</th>'
-				+ '<th>' + mw.msg( 'smitespam-preview-text') + '</th>'
-				+ '<th>' + mw.msg( 'smitespam-delete' ) + '</th>'
-				+ '</tr>' );
-			for (var i = 0; i < displayPageSize; ++i) {
+		displayResults: function () {
+			$( '#smitespam-page-list' ).empty();
+			$( '#smitespam-page-list' ).append( '<tr>' +
+				'<th>' + mw.msg( 'smitespam-page' ) + '</th>' +
+				'<th>' + mw.msg( 'smitespam-probability' ) + '</th>' +
+				'<th>' + mw.msg( 'smitespam-created-by' ) + '</th>' +
+				'<th>' + mw.msg( 'smitespam-preview-text' ) + '</th>' +
+				'<th>' + mw.msg( 'smitespam-delete' ) + '</th>' +
+				'</tr>' );
+			function checkboxChanged() {
+				var id = $( this ).val();
+				if ( this.checked ) {
+					pagination.data.pagesToDelete.push( id );
+				} else {
+					var index = $.inArray( id, pagination.data.pagesToDelete );
+					pagination.data.pagesToDelete.splice( index, 1 );
+				}
+			}
+			for ( var i = 0; i < displayPageSize; ++i ) {
 				var page = results[resultPageToDisplay.getValue()][i];
 				var $row = $( '<tr>' );
-				$( '<td></td>' ).html( page['link'] ).appendTo( $row );
+				$( '<td></td>' ).html( page.link ).appendTo( $row );
 				$( '<td></td>' ).text( page['spam-probability-text'] ).appendTo( $row );
 				$( '<td></td>' ).html( page['creator-link'] ).appendTo( $row );
-				$( '<td></td>' ).text( page['preview'] ).appendTo( $row );
+				$( '<td></td>' ).text( page.preview ).appendTo( $row );
 
 				var $checkbox = $( '<input>', {
 					type: 'checkbox',
-					value: page['id']
+					value: page.id
 				} )
-					.on( 'change', function() {
-						var id = $( this ).val();
-						if ( this.checked ) {
-							pagination.data.pagesToDelete.push( id );
-						}
-						else {
-							var index = $.inArray( id, pagination.data.pagesToDelete );
-							pagination.data.pagesToDelete.splice( index, 1);
-						}
-					} );
+					.on( 'change', checkboxChanged );
 				if ( $.inArray( $checkbox.val(), pagination.data.pagesToDelete ) !== -1 ) {
 					$checkbox.attr( 'checked', 'checked' );
 				}
@@ -168,7 +162,7 @@
 		}
 	};
 
-	$( '#smitespam-delete-pages' ).on( 'submit', function() {
+	$( '#smitespam-delete-pages' ).on( 'submit', function () {
 		var toDelete = pagination.data.pagesToDelete;
 		$( '#smitespam-page-list' ).empty();
 		var $this = $( this );
@@ -182,7 +176,7 @@
 		}
 	} );
 
-	$( '<p id="results-loading"></p>').text( 'Loading...' )
+	$( '<p id="results-loading"></p>' ).text( 'Loading...' )
 		.appendTo( '#pagination' );
 	resultPageToDisplay.notify();
 

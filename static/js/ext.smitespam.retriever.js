@@ -36,6 +36,7 @@
 	var displayPageSize = mw.config.get( 'displayPageSize' );
 	var results = [];
 	results.push( [] );
+	var editToken, deleteIndex = 0;
 
 	var resultPageToDisplay = new Counter();
 	resultPageToDisplay.notify = function () {
@@ -81,7 +82,9 @@
 
 	var pagination = {
 		data: {
-			pagesToDelete: []
+			pagesToDelete: [],
+			pagesDeleted: [],
+			failedToDeletePages: []
 		},
 		handlersAttached: false,
 		attachHandlers: function () {
@@ -142,42 +145,73 @@
 			}
 			for ( var i = 0; i < displayPageSize; ++i ) {
 				var page = results[resultPageToDisplay.getValue()][i];
-				var $row = $( '<tr>' );
+				var $row = $( '<tr>' ).attr( 'id', 'result-row-page-' + page.id );
 				$( '<td></td>' ).html( page.link ).appendTo( $row );
 				$( '<td></td>' ).text( page['spam-probability-text'] ).appendTo( $row );
 				$( '<td></td>' ).html( page['creator-link'] ).appendTo( $row );
 				$( '<td></td>' ).text( page.preview ).appendTo( $row );
-
-				var $checkbox = $( '<input>', {
-					type: 'checkbox',
-					value: page.id
-				} )
-					.on( 'change', checkboxChanged );
-				if ( $.inArray( $checkbox.val(), pagination.data.pagesToDelete ) !== -1 ) {
-					$checkbox.attr( 'checked', 'checked' );
+				if ( $.inArray( page.id.toString(), pagination.data.pagesDeleted ) !== -1 ) {
+					$( '<td></td>' ).text( mw.msg( 'smitespam-delete-page-success-msg' ) ).appendTo( $row );
+				} else if ( $.inArray( page.id.toString(), pagination.data.failedToDeletePages ) !== -1 ) {
+					$( '<td></td>' ).text( mw.msg( 'smitespam-delete-page-failure-msg' ) ).appendTo( $row );
+				} else {
+					var $checkbox = $( '<input>', {
+						type: 'checkbox',
+						value: page.id
+					} )
+						.on( 'change', checkboxChanged );
+					if ( $.inArray( $checkbox.val(), pagination.data.pagesToDelete ) !== -1 ) {
+						$checkbox.attr( 'checked', 'checked' );
+					}
+					$( '<td></td>' ).append( $checkbox ).appendTo( $row );
 				}
-				$( '<td></td>' ).append( $checkbox ).appendTo( $row );
 				$( '#smitespam-page-list' ).append( $row );
 			}
 		}
 	};
 
 	$( '#smitespam-delete-pages' ).on( 'submit', function () {
-		var toDelete = pagination.data.pagesToDelete;
-		$( '#smitespam-page-list' ).empty();
-		var $this = $( this );
-		for ( var i = 0; i < toDelete.length; ++i ) {
-			$( '<input>', {
-				type: 'checkbox',
-				name: 'delete[]',
-				value: toDelete[i],
-				checked: 'checked'
-			} ).hide().appendTo( $this );
-		}
+		deletePage();
+		return false;
 	} );
 
-	$( '<p id="results-loading"></p>' ).text( 'Loading...' )
-		.appendTo( '#pagination' );
-	resultPageToDisplay.notify();
+	$.getJSON( mw.config.get( 'wgScriptPath' ) + '/api.php?action=query&meta=tokens&format=json',
+		function ( data ) {
+			editToken = data.query.tokens.csrftoken;
+			$( '<p id="results-loading"></p>' ).text( 'Loading...' )
+				.appendTo( '#pagination' );
+			resultPageToDisplay.notify();
+		}
+	);
 
+	function processDeletedPage( data ) {
+		var pageID = pagination.data.pagesToDelete[deleteIndex];
+		var row = $( '#result-row-page-' + pageID );
+		if ( 'delete' in data ) {
+			pagination.data.pagesDeleted.push( pageID );
+			if ( row.length ) {
+				row.find( 'td' ).eq( 4 ).text( mw.msg( 'smitespam-delete-page-success-msg' ) );
+			}
+		} else if ( 'error' in data ) {
+			pagination.data.failedToDeletePages.push( pageID );
+			if ( row.length ) {
+				row.find( 'td' ).eq( 4 ).text( mw.msg( 'smitespam-delete-page-failure-msg' ) );
+			}
+		}
+		deleteIndex++;
+		if ( deleteIndex < pagination.data.pagesToDelete.length ) {
+			deletePage();
+		}
+	}
+
+	function deletePage() {
+		$.post( mw.config.get( 'wgScriptPath' ) + '/api.php?action=delete&format=json',
+			{
+				token: editToken,
+				pageid: pagination.data.pagesToDelete[deleteIndex],
+				reason: mw.msg( 'smitespam-deleted-reason' )
+			},
+			'json'
+		).done( processDeletedPage );
+	}
 } )( jQuery );

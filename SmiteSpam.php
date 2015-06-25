@@ -42,6 +42,9 @@ $wgResourceModules['ext.SmiteSpam.retriever'] = array(
 		'table_pager_prev',
 		'table_pager_next',
 		'smitespam-loading',
+		'smitespam-delete-page-success-msg',
+		'smitespam-delete-page-failure-msg',
+		'smitespam-deleted-reason',
 	),
 );
 

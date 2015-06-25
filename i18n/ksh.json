@@ -16,5 +16,9 @@
 	"smitespam-preview-text": "Donn dä Täx vöraff belohre",
 	"smitespam-delete-selected": "Donn de Ußjewählte fottschmiiße",
 	"smitespam-deleted-reason": "Vum Zohsazprorjamm jähje der <i lang=\"en\" xml:lang=\"en\" dir=\"ltr\" title=\"„för jewöhnlesch angmaß övverdrahre Nohreeschte udder Meddeijlonge, di wä se kritt jaa nit han well,“\">SPAM</i> als <i lang=\"en\" xml:lang=\"en\" dir=\"ltr\" title=\"„för jewöhnlesch angmaß övverdrahre Nohreeschte udder Meddeijlonge, di wä se kritt jaa nit han well,“\">SPAM</i> ennjeschtohf.",
-	"action-smitespam": "jähje der <i lang=\"en\" xml:lang=\"en\" dir=\"ltr\" title=\"„för jewöhnlesch angmaß övverdrahre Nohreeschte udder Meddeijlonge, di wä se kritt jaa nit han well,“\">SPAM</i>"
+	"action-smitespam": "jähje der <i lang=\"en\" xml:lang=\"en\" dir=\"ltr\" title=\"„för jewöhnlesch angmaß övverdrahre Nohreeschte udder Meddeijlonge, di wä se kritt jaa nit han well,“\">SPAM</i>",
+	"smitespam-probability-low": "Kleijn",
+	"smitespam-probability-medium": "Meddel",
+	"smitespam-probability-high": "Huh",
+	"smitespam-probability-very-high": "Ärsch huh"
 }

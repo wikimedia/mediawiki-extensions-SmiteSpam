@@ -7,11 +7,19 @@
 	},
 	"smitespam": "Eliminar publicidade",
 	"smitespam-desc": "Proporciona unha [[Special:SmiteSpam|páxina especial]] que axuda ós administradores a identificar e eliminar páxinas wiki de publicidade.",
+	"smitespam-spam-pages-list-heading": "Posibles páxinas de spam",
 	"smitespam-delete-page-success-msg": "Páxina borrada",
 	"smitespam-delete-page-failure-msg": "Fallou a eliminación da páxina",
 	"smitespam-page": "Páxina",
 	"smitespam-delete": "Borrar",
 	"smitespam-probability": "Probabilidade",
 	"smitespam-created-by": "Creado por",
-	"smitespam-delete-selected": "Eliminar a selección"
+	"smitespam-preview-text": "Vista previa do texto",
+	"smitespam-delete-selected": "Eliminar a selección",
+	"smitespam-deleted-reason": "Identificado coma spam pola Extensión:SmiteSpam.",
+	"action-smitespam": "Eliminar publicidade",
+	"smitespam-probability-low": "Baixa",
+	"smitespam-probability-medium": "Media",
+	"smitespam-probability-high": "Alta",
+	"smitespam-probability-very-high": "Moi alta"
 }

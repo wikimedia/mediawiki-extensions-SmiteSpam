@@ -15,5 +15,9 @@
 	"smitespam-created-by": "Criada por",
 	"smitespam-preview-text": "Pré-visualizar texto",
 	"smitespam-delete-selected": "Eliminar selecionadas",
-	"smitespam-deleted-reason": "Identificado como spam pela Extensão:SmiteSpam."
+	"smitespam-deleted-reason": "Identificado como spam pela Extensão:SmiteSpam.",
+	"smitespam-probability-low": "Baixa",
+	"smitespam-probability-medium": "Média",
+	"smitespam-probability-high": "Alta",
+	"smitespam-probability-very-high": "Muito alta"
 }

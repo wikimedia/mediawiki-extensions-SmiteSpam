@@ -1,0 +1,11 @@
+{
+	"@metadata": {
+		"authors": [
+			"Jim Carter"
+		]
+	},
+	"smitespam-probability-low": "কম",
+	"smitespam-probability-medium": "মাঝারি",
+	"smitespam-probability-high": "উচ্চ",
+	"smitespam-probability-very-high": "অত্যন্ত উচ্চ"
+}

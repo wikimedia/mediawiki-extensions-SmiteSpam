@@ -1,13 +1,15 @@
 {
 	"@metadata": {
 		"authors": [
-			"Alexmar983"
+			"Alexmar983",
+			"Macofe"
 		]
 	},
 	"smitespam-spam-pages-list-heading": "Possibili pagine di spam",
 	"smitespam-delete-page-success-msg": "Pagina cancellata",
 	"smitespam-page": "Pagina",
 	"smitespam-delete": "Cancella",
+	"smitespam-probability": "Probabilità",
 	"smitespam-created-by": "Creato da",
 	"smitespam-preview-text": "Testo in anteprima",
 	"smitespam-delete-selected": "Cancella ciò che è selezionato",

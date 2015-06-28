@@ -1,0 +1,11 @@
+{
+	"@metadata": {
+		"authors": [
+			"Praveen Illa"
+		]
+	},
+	"smitespam-probability-low": "తక్కువ",
+	"smitespam-probability-medium": "మధ్యమం",
+	"smitespam-probability-high": "ఎక్కువ",
+	"smitespam-probability-very-high": "చాలా ఎక్కువ"
+}

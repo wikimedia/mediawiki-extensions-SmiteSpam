@@ -1,0 +1,11 @@
+{
+	"@metadata": {
+		"authors": [
+			"Vaishali Parab"
+		]
+	},
+	"smitespam-probability-low": "कमी",
+	"smitespam-probability-medium": "मदलें",
+	"smitespam-probability-high": "चड",
+	"smitespam-probability-very-high": "खूब चड"
+}

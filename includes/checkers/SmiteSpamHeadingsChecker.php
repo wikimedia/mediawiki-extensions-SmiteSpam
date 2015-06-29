@@ -1,6 +1,6 @@
 <?php
 /**
- * Evaluates an SmiteSpamWikiPage based on the number of wikitext headings.
+ * Evaluates a SmiteSpamWikiPage based on the number of wikitext headings.
  */
 class SmiteSpamHeadingsChecker {
 	/**

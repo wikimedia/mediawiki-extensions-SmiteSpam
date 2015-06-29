@@ -1,6 +1,6 @@
 <?php
 /**
- * Evaluates an SmiteSpamWikiPage based on the number of internal links.
+ * Evaluates a SmiteSpamWikiPage based on the number of internal links.
  */
 class SmiteSpamInternalLinksChecker {
 	/**

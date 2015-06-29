@@ -1,6 +1,6 @@
 <?php
 /**
- * Evaluates an SmiteSpamWikiPage based on the ratio of external links to words in the
+ * Evaluates a SmiteSpamWikiPage based on the ratio of external links to words in the
  * page.
  */
 class SmiteSpamExternalLinksChecker {

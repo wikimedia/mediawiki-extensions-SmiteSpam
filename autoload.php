@@ -8,10 +8,8 @@ $wgAutoloadClasses += array(
 	'SmiteSpamApiQuery' => __DIR__ . '/api/SmiteSpamApiQuery.php',
 	'SmiteSpamDeleter' => __DIR__ . '/includes/SmiteSpamDeleter.php',
 	'SmiteSpamExternalLinksChecker' => __DIR__ . '/includes/checkers/SmiteSpamExternalLinksChecker.php',
-	'SmiteSpamHeadingsChecker' => __DIR__ . '/includes/checkers/SmiteSpamHeadingsChecker.php',
-	'SmiteSpamInternalLinksChecker' => __DIR__ . '/includes/checkers/SmiteSpamInternalLinksChecker.php',
 	'SmiteSpamRepeatedExternalLinksChecker' => __DIR__ . '/includes/checkers/SmiteSpamRepeatedExternalLinksChecker.php',
-	'SmiteSpamTemplatesChecker' => __DIR__ . '/includes/checkers/SmiteSpamTemplatesChecker.php',
 	'SmiteSpamWikiPage' => __DIR__ . '/includes/SmiteSpamWikiPage.php',
+	'SmiteSpamWikitextChecker' => __DIR__ . '/includes/checkers/SmiteSpamWikitextChecker.php',
 	'SpecialSmiteSpam' => __DIR__ . '/SpecialSmiteSpam.php',
 );

@@ -35,6 +35,7 @@
 	var queryPageSize = mw.config.get( 'queryPageSize' );
 	var displayPageSize = mw.config.get( 'displayPageSize' );
 	var results = [];
+	var users = {};
 	results.push( [] );
 	var editToken, deleteIndex = 0;
 
@@ -62,7 +63,7 @@
 
 	function processResponse( data ) {
 		var receivedPages = data.smitespamanalyze.pages;
-
+		$.extend( users, data.smitespamanalyze.users );
 		while ( receivedPages.length ) {
 			var remaining = displayPageSize - results[results.length - 1].length;
 			var toAppend = receivedPages.slice( 0, remaining );
@@ -148,7 +149,7 @@
 				var $row = $( '<tr>' ).attr( 'id', 'result-row-page-' + page.id );
 				$( '<td></td>' ).html( page.link ).appendTo( $row );
 				$( '<td></td>' ).text( page['spam-probability-text'] ).appendTo( $row );
-				$( '<td></td>' ).html( page['creator-link'] ).appendTo( $row );
+				$( '<td></td>' ).html( users[page.creator] || page.creator ).appendTo( $row );
 				$( '<td></td>' ).text( page.preview ).appendTo( $row );
 				if ( $.inArray( page.id.toString(), pagination.data.pagesDeleted ) !== -1 ) {
 					$( '<td></td>' ).text( mw.msg( 'smitespam-delete-page-success-msg' ) ).appendTo( $row );

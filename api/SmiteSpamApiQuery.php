@@ -16,7 +16,8 @@ class SmiteSpamApiQuery extends ApiBase {
 		$ss = new SmiteSpamAnalyzer();
 		$spamPages = $ss->run( $offset, $limit );
 
-		$data = array();
+		$pages = array();
+		$users = array();
 
 		foreach ( $spamPages as $page ) {
 			$title = $page->getTitle();
@@ -32,18 +33,18 @@ class SmiteSpamApiQuery extends ApiBase {
 			if ( $oldestRevision ) {
 				$creator = $oldestRevision->getUserText( Revision::RAW );
 				if ( $creator ) {
-					$user = Linker::link(
-						SpecialPage::getTitleFor( 'Contributions', $creator ),
-						Sanitizer::escapeHtmlAllowEntities( $creator ),
-						array( 'target' => '_blank' )
-					);
+					if ( !isset( $users[$creator] ) ) {
+						$users[$creator] = Linker::link(
+							SpecialPage::getTitleFor( 'Contributions', $creator ),
+							Sanitizer::escapeHtmlAllowEntities( $creator ),
+							array( 'target' => '_blank' )
+						);
+					}
+				} else {
+					$creator = '-';
 				}
-				else {
-					$user = '-';
-				}
-			}
-			else {
-				$user = '-';
+			} else {
+				$creator = '-';
 			}
 
 			if ( $page->spamProbability <= 0.5 ) {
@@ -64,10 +65,10 @@ class SmiteSpamApiQuery extends ApiBase {
 				$previewText .= '...';
 			}
 
-			$data[] = array(
+			$pages[] = array(
 				'id' => $page->getID(),
 				'link' => $titleLink,
-				'creator-link' => $user,
+				'creator' => $creator,
 				'spam-probability-value' => $page->spamProbability,
 				'spam-probability-text' => $spamProbability,
 				'preview' => $previewText
@@ -79,7 +80,8 @@ class SmiteSpamApiQuery extends ApiBase {
 			null,
 			$this->getModuleName(),
 			array (
-				'pages' => $data
+				'pages' => $pages,
+				'users' => $users,
 			) );
 		return true;
 	}

@@ -54,9 +54,7 @@ $wgResourceModules['ext.SmiteSpam.retriever'] = array(
 $wgSmiteSpamCheckers = array(
 	'ExternalLinks' => 1,
 	'RepeatedExternalLinks' => 1,
-	'InternalLinks' => 1,
-	'Headings' => 1,
-	'Templates' => 1,
+	'Wikitext' => 1,
 );
 
 // Threshold (tolerance)

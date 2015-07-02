@@ -16,6 +16,7 @@ class SmiteSpamAnalyzer {
 			'checkers' => $wgSmiteSpamCheckers,
 			'threshold' => $wgSmiteSpamThreshold,
 			'ignorePagesWithNoExternalLinks' => $wgSmiteSpamIgnorePagesWithNoExternalLinks,
+			'ignoreSmallPages' => $wgSmiteSpamIgnoreSmallPages,
 		);
 	}
 	/**
@@ -67,7 +68,8 @@ class SmiteSpamAnalyzer {
 			    continue;
 			}
 
-			if ( count( $page->getMetadata( 'externalLinks' ) ) == 0
+			if ( $this->config['ignoreSmallPages']
+				&& count( $page->getMetadata( 'externalLinks' ) ) == 0
 				&& strlen( $page->getMetadata( 'content' ) ) < 500 ) {
 				// Ignore small pages with no external links
 				continue;

@@ -63,6 +63,9 @@ $wgSmiteSpamCheckers = array(
 // Pages analyzed as having a spam "probability" higher than this will be shown on Special Page
 $wgSmiteSpamThreshold = 0.7;
 
+// Ignore pages smaller than 500 characters?
+$wgSmiteSpamIgnoreSmallPages = true;
+
 // Should SmiteSpam ignore all pages that don't have any external links
 // outside of template calls?
 $wgSmiteSpamIgnorePagesWithNoExternalLinks = true;

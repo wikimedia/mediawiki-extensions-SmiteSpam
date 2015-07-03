@@ -128,13 +128,6 @@
 		},
 		displayResults: function () {
 			$( '#smitespam-page-list' ).empty();
-			$( '#smitespam-page-list' ).append( '<tr>' +
-				'<th>' + mw.msg( 'smitespam-page' ) + '</th>' +
-				'<th>' + mw.msg( 'smitespam-probability' ) + '</th>' +
-				'<th>' + mw.msg( 'smitespam-created-by' ) + '</th>' +
-				'<th>' + mw.msg( 'smitespam-preview-text' ) + '</th>' +
-				'<th>' + mw.msg( 'smitespam-delete' ) + '</th>' +
-				'</tr>' );
 			function checkboxChanged() {
 				var id = $( this ).val();
 				if ( this.checked ) {
@@ -144,29 +137,63 @@
 					pagination.data.pagesToDelete.splice( index, 1 );
 				}
 			}
-			for ( var i = 0; i < displayPageSize; ++i ) {
-				var page = results[resultPageToDisplay.getValue()][i];
-				var $row = $( '<tr>' ).attr( 'id', 'result-row-page-' + page.id );
-				$( '<td></td>' ).html( page.link ).appendTo( $row );
-				$( '<td></td>' ).text( page['spam-probability-text'] ).appendTo( $row );
-				$( '<td></td>' ).html( users[page.creator] || page.creator ).appendTo( $row );
-				$( '<td></td>' ).text( page.preview ).appendTo( $row );
-				if ( $.inArray( page.id.toString(), pagination.data.pagesDeleted ) !== -1 ) {
-					$( '<td></td>' ).text( mw.msg( 'smitespam-delete-page-success-msg' ) ).appendTo( $row );
-				} else if ( $.inArray( page.id.toString(), pagination.data.failedToDeletePages ) !== -1 ) {
-					$( '<td></td>' ).text( mw.msg( 'smitespam-delete-page-failure-msg' ) ).appendTo( $row );
-				} else {
-					var $checkbox = $( '<input>', {
-						type: 'checkbox',
-						value: page.id
-					} )
-						.on( 'change', checkboxChanged );
-					if ( $.inArray( $checkbox.val(), pagination.data.pagesToDelete ) !== -1 ) {
-						$checkbox.attr( 'checked', 'checked' );
-					}
-					$( '<td></td>' ).append( $checkbox ).appendTo( $row );
+			var creators = {};
+			var i, page;
+			var resultsToDisplay = results[resultPageToDisplay.getValue()];
+			for ( i = 0; i < resultsToDisplay.length; ++i ) {
+				page = resultsToDisplay[i];
+				if ( !( page.creator in creators ) ) {
+					creators[page.creator] = {};
+					creators[page.creator].pages = [];
+					creators[page.creator].totalSpamValue = 0;
 				}
-				$( '#smitespam-page-list' ).append( $row );
+				creators[page.creator].pages.push( page );
+				creators[page.creator].totalSpamValue += page['spam-probability-value'];
+			}
+			var groupedPages = [];
+			$.each( creators, function ( key, value ) {
+				value.creator = key;
+				groupedPages.push( value );
+			} );
+			groupedPages.sort( function ( a, b ) {
+				return b.totalSpamValue - a.totalSpamValue;
+			} );
+			for ( i = 0; i < groupedPages.length; i++ ) {
+				var group = groupedPages[i].pages;
+				var groupCreator = groupedPages[i].creator;
+				var $creatorCell = $( '<th>' ).attr( 'colspan', 5 )
+					.html( mw.msg( 'smitespam-created-by' ) + ' ' + users[groupCreator] || groupCreator );
+				var $creatorRow = $( '<tr>' ).append( $creatorCell );
+				$( '#smitespam-page-list' ).append( $creatorRow );
+				$( '#smitespam-page-list' ).append( '<tr>' +
+					'<th>' + mw.msg( 'smitespam-page' ) + '</th>' +
+					'<th>' + mw.msg( 'smitespam-probability' ) + '</th>' +
+					'<th>' + mw.msg( 'smitespam-preview-text' ) + '</th>' +
+					'<th>' + mw.msg( 'smitespam-delete' ) + '</th>' +
+					'</tr>' );
+				for ( var j = 0; j < group.length; j++ ) {
+					page = group[j];
+					var $row = $( '<tr>' ).attr( 'id', 'result-row-page-' + page.id );
+					$( '<td></td>' ).html( page.link ).appendTo( $row );
+					$( '<td></td>' ).text( page['spam-probability-text'] ).appendTo( $row );
+					$( '<td></td>' ).text( page.preview ).appendTo( $row );
+					if ( $.inArray( page.id.toString(), pagination.data.pagesDeleted ) !== -1 ) {
+						$( '<td></td>' ).text( mw.msg( 'smitespam-delete-page-success-msg' ) ).appendTo( $row );
+					} else if ( $.inArray( page.id.toString(), pagination.data.failedToDeletePages ) !== -1 ) {
+						$( '<td></td>' ).text( mw.msg( 'smitespam-delete-page-failure-msg' ) ).appendTo( $row );
+					} else {
+						var $checkbox = $( '<input>', {
+							type: 'checkbox',
+							value: page.id
+						} )
+							.on( 'change', checkboxChanged );
+						if ( $.inArray( $checkbox.val(), pagination.data.pagesToDelete ) !== -1 ) {
+							$checkbox.attr( 'checked', 'checked' );
+						}
+						$( '<td></td>' ).append( $checkbox ).appendTo( $row );
+					}
+					$( '#smitespam-page-list' ).append( $row );
+				}
 			}
 		}
 	};
@@ -191,12 +218,12 @@
 		if ( 'delete' in data ) {
 			pagination.data.pagesDeleted.push( pageID );
 			if ( row.length ) {
-				row.find( 'td' ).eq( 4 ).text( mw.msg( 'smitespam-delete-page-success-msg' ) );
+				row.find( 'td' ).eq( 3 ).text( mw.msg( 'smitespam-delete-page-success-msg' ) );
 			}
 		} else if ( 'error' in data ) {
 			pagination.data.failedToDeletePages.push( pageID );
 			if ( row.length ) {
-				row.find( 'td' ).eq( 4 ).text( mw.msg( 'smitespam-delete-page-failure-msg' ) );
+				row.find( 'td' ).eq( 3 ).text( mw.msg( 'smitespam-delete-page-failure-msg' ) );
 			}
 		}
 		deleteIndex++;

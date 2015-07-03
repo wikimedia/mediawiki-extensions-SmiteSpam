@@ -12,6 +12,7 @@ class SmiteSpamAnalyzer {
 	public function __construct() {
 		global $wgSmiteSpamCheckers, $wgSmiteSpamThreshold;
 		global $wgSmiteSpamIgnorePagesWithNoExternalLinks;
+		global $wgSmiteSpamIgnoreSmallPages;
 		$this->config = array(
 			'checkers' => $wgSmiteSpamCheckers,
 			'threshold' => $wgSmiteSpamThreshold,

@@ -20,5 +20,6 @@
 	"smitespam-probability-low": "Low",
 	"smitespam-probability-medium": "Medium",
 	"smitespam-probability-high": "High",
-	"smitespam-probability-very-high": "Very high"
+	"smitespam-probability-very-high": "Very high",
+	"smitespam-select": "Select: "
 }

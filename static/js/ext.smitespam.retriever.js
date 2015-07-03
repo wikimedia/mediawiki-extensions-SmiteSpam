@@ -127,6 +127,28 @@
 			$( '#displayed-page-number' ).text( resultPageToDisplay.getValue() + 1 );
 		},
 		displayResults: function () {
+			$( '#smitespam-delete-pages input[type="submit"]' ).show();
+			var $selectAll = $( '<a>' )
+				.attr( 'href', '#' )
+				.text( mw.msg( 'powersearch-toggleall' ) )
+				.on( 'click', function () {
+					$( '#smitespam-page-list input[type="checkbox"]' ).each( function () {
+						$( this ).prop( 'checked', true ).triggerHandler( 'change' );
+					} );
+				} );
+			var $selectNone = $( '<a>' )
+				.attr( 'href', '#' )
+				.text( mw.msg( 'powersearch-togglenone' ) )
+				.on( 'click', function () {
+					$( '#smitespam-page-list input[type="checkbox"]' ).each( function () {
+						$( this ).prop( 'checked', false ).triggerHandler( 'change' );
+					} );
+				} );
+			$( '#smitespam-select-options' ).empty();
+			$( '#smitespam-select-options' ).append( mw.msg( 'smitespam-select' ) );
+			$( '#smitespam-select-options' ).append( $selectAll );
+			$( '#smitespam-select-options' ).append( ', ' );
+			$( '#smitespam-select-options' ).append( $selectNone );
 			$( '#smitespam-page-list' ).empty();
 			function checkboxChanged() {
 				var id = $( this ).val();

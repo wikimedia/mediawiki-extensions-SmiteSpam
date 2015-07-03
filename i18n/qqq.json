@@ -22,5 +22,6 @@
 	"smitespam-probability-low": "Low probability\n{{Identical|Low}}",
 	"smitespam-probability-medium": "Medium probability\n{{Identical|Medium}}",
 	"smitespam-probability-high": "High probability\n{{Identical|High}}",
-	"smitespam-probability-very-high": "Very high probability"
+	"smitespam-probability-very-high": "Very high probability",
+	"smitespam-select": "Followed by two links: {{msg-mw|Powersearch-toggleall}} and {{msg-mw|Powersearch-togglenone}} which respectively selects all pages and de-selects all pages\n{{Identical|Select}}"
 }

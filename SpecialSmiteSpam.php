@@ -54,6 +54,11 @@ class SpecialSmiteSpam extends SpecialPage {
 				)
 			)
 		);
+
+		$out->addHTML( '<div id="smitespam-select-options"></div>' );
+
+		$out->addHTML( '<input type="submit" value="'
+			. $this->msg( 'smitespam-delete-selected' ) . '" style="display:none;">' );
 		$out->addHTML( Html::openElement( 'table', array(
 			'class' => 'wikitable',
 			'id' => 'smitespam-page-list',
@@ -61,7 +66,7 @@ class SpecialSmiteSpam extends SpecialPage {
 
 		$out->addHTML( Html::closeElement( 'table' ) );
 		$out->addHTML( '<input type="submit" value="'
-			. $this->msg( 'smitespam-delete-selected' ) . '">' );
+			. $this->msg( 'smitespam-delete-selected' ) . '" style="display:none;">' );
 		$out->addHTML( Html::closeElement( 'form' ) );
 
 		$out->addModules( 'ext.SmiteSpam.retriever' );

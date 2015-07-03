@@ -45,6 +45,9 @@ $wgResourceModules['ext.SmiteSpam.retriever'] = array(
 		'smitespam-delete-page-success-msg',
 		'smitespam-delete-page-failure-msg',
 		'smitespam-deleted-reason',
+		'powersearch-toggleall',
+		'powersearch-togglenone',
+		'smitespam-select',
 	),
 );
 

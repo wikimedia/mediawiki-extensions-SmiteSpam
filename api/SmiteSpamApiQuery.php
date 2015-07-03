@@ -34,10 +34,13 @@ class SmiteSpamApiQuery extends ApiBase {
 				$creator = $oldestRevision->getUserText( Revision::RAW );
 				if ( $creator ) {
 					if ( !isset( $users[$creator] ) ) {
-						$users[$creator] = Linker::link(
-							SpecialPage::getTitleFor( 'Contributions', $creator ),
-							Sanitizer::escapeHtmlAllowEntities( $creator ),
-							array( 'target' => '_blank' )
+						$users[$creator] = array(
+							'link' => Linker::link(
+								SpecialPage::getTitleFor( 'Contributions', $creator ),
+								Sanitizer::escapeHtmlAllowEntities( $creator ),
+								array( 'target' => '_blank' )
+							),
+							'blocked' => (int)User::newFromId( $oldestRevision->getUser( Revision::RAW ) )->isBlocked(),
 						);
 					}
 				} else {

@@ -13,7 +13,7 @@ class SmiteSpamApiQuery extends ApiBase {
 			$this->dieUsage( 'Limit parameter must be integer.', 'badparams' );
 		}
 
-		$ss = new SmiteSpamAnalyzer();
+		$ss = new SmiteSpamAnalyzer( false );
 		$spamPages = $ss->run( $offset, $limit );
 
 		$pages = array();

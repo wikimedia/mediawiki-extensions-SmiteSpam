@@ -9,7 +9,7 @@ class SmiteSpamAnalyzer {
 	 */
 	protected $config;
 
-	public function __construct() {
+	public function __construct( $sort = true ) {
 		global $wgSmiteSpamCheckers, $wgSmiteSpamThreshold;
 		global $wgSmiteSpamIgnorePagesWithNoExternalLinks;
 		global $wgSmiteSpamIgnoreSmallPages;
@@ -18,6 +18,7 @@ class SmiteSpamAnalyzer {
 			'threshold' => $wgSmiteSpamThreshold,
 			'ignorePagesWithNoExternalLinks' => $wgSmiteSpamIgnorePagesWithNoExternalLinks,
 			'ignoreSmallPages' => $wgSmiteSpamIgnoreSmallPages,
+			'sort' => $sort,
 		);
 	}
 	/**
@@ -96,12 +97,14 @@ class SmiteSpamAnalyzer {
 		/**
 		 * @todo check compatibility of inline function
 		 */
-		usort(
-			$spamPages,
-			function( $pageA, $pageB ) {
-				return $pageA->spamProbability < $pageB->spamProbability;
-			}
-		);
+		if ( $this->config['sort'] ) {
+			usort(
+				$spamPages,
+				function( $pageA, $pageB ) {
+					return $pageA->spamProbability < $pageB->spamProbability;
+				}
+			);
+		}
 		return $spamPages;
 	}
 }

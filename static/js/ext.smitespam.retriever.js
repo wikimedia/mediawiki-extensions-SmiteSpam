@@ -162,7 +162,8 @@
 				var group = groupedPages[i].pages;
 				var groupCreator = groupedPages[i].creator;
 				var $creatorCell = $( '<th>' ).attr( 'colspan', 5 )
-					.html( mw.msg( 'smitespam-created-by' ) + ' ' + users[groupCreator] || groupCreator );
+					.html( mw.msg( 'smitespam-created-by' ) + ' ' +
+					( users[groupCreator] ? users[groupCreator].link : groupCreator ) );
 				var $creatorRow = $( '<tr>' ).append( $creatorCell );
 				$( '#smitespam-page-list' ).append( $creatorRow );
 				$( '#smitespam-page-list' ).append( '<tr>' +

@@ -180,12 +180,58 @@
 			groupedPages.sort( function ( a, b ) {
 				return b.totalSpamValue - a.totalSpamValue;
 			} );
+			function onBlockButton() {
+				var $this = $( this );
+				var username = $this.parent().data( 'username' );
+				$this.prop( 'disabled', true );
+				$.post( mw.config.get( 'wgScriptPath' ) + '/api.php?action=block&format=json',
+					{
+						user: username,
+						token: editToken,
+						nocreate: '',
+						noemail: '',
+						autoblock: '',
+						reason: 'Spamming'
+					},
+					'json'
+				).done( function ( data ) {
+					if ( 'block' in data ) {
+						$( '#smitespam-page-list th button' ).each( function () {
+							var $this = $( this );
+							if ( $this.parent().data( 'username' )  === username ) {
+								$this.parent().append( ' (Blocked)' );
+								$this.remove();
+								return false;
+							}
+						} );
+					} else if ( 'error' in data ) {
+						$( '#smitespam-page-list th button' ).each( function () {
+							var $this = $( this );
+							if ( $this.parent().data( 'username' )  === username ) {
+								$this.parent().append( ' (Failed to block)' );
+								$this.remove();
+								return false;
+							}
+						} );
+					}
+				} );
+			}
 			for ( i = 0; i < groupedPages.length; i++ ) {
 				var group = groupedPages[i].pages;
 				var groupCreator = groupedPages[i].creator;
 				var $creatorCell = $( '<th>' ).attr( 'colspan', 5 )
 					.html( mw.msg( 'smitespam-created-by' ) + ' ' +
-					( users[groupCreator] ? users[groupCreator].link : groupCreator ) );
+						( users[groupCreator] ? users[groupCreator].link : groupCreator ) )
+					.data( 'username', groupCreator );
+				if ( users[groupCreator] ) {
+					if ( users[groupCreator].blocked ) {
+						$creatorCell.append( ' (Blocked)' );
+					} else {
+						var $blockButton = $( '<button>' ).text( 'Block' ).on( 'click', onBlockButton );
+						$creatorCell.append( ' ' );
+						$creatorCell.append( $blockButton );
+					}
+				}
 				var $creatorRow = $( '<tr>' ).append( $creatorCell );
 				$( '#smitespam-page-list' ).append( $creatorRow );
 				$( '#smitespam-page-list' ).append( '<tr>' +

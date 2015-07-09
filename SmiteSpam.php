@@ -27,7 +27,7 @@ $wgGroupPermissions['sysop']['smitespam'] = true;
 $wgAPIModules['smitespamanalyze'] = 'SmiteSpamApiQuery';
 
 $wgResourceModules['ext.SmiteSpam.retriever'] = array(
-	'scripts' => 'js/ext.smitespam.retriever.js',
+	'scripts' => 'js/ext.smitespam.js',
 	'localBasePath' => "$ssRoot/static",
 	'remoteExtPath' => 'SmiteSpam/static',
 	'dependencies' => array(

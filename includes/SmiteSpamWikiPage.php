@@ -10,6 +10,12 @@ class SmiteSpamWikiPage extends WikiPage {
 	private $metadata;
 
 	/**
+	 * The Revision object of the oldest revision
+	 * @var Revision|null
+	 */
+	private $oldestRevision;
+
+	/**
 	 * A probability-like value representing how likely this page is a spam page.
 	 * @var float
 	 */
@@ -25,6 +31,13 @@ class SmiteSpamWikiPage extends WikiPage {
 		}
 		parent::__construct( $title );
 		$this->metadata = array();
+	}
+
+	public function getOldestRevision() {
+		if ( !$this->oldestRevision ) {
+			$this->oldestRevision = parent::getOldestRevision();
+		}
+		return $this->oldestRevision;
 	}
 
 	/**

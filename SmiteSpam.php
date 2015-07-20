@@ -20,11 +20,15 @@ require_once "$ssRoot/autoload.php";
 $wgMessagesDirs['SmiteSpam'] = "$ssRoot/i18n";
 $wgExtensionMessagesFiles['SmiteSpamAlias'] = "$ssRoot/SmiteSpam.alias.php";
 $wgSpecialPages['SmiteSpam'] = 'SpecialSmiteSpam';
+$wgSpecialPages['SmiteSpamTrustedUsers'] = 'SpecialSmiteSpamTrustedUsers';
 
 $wgAvailableRights[] = 'smitespam';
 $wgGroupPermissions['sysop']['smitespam'] = true;
 
 $wgAPIModules['smitespamanalyze'] = 'SmiteSpamApiQuery';
+$wgAPIModules['smitespamtrustuser'] = 'SmiteSpamApiTrustUser';
+
+$wgHooks['LoadExtensionSchemaUpdates'][] = 'SmiteSpamHooks::createTables';
 
 $wgResourceModules['ext.SmiteSpam.retriever'] = array(
 	'scripts' => 'js/ext.smitespam.js',

@@ -41,10 +41,17 @@
 			ajaxQueries.pages.numSent++;
 		},
 		processResponse: function ( data ) {
-			var receivedPages = data.smitespamanalyze.pages;
-			$.extend( users, data.smitespamanalyze.users );
-			$.merge( results, receivedPages );
-			displayResults();
+			if ( 'smitespamanalyze' in data ) {
+				var receivedPages = data.smitespamanalyze.pages;
+				$.extend( users, data.smitespamanalyze.users );
+				$.merge( results, receivedPages );
+				displayResults();
+			} else if ( 'error' in data ) {
+				if ( data.error.code === 'internal_api_error_DBQueryError' ) {
+					createErrorbox();
+					$( '<p>' ).text( 'Database error! Did you forget to run maintenance/update.php?' ).appendTo( '#ajax-errorbox' );
+				}
+			}
 		}
 	};
 
@@ -78,12 +85,7 @@
 					row.remove();
 				}
 				refreshRangeDisplayer();
-				if ( $( '#ajax-successbox' ).length === 0 ) {
-					var $successbox = $( '<div>', { id: 'ajax-successbox' } )
-						.addClass( 'successbox' );
-					$( '#pagination' ).append( $successbox );
-					$( '#pagination' ).append( '<br>' );
-				}
+				createSuccessbox();
 				// TODO i18n
 				$( '#ajax-successbox' ).append( '<p>Page "' + pageTitleText + '" deleted.</p>' );
 			} else if ( 'error' in data ) {
@@ -91,12 +93,7 @@
 				if ( row.length ) {
 					row.find( 'td' ).eq( 3 ).text( mw.msg( 'smitespam-delete-page-failure-msg' ) );
 				}
-				if ( $( '#ajax-errorbox' ).length === 0 ) {
-					var $errorbox = $( '<div>', { id: 'ajax-errorbox' } )
-						.addClass( 'errorbox' );
-					$( '#pagination' ).append( $errorbox );
-					$( '#pagination' ).append( '<br>' );
-				}
+				createErrorbox();
 				// TODO i18n
 				$( '#ajax-errorbox' ).append( '<p>Failed to delete page "' + pageTitleText + '".</p>' );
 			}
@@ -133,18 +130,14 @@
 				$( '#smitespam-page-list th .block-checkbox-container' ).each( function () {
 					var $this = $( this );
 					if ( $this.parent().data( 'username' )  === username ) {
+						$this.empty();
 						// TODO i18n
-						$this.parent().append( ' (Blocked)' );
-						$this.remove();
+						$this.append( ' &middot; (Blocked)' );
+						$this.parent().find( '.trust-user-button-container' ).remove();
 						return false;
 					}
 				} );
-				if ( $( '#ajax-successbox' ).length === 0 ) {
-					var $successbox = $( '<div>', { id: 'ajax-successbox' } )
-						.addClass( 'successbox' );
-					$( '#pagination' ).append( $successbox );
-					$( '#pagination' ).append( '<br>' );
-				}
+				createSuccessbox();
 				// TODO i18n
 				$( '#ajax-successbox' ).append( '<p>User "' + username + '" blocked.</p>' );
 			} else if ( 'error' in data ) {
@@ -152,18 +145,13 @@
 				$( '#smitespam-page-list .block-checkbox-container' ).each( function () {
 					var $this = $( this );
 					if ( $this.parent().data( 'username' )  === username ) {
+						$this.empty();
 						// TODO i18n
-						$this.parent().append( ' (Failed to block)' );
-						$this.remove();
+						$this.append( ' &middot; (Failed to block)' );
 						return false;
 					}
 				} );
-				if ( $( '#ajax-errorbox' ).length === 0 ) {
-					var $errorbox = $( '<div>', { id: 'ajax-errorbox' } )
-						.addClass( 'errorbox' );
-					$( '#pagination' ).append( $errorbox );
-					$( '#pagination' ).append( '<br>' );
-				}
+				createErrorbox();
 				// TODO i18n
 				$( '#ajax-errorbox' ).append( '<p>Failed to block user "' + username + '".</p>' );
 			}
@@ -248,6 +236,34 @@
 			}
 		}
 
+		function onTrustUserButtonClick() {
+			var $this = $( this );
+			var username = $this
+				.parent() // button container
+				.parent() // creator cell
+				.data( 'username' );
+
+			$.getJSON( mw.config.get( 'wgScriptPath' ) + '/api.php?action=smitespamtrustuser&format=json&username=' + username,
+				function ( data ) {
+					if ( 'smitespamtrustuser' in data ) {
+						$this.parent().parent().find( '.block-checkbox-container' ).remove();
+						// TODO i18n
+						$this.parent().append( 'Trusted' );
+						$this.remove();
+						createSuccessbox();
+
+						$( '#ajax-successbox' ).append( '<p>Trusted user "' + username + '".</p>' );
+					} else {
+						// TODO i18n
+						$this.parent().append( 'Failed to trust' );
+						$this.remove();
+						createErrorbox();
+						$( '#ajax-errorbox' ).append( '<p>Failed to trust user "' + username + '".</p>' );
+					}
+				}
+			);
+		}
+
 		$( '#smitespam-page-list' ).empty();
 		for ( i = 0; i < groupedPages.length; i++ ) {
 			var group = groupedPages[i].pages;
@@ -273,11 +289,20 @@
 					if ( $.inArray( $blockCheckbox.val(), usersToBlock ) !== -1 ) {
 						$blockCheckbox.attr( 'checked', 'checked' );
 					}
+					$blockCheckboxContainer.append( ' &middot; ' );
 					$blockCheckboxContainer.append( $blockCheckbox );
 					// TODO i18n
 					$blockCheckboxContainer.append( 'Block' );
-					$creatorCell.append( ' &middot; ' );
 					$creatorCell.append( $blockCheckboxContainer );
+
+					var $trustUserButtonContainer = $( '<span>' ).addClass( 'trust-user-button-container' );
+					$trustUserButtonContainer.append( ' &middot; ' );
+					// TODO i18n
+					var $trustUserButton = $( '<button>' ).text( 'Trust' )
+						.on( 'click', onTrustUserButtonClick );
+
+					$trustUserButtonContainer.append( $trustUserButton );
+					$creatorCell.append( $trustUserButtonContainer );
 				}
 			}
 			var $creatorRow = $( '<tr>' ).append( $creatorCell );
@@ -361,6 +386,24 @@
 		var numDisplayed = $( '.result-row' ).length;
 		$( '#smitespam-displayed-range-to' ).text( fromPageIndex + numDisplayed - 1 );
 		$( '#smitespam-displayed-range' ).show();
+	}
+
+	function createSuccessbox() {
+		if ( $( '#ajax-successbox' ).length === 0 ) {
+			var $successbox = $( '<div>', { id: 'ajax-successbox' } )
+				.addClass( 'successbox' );
+			$( '#pagination' ).append( $successbox );
+			$( '#pagination' ).append( '<br>' );
+		}
+	}
+
+	function createErrorbox() {
+		if ( $( '#ajax-errorbox' ).length === 0 ) {
+			var $errorbox = $( '<div>', { id: 'ajax-errorbox' } )
+				.addClass( 'errorbox' );
+			$( '#pagination' ).append( $errorbox );
+			$( '#pagination' ).append( '<br>' );
+		}
 	}
 
 	function init() {

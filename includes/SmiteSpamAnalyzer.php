@@ -32,6 +32,17 @@ class SmiteSpamAnalyzer {
 	public function run( $offset = 0, $limit = 500 ) {
 		$dbr = wfGetDB( DB_SLAVE );
 
+		$usersResult = $dbr->select(
+			array( 'smitespam_trusted_user' ),
+			'trusted_user_id'
+		);
+
+		$trustedUsers = array();
+
+		foreach ( $usersResult as $row ) {
+			$trustedUsers[] = $row->trusted_user_id;
+		}
+
 		$result = $dbr->select(
 			array( 'page' ),
 			'page_id',
@@ -62,6 +73,12 @@ class SmiteSpamAnalyzer {
 				|| !method_exists( $page->getContent(), 'getNativeData' ) ) {
 				// Page does not contain regular wikitext
 				// or cannot get content
+				continue;
+			}
+
+			$creatorID = $page->getOldestRevision()->getUser( Revision::RAW );
+
+			if ( in_array( $creatorID, $trustedUsers ) ) {
 				continue;
 			}
 

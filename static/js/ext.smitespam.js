@@ -228,11 +228,16 @@
 
 		function onBlockCheckboxChange() {
 			var username = $( this ).val();
+			var headingsRow = $( this ).closest( 'tr' ).next();
+			var $checkboxes = headingsRow.nextUntil( ':not(.result-row)' )
+				.find( 'input[type=checkbox]' );
 			if ( this.checked ) {
 				usersToBlock.push( username );
+				$checkboxes.prop( 'checked', true );
 			} else {
 				var index = $.inArray( username, usersToBlock );
 				usersToBlock.splice( index, 1 );
+				$checkboxes.prop( 'checked', false );
 			}
 		}
 

@@ -21,6 +21,7 @@
 	key value pairs of type:
 	username: {
 		blocked: false,
+		isIP: false,
 		link: ''
 	}
 	*/
@@ -228,11 +229,24 @@
 
 		function onBlockCheckboxChange() {
 			var username = $( this ).val();
+			var userIsIP = false;
+			if ( username in users && users[username].isIP ) {
+				userIsIP = true;
+			}
+			var headingsRow = $( this ).closest( 'tr' ).next();
+			var $checkboxes = headingsRow.nextUntil( ':not(.result-row)' )
+				.find( 'input[type=checkbox]' );
 			if ( this.checked ) {
 				usersToBlock.push( username );
+				if ( !userIsIP ) {
+					$checkboxes.prop( 'checked', true );
+				}
 			} else {
 				var index = $.inArray( username, usersToBlock );
 				usersToBlock.splice( index, 1 );
+				if ( !userIsIP ) {
+					$checkboxes.prop( 'checked', false );
+				}
 			}
 		}
 

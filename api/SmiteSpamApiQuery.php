@@ -45,6 +45,7 @@ class SmiteSpamApiQuery extends ApiBase {
 								array( 'target' => '_blank' )
 							),
 							'blocked' => (int)$blocked,
+							'isIP' => (int)IP::isIPAddress( $creator )
 						);
 					}
 				} else {

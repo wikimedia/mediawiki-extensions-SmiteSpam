@@ -32,6 +32,7 @@ $wgHooks['LoadExtensionSchemaUpdates'][] = 'SmiteSpamHooks::createTables';
 
 $wgResourceModules['ext.SmiteSpam.retriever'] = array(
 	'scripts' => 'js/ext.smitespam.js',
+	'styles' => 'css/smitespam.css',
 	'localBasePath' => "$ssRoot/static",
 	'remoteExtPath' => 'SmiteSpam/static',
 	'dependencies' => array(

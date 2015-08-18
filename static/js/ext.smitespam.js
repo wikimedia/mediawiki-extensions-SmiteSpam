@@ -72,7 +72,7 @@
 		processResponse: function ( data ) {
 			var pageID = pagesToDelete[pagesToDeleteIndex];
 			var pageTitleText = pagesToDeleteTitleTexts[pagesToDeleteIndex];
-			var row = $( '#result-row-page-' + pageID );
+			var row = $( '#result-card-page-' + pageID );
 			if ( 'delete' in data ) {
 				for ( var i = 0; i < results.length; i++ ) {
 					// force both to string
@@ -127,7 +127,7 @@
 			var username = usersToBlock[usersToBlockIndex];
 			if ( 'block' in data ) {
 				users[username].blocked = true;
-				$( '#smitespam-page-list th .block-checkbox-container' ).each( function () {
+				$( '#smitespam-page-list .creator-card .block-checkbox-container' ).each( function () {
 					var $this = $( this );
 					if ( $this.parent().data( 'username' )  === username ) {
 						$this.empty();
@@ -142,7 +142,7 @@
 				$( '#ajax-successbox' ).append( '<p>User "' + username + '" blocked.</p>' );
 			} else if ( 'error' in data ) {
 				usersFailedToBlock.push( username );
-				$( '#smitespam-page-list .block-checkbox-container' ).each( function () {
+				$( '#smitespam-page-list .creator-card .block-checkbox-container' ).each( function () {
 					var $this = $( this );
 					if ( $this.parent().data( 'username' )  === username ) {
 						$this.empty();
@@ -212,11 +212,8 @@
 			if ( this.checked ) {
 				pagesToDelete.push( id );
 				var titleText = $( this )
-					.parent() // td
-					.parent() // tr
-					.find( 'td' )
-					.eq( 0 ) // first cell
-					.find( 'a' )
+					.closest( '.card' )
+					.find( '.smitespam-page-title a' )
 					.text();
 				pagesToDeleteTitleTexts.push( titleText );
 			} else {
@@ -228,16 +225,16 @@
 
 		function onBlockCheckboxChange() {
 			var username = $( this ).val();
-			var headingsRow = $( this ).closest( 'tr' ).next();
-			var $checkboxes = headingsRow.nextUntil( ':not(.result-row)' )
+			var $userCard = $( this ).closest( '.creator-card' ).next();
+			var $checkboxes = $userCard.nextUntil( ':not(.card)' )
 				.find( 'input[type=checkbox]' );
 			if ( this.checked ) {
 				usersToBlock.push( username );
-				$checkboxes.prop( 'checked', true );
+				$checkboxes.prop( 'checked', true ).change();
 			} else {
 				var index = $.inArray( username, usersToBlock );
 				usersToBlock.splice( index, 1 );
-				$checkboxes.prop( 'checked', false );
+				$checkboxes.prop( 'checked', false ).change();
 			}
 		}
 
@@ -273,17 +270,20 @@
 		for ( i = 0; i < groupedPages.length; i++ ) {
 			var group = groupedPages[i].pages;
 			var groupCreator = groupedPages[i].creator;
-			var $creatorCell = $( '<th>' ).attr( 'colspan', 5 )
+			var $userGroup = $( '<div>' ).addClass( 'user-group' );
+			$userGroup.append( '<hr>' );
+			var $creatorCard = $( '<div>' )
+				.addClass( 'creator-card' )
 				.html( mw.msg( 'smitespam-created-by' ) + ' ' +
 					( users[groupCreator] ? users[groupCreator].link : groupCreator ) )
 				.data( 'username', groupCreator );
 			if ( users[groupCreator] ) {
 				if ( users[groupCreator].blocked ) {
 					// TODO i18n
-					$creatorCell.append( ' &middot; (Blocked)' );
+					$creatorCard.append( ' &middot; (Blocked)' );
 				} else if ( $.inArray( groupCreator, usersFailedToBlock ) !== -1 ) {
 					// TODO i18n
-					$creatorCell.append( ' &middot; (Failed to block)' );
+					$creatorCard.append( ' &middot; (Failed to block)' );
 				} else {
 					var $blockCheckboxContainer = $( '<span>' ).addClass( 'block-checkbox-container' );
 					var $blockCheckbox = $( '<input>', {
@@ -298,7 +298,7 @@
 					$blockCheckboxContainer.append( $blockCheckbox );
 					// TODO i18n
 					$blockCheckboxContainer.append( 'Block' );
-					$creatorCell.append( $blockCheckboxContainer );
+					$creatorCard.append( $blockCheckboxContainer );
 
 					var $trustUserButtonContainer = $( '<span>' ).addClass( 'trust-user-button-container' );
 					$trustUserButtonContainer.append( ' &middot; ' );
@@ -307,26 +307,31 @@
 						.on( 'click', onTrustUserButtonClick );
 
 					$trustUserButtonContainer.append( $trustUserButton );
-					$creatorCell.append( $trustUserButtonContainer );
+					$creatorCard.append( $trustUserButtonContainer );
 				}
 			}
-			var $creatorRow = $( '<tr>' ).append( $creatorCell );
-			$( '#smitespam-page-list' ).append( $creatorRow );
-			$( '#smitespam-page-list' ).append( '<tr>' +
-				'<th>' + mw.msg( 'smitespam-page' ) + '</th>' +
-				'<th>' + mw.msg( 'smitespam-probability' ) + '</th>' +
-				'<th>' + mw.msg( 'smitespam-preview-text' ) + '</th>' +
-				'<th>' + mw.msg( 'smitespam-delete' ) + '</th>' +
-				'</tr>' );
+			$userGroup.append( $creatorCard );
+			$userGroup.append( '<hr>' );
+			$( '#smitespam-page-list' ).append( $userGroup );
 			for ( var j = 0; j < group.length; j++ ) {
 				page = group[j];
-				var $row = $( '<tr>' ).attr( 'id', 'result-row-page-' + page.id );
-				$row.addClass( 'result-row' );
-				$( '<td></td>' ).html( page.link ).appendTo( $row );
-				$( '<td></td>' ).text( page['spam-probability-text'] ).appendTo( $row );
-				$( '<td></td>' ).text( page.preview ).appendTo( $row );
+				var $card = $( '<div>' ).attr( 'id', 'result-card-page-' + page.id );
+				$card.addClass( 'card' );
+				$card = $card.append( '<div>' ).addClass( 'row' );
+				var $cardInfoSection = $( '<div>' ).addClass( 'card-info-section' )
+					.appendTo( $card );
+				var $cardDataSection = $( '<div>' ).addClass( 'card-data-section' )
+					.appendTo( $card );
+				$( '<h3>' ).addClass( 'smitespam-page-title' )
+					.html( page.link ).appendTo( $cardDataSection );
+				$( '<p>' ).text( page.preview ).appendTo( $cardDataSection );
+				$( '<span>' )
+					.addClass( 'info-tag' )
+					.text( page['spam-probability-text'] )
+					.appendTo( $cardInfoSection );
+				$cardInfoSection.append( '<br>' );
 				if ( $.inArray( page.id.toString(), pagesFailedToDelete ) !== -1 ) {
-					$( '<td></td>' ).text( mw.msg( 'smitespam-delete-page-failure-msg' ) ).appendTo( $row );
+					$( '<td></td>' ).text( mw.msg( 'smitespam-delete-page-failure-msg' ) ).appendTo( $cardInfoSection );
 				} else {
 					var $checkbox = $( '<input>', {
 						type: 'checkbox',
@@ -336,9 +341,11 @@
 					if ( $.inArray( $checkbox.val(), pagesToDelete ) !== -1 ) {
 						$checkbox.attr( 'checked', 'checked' );
 					}
-					$( '<td></td>' ).append( $checkbox ).appendTo( $row );
+					$( '<label>' ).append( $checkbox )
+						.append( 'Delete' ) // TODO: i18n
+						.appendTo( $cardInfoSection );
 				}
-				$( '#smitespam-page-list' ).append( $row );
+				$userGroup.append( $card );
 			}
 		}
 		refreshRangeDisplayer();
@@ -377,7 +384,7 @@
 			$( '<a>', { href: '#', id: 'smitespam-pager-next' } )
 				.text( mw.msg( 'table_pager_next' ) )
 				.on( 'click', function () {
-					var jump = $( '#smitespam-page-list .result-row' ).length;
+					var jump = $( '#smitespam-page-list .card' ).length;
 					displayOffset += jump;
 					displayResults();
 				} )
@@ -388,7 +395,7 @@
 	function refreshRangeDisplayer() {
 		var fromPageIndex = displayOffset + 1;
 		$( '#smitespam-displayed-range-from' ).text( fromPageIndex );
-		var numDisplayed = $( '.result-row' ).length;
+		var numDisplayed = $( '.card' ).length;
 		$( '#smitespam-displayed-range-to' ).text( fromPageIndex + numDisplayed - 1 );
 		$( '#smitespam-displayed-range' ).show();
 	}

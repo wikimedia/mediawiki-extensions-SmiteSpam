@@ -43,6 +43,10 @@ class SpecialSmiteSpam extends SpecialPage {
 			}
 		}
 
+		$out->addHTML(
+			'<a target="_blank" href="./Special:SmiteSpamTrustedUsers">View trusted users</a>'
+		);
+
 		$out->addHTML( '<h2>' . $this->msg( 'smitespam-spam-pages-list-heading' )->text() . '</h2>' );
 
 		$out->addHTML( '<div id="pagination"></div>' );
@@ -59,12 +63,11 @@ class SpecialSmiteSpam extends SpecialPage {
 
 		$out->addHTML( '<input type="submit" value="'
 			. $this->msg( 'smitespam-delete-selected' ) . '" style="display:none;">' );
-		$out->addHTML( Html::openElement( 'table', array(
-			'class' => 'wikitable',
+		$out->addHTML( Html::openElement( 'div', array(
 			'id' => 'smitespam-page-list',
 		) ) );
 
-		$out->addHTML( Html::closeElement( 'table' ) );
+		$out->addHTML( Html::closeElement( 'div' ) );
 		$out->addHTML( '<input type="submit" value="'
 			. $this->msg( 'smitespam-delete-selected' ) . '" style="display:none;">' );
 		$out->addHTML( Html::closeElement( 'form' ) );

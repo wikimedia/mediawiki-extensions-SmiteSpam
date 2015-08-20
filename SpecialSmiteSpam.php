@@ -44,7 +44,11 @@ class SpecialSmiteSpam extends SpecialPage {
 		}
 
 		$out->addHTML(
-			'<a target="_blank" href="./Special:SmiteSpamTrustedUsers">View trusted users</a>'
+			Linker::link(
+				SpecialPage::getTitleFor( 'SmiteSpamTrustedUsers' ),
+				wfMessage( 'smitespam-view-trusted-users' )->text(),
+				array( 'target' => '_blank' )
+			)
 		);
 
 		$out->addHTML( '<h2>' . $this->msg( 'smitespam-spam-pages-list-heading' )->text() . '</h2>' );

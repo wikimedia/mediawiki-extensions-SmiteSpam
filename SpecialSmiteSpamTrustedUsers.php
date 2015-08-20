@@ -28,10 +28,9 @@ class SpecialSmiteSpamTrustedUsers extends SpecialPage {
 					);
 
 					if ( $result ) {
-						// TODO i18n
 						$out->addHTML(
 							'<div class="errorbox">' .
-							"<p>User '$username' already trusted.</p>" .
+							"<p>" . wfMessage( 'smitespam-already-trusted', $username )->text() . "</p>" .
 							'</div>'
 						);
 					} else {
@@ -45,18 +44,16 @@ class SpecialSmiteSpamTrustedUsers extends SpecialPage {
 								'trusted_user_admin_id' => $this->getUser()->getID()
 							)
 						);
-						// TODO i18n
 						$out->addHTML(
 							'<div class="successbox">' .
-							"<p>Trusted user '$username'.</p>" .
+							"<p>" . wfMessage( 'smitespam-trusted-user-message', $username )->escaped() . "</p>" .
 							'</div>'
 						);
 					}
 				} else {
-					// TODO i18n
 					$out->addHTML(
 						'<div class="errorbox">' .
-						"<p>User '$username' does not exist.</p>" .
+						"<p>" . wfMessage( 'smitespam-userdoesnotexist', $username )->escaped() . "</p>" .
 						'</div>'
 					);
 				}
@@ -70,7 +67,6 @@ class SpecialSmiteSpamTrustedUsers extends SpecialPage {
 							'smitespam_trusted_user',
 							array( 'trusted_user_id = ' . $user->getId() )
 						);
-						// TODO i18n
 						$out->addHTML(
 							'<div class="successbox">' .
 							"<p>Removed user '$usernameToDelete' from trusted users.</p>" .
@@ -94,15 +90,16 @@ class SpecialSmiteSpamTrustedUsers extends SpecialPage {
 
 		$out->addHTML( "<form method=\"post\">" );
 
-		$out->addHTML( '<label>Add user: <input type="text" name="username"></label>' .
-			' <input type="submit" value="Add" name="add">' );
+		$out->addHTML( '<label>' . wfMessage( 'smitespam-add-user-label' )->text() .
+			'<input type="text" name="username"></label>' .
+			' <input type="submit" value="' . wfMessage( 'smitespam-trust' )->text() .
+			'" name="add">' );
 
-		// TODO i18n
 		$out->addHTML( '<table class="wikitable"><tr>' .
-			'<th>Trusted User</th>' .
-			'<th>Timestamp</th>' .
-			'<th>Trusting Admin</th>' .
-			'<th>Remove</th>' .
+			'<th>' . wfMessage( 'smitespam-trusted-user' )->text() . '</th>' .
+			'<th>' . wfMessage( 'smitespam-timestamp' )->text() . '</th>' .
+			'<th>' . wfMessage( 'smitespam-trusting-admin' )->text() . '</th>' .
+			'<th>' . wfMessage( 'smitespam-remove' )->text() . '</th>' .
 			'</tr>'
 		);
 		foreach ( $result as $row ) {
@@ -119,11 +116,14 @@ class SpecialSmiteSpamTrustedUsers extends SpecialPage {
 				Sanitizer::escapeHtmlAllowEntities( $admin ),
 				array( 'target' => '_blank' )
 			);
+
+			// TODO i18n
 			$out->addHTML(
 				"<tr><td>$trustedUserContribsLink</td>" .
 				"<td>$timestamp</td>" .
 				"<td>$adminContribsLink</td>" .
-				"<td><button type=\"submit\" name=\"remove\" value=\"$trustedUser\">Remove</button></tr>"
+				"<td><button type=\"submit\" name=\"remove\" value=\"$trustedUser\">" .
+				wfMessage( 'smitespam-remove' )->text() . "</button></tr>"
 			);
 		}
 		$out->addHTML( '</table>' );

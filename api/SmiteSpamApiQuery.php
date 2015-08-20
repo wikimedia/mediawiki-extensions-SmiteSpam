@@ -29,8 +29,13 @@ class SmiteSpamApiQuery extends ApiBase {
 			);
 
 			$oldestRevision = $page->getOldestRevision();
+			$timestamp = '';
 
 			if ( $oldestRevision ) {
+				$timestamp = $this->getLanguage()->userTimeAndDate(
+					$oldestRevision->getTimestamp(),
+					$this->getUser()
+				);
 				$creator = $oldestRevision->getUserText( Revision::RAW );
 				if ( $creator ) {
 					if ( !isset( $users[$creator] ) ) {
@@ -78,7 +83,8 @@ class SmiteSpamApiQuery extends ApiBase {
 				'creator' => $creator,
 				'spam-probability-value' => $page->spamProbability,
 				'spam-probability-text' => $spamProbability,
-				'preview' => $previewText
+				'preview' => $previewText,
+				'timestamp' => $timestamp
 			);
 		}
 

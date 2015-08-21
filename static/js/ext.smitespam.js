@@ -330,6 +330,10 @@
 					.text( page['spam-probability-text'] )
 					.appendTo( $cardInfoSection );
 				$cardInfoSection.append( '<br>' );
+				$( '<span>' )
+					.text( page.timestamp )
+					.appendTo( $cardInfoSection );
+				$cardInfoSection.append( '<br>' );
 				if ( $.inArray( page.id.toString(), pagesFailedToDelete ) !== -1 ) {
 					$( '<td></td>' ).text( mw.msg( 'smitespam-delete-page-failure-msg' ) ).appendTo( $cardInfoSection );
 				} else {

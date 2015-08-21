@@ -65,7 +65,7 @@ class SmiteSpamApiQuery extends ApiBase {
 			}
 
 			$previewText = Sanitizer::escapeHtmlAllowEntities(
-				substr( $page->getMetadata( 'content' ), 0, 50 )
+				mb_substr( $page->getMetadata( 'content' ), 0, 50 )
 			);
 
 			if ( strlen( $page->getMetadata( 'content' ) ) > 50  ) {

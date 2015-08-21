@@ -9,7 +9,7 @@
 }
 
 .card-info-section {
-    padding: .5em;
+    padding: .2em;
     font-size: .9em;
     width: 20%;
     float: left;
@@ -46,7 +46,7 @@
 
 .card-data-section {
     background-color: #fff;
-    padding: 0 1em;
+    padding: .2em 1em;
     width: 80%;
     float: left;
 }

@@ -426,6 +426,22 @@
 			ajaxQueries.blockUser.send();
 			return false;
 		} );
+
+		$( '#smitespam-select-options' ).append( 'Select: ' );
+		$( '<a>', { href: '#' } )
+			.text( mw.msg( 'powersearch-toggleall' ) )
+			.on( 'click', function () {
+				$( '.creator-card input[type="checkbox"]' ).prop( 'checked', true ).change();
+			} )
+			.appendTo( '#smitespam-select-options' );
+		$( '#smitespam-select-options' ).append( ' &middot; ' );
+		$( '<a>', { href: '#' } )
+			.text( mw.msg( 'powersearch-togglenone' ) )
+			.on( 'click', function () {
+				$( '.creator-card input[type="checkbox"]' ).prop( 'checked', false ).change();
+			} )
+			.appendTo( '#smitespam-select-options' );
+
 		// Display from (page) - to (page)
 		var $rangeDisplayer = $( '<span>', { id: 'smitespam-displayed-range' } ).hide();
 		$( '<span>', { id: 'smitespam-displayed-range-from' } ).appendTo( $rangeDisplayer );

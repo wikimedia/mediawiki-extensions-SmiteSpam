@@ -109,7 +109,10 @@ class SpecialSmiteSpamTrustedUsers extends SpecialPage {
 				Sanitizer::escapeHtmlAllowEntities( $trustedUser ),
 				array( 'target' => '_blank' )
 			);
-			$timestamp = wfTimestamp( TS_RFC2822, $row->trusted_user_timestamp );
+			$timestamp = $this->getLanguage()->userTimeAndDate(
+				$row->trusted_user_timestamp,
+				$this->getUser()
+			);
 			$admin = User::newFromID( $row->trusted_user_admin_id )->getName();
 			$adminContribsLink = Linker::link(
 				SpecialPage::getTitleFor( 'Contributions', $admin ),

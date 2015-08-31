@@ -23,17 +23,21 @@
     margin: .2em;
 }
 
-.info-tag.red {
+.info-tag.red,
+.info-tag.probability-very-high,
+.info-tag.probability-high {
     background-color: red;
     color: white;
 }
 
-.info-tag.orange {
+.info-tag.orange,
+.info-tag.probability-medium {
     background-color: darkorange;
     color: white;
 }
 
-.info-tag.green {
+.info-tag.green,
+.info-tag.probability-low {
     background-color: green;
     color: white;
 }

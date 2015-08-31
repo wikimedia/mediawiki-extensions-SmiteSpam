@@ -315,10 +315,28 @@
 				$( '<h3>' ).addClass( 'smitespam-page-title' )
 					.html( page.link ).appendTo( $cardDataSection );
 				$( '<p>' ).text( page.preview ).appendTo( $cardDataSection );
-				$( '<span>' )
+				var $spamLevelTag = $( '<span>' )
 					.addClass( 'info-tag' )
-					.text( page['spam-probability-text'] )
 					.appendTo( $cardInfoSection );
+				if ( page['spam-probability-level'] === 0 ) {
+					$spamLevelTag
+						.text( mw.msg( 'smitespam-probability-low' ) )
+						.addClass( 'probability-low' );
+				} else if ( page['spam-probability-level'] === 1 ) {
+					$spamLevelTag
+						.text( mw.msg( 'smitespam-probability-medium' ) )
+						.addClass( 'probability-medium' );
+				} else if ( page['spam-probability-level'] === 2 ) {
+					$spamLevelTag
+						.text( mw.msg( 'smitespam-probability-high' ) )
+						.addClass( 'probability-high' );
+				} else if ( page['spam-probability-level'] === 3 ) {
+					$spamLevelTag
+						.text( mw.msg( 'smitespam-probability-very-high' ) )
+						.addClass( 'probability-very-high' );
+				} else {
+					$spamLevelTag.text( '-' );
+				}
 				$cardInfoSection.append( '<br>' );
 				$( '<span>' )
 					.text( page.timestamp )

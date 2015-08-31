@@ -60,13 +60,13 @@ class SmiteSpamApiQuery extends ApiBase {
 			}
 
 			if ( $page->spamProbability <= 0.5 ) {
-				$spamProbability = wfMessage( 'smitespam-probability-low' )->text();
+				$spamProbabilityLevel = 0;
 			} elseif ( $page->spamProbability <= 1 ) {
-				$spamProbability = wfMessage( 'smitespam-probability-medium' )->text();
+				$spamProbabilityLevel = 1;
 			} elseif ( $page->spamProbability <= 2 ) {
-				$spamProbability = wfMessage( 'smitespam-probability-high' )->text();
+				$spamProbabilityLevel = 2;
 			} else {
-				$spamProbability = wfMessage( 'smitespam-probability-very-high' )->text();
+				$spamProbabilityLevel = 3;
 			}
 
 			$previewText = Sanitizer::escapeHtmlAllowEntities(
@@ -82,7 +82,7 @@ class SmiteSpamApiQuery extends ApiBase {
 				'link' => $titleLink,
 				'creator' => $creator,
 				'spam-probability-value' => $page->spamProbability,
-				'spam-probability-text' => $spamProbability,
+				'spam-probability-level' => $spamProbabilityLevel,
 				'preview' => $previewText,
 				'timestamp' => $timestamp
 			);

@@ -36,7 +36,6 @@
 	"smitespam-block-failed": "Failed to block",
 	"smitespam-blocked-user-success-msg": "Blocked user \"$1\".",
 	"smitespam-blocked-user-failure-msg": "Failed to block user \"$1\".",
-	"smitespam-loading": "Loading...",
 	"smitespam-trusted-user-success-msg": "Trusted user \"$1\".",
 	"smitespam-trusted-user-failure-msg": "Failed to trust user \"$1\".",
 	"smitespam-view-trusted-users": "View trusted users"

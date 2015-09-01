@@ -57,7 +57,8 @@ $wgResourceModules['ext.SmiteSpam.retriever'] = array(
 		'smitespam-trusted-user-failure-msg',
 		'smitespam-trusted-user-success-msg',
 		'powersearch-toggleall',
-		'powersearch-togglenone'
+		'powersearch-togglenone',
+		'smitespam-deleted-reason'
 	),
 );
 

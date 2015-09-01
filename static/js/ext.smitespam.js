@@ -7,6 +7,7 @@
 	// Data
 	var results = []; // pages
 	var displayOffset = 0;
+	var oldDisplayOffset = -1;
 
 	var pagesToDelete = [];
 	var pagesToDeleteIndex = 0;
@@ -181,6 +182,9 @@
 	}
 
 	function displayResults() {
+		if ( oldDisplayOffset === displayOffset ) {
+			return;
+		}
 		if ( displayOffset + displaySize > results.length &&
 			ajaxQueries.pages.numSent * querySize < numPages ) {
 			$( '#smitespam-loading' ).show();
@@ -344,6 +348,11 @@
 		}
 		refreshRangeDisplayer();
 		refreshPager();
+		oldDisplayOffset = displayOffset;
+		if ( displayOffset + displaySize * 2 > results.length &&
+			ajaxQueries.pages.numSent * querySize < numPages ) {
+			ajaxQueries.pages.send();
+		}
 	}
 
 	function refreshPager() {

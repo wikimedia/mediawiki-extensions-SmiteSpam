@@ -38,7 +38,6 @@
 	"smitespam-block-failed": "Status message displayed next to a username when the block request has failed",
 	"smitespam-blocked-user-success-msg": "Success message when a user is succesfully blocked",
 	"smitespam-blocked-user-failure-msg": "Failure message when a user could not be blocked",
-	"smitespam-loading": "Displaying to indicate that more pages are loading",
 	"smitespam-trusted-user-success-msg": "Success message when a user is succesfully trusted",
 	"smitespam-trusted-user-failure-msg": "Success message when a user could not be trusted",
 	"smitespam-view-trusted-users": "Link text to go to Special:SmiteSpamTrustedUsers page"

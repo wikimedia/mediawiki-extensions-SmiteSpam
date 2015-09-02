@@ -443,7 +443,10 @@
 		$( '<span>', { id: 'smitespam-displayed-range-to' } ).appendTo( $rangeDisplayer );
 		$pagination.append( $rangeDisplayer );
 
-		$( '<span>', { id: 'smitespam-loading' } ).text( ' (' + mw.msg( 'smitespam-loading' ) + ')' ).appendTo( $pagination );
+		$( '<span>', { id: 'smitespam-loading' } )
+			.html( '&nbsp;' )
+			.append( $.createSpinner() )
+			.appendTo( $pagination );
 
 		var $pager = $( '<p>' ).addClass( 'pager' );
 		$( '<span>', { id: 'smitespam-pager-prev-container' } ).appendTo( $pager );

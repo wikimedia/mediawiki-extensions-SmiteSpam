@@ -37,6 +37,7 @@ $wgResourceModules['ext.SmiteSpam.retriever'] = array(
 	'remoteExtPath' => 'SmiteSpam/static',
 	'dependencies' => array(
 		'mediawiki.jqueryMsg',
+		'jquery.spinner'
 	),
 	'messages' => array(
 		'smitespam-block',

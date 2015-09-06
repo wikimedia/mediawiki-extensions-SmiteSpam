@@ -4,15 +4,20 @@
 			"Robby"
 		]
 	},
-	"smitespam-delete-page-success-msg": "Geläscht Säit",
-	"smitespam-delete-page-failure-msg": "Säit konnt net geläscht ginn",
-	"smitespam-page": "Säit",
 	"smitespam-delete": "Läschen",
-	"smitespam-probability": "Wahrscheinlechkeet",
-	"smitespam-preview-text": "Text kucken ouni ze späicheren",
-	"smitespam-delete-selected": "Ugewielt läschen",
+	"smitespam-delete-page-success-msg": "Säit \"$1\" gouf geläscht.",
+	"smitespam-delete-page-failure-msg": "D'Säit \"$1\" konnt net geläscht ginn",
+	"action-smitespam": "D'Erweiderung 'SmiteSpam' benotzen",
 	"smitespam-probability-low": "Niddereg",
 	"smitespam-probability-medium": "Mëttel",
 	"smitespam-probability-high": "Héich",
-	"smitespam-probability-very-high": "Ganz héich"
+	"smitespam-probability-very-high": "Ganz héich",
+	"smitespam-select": "Eraussichen:",
+	"smitespam-userdoesnotexist": "{{GENDER:$1|De Benotzer|D'Benotzerin}} \"$1\" gëtt et net.",
+	"smitespam-add-user-label": "Benotzer derbäisetzen",
+	"smitespam-timestamp": "Zäitstempel",
+	"smitespam-remove": "Ewechhuelen",
+	"smitespam-block": "Spären",
+	"smitespam-blocked": "Gespaart",
+	"smitespam-block-failed": "Konnt net gespaart ginn"
 }

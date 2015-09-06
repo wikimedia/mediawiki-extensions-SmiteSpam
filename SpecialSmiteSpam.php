@@ -19,30 +19,6 @@ class SpecialSmiteSpam extends SpecialPage {
 
 		$numPages = SiteStats::pages();
 
-		$request = $this->getRequest();
-
-		if ( $request->wasPosted() ) {
-			$ssDeleter = new SmiteSpamDeleter();
-			$pageIDs = $request->getArray( 'delete' );
-			if ( $pageIDs ) {
-				$messages = $ssDeleter->deletePages( $pageIDs );
-				if ( isset( $messages['error'] ) ) {
-					$out->addHTML( '<div class="errorbox">' );
-					foreach ( $messages['error'] as $message ) {
-						$out->addHTML( '<p>' . $message . '</p>' );
-					}
-					$out->addHTML( '</div>' );
-				}
-				if ( isset( $messages['success'] ) ) {
-					$out->addHTML( '<div class="successbox">' );
-					foreach ( $messages['success'] as $message ) {
-						$out->addHTML( '<p>' . $message . '</p>' );
-					}
-					$out->addHTML( '</div>' );
-				}
-			}
-		}
-
 		$out->addHTML(
 			Linker::link(
 				SpecialPage::getTitleFor( 'SmiteSpamTrustedUsers' ),

@@ -10,7 +10,8 @@ $wgExtensionCredits['antispam'][] = array(
 	'namemsg' => 'smitespam',
 	'author' => 'Vivek Ghaisas',
 	'descriptionmsg'  => 'smitespam-desc',
-	'license-name' => 'GPL-2.0'
+	'license-name' => 'GPL-2.0',
+	'version' => '0.1',
 );
 
 $ssRoot = __DIR__;

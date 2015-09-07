@@ -4,9 +4,12 @@
 			"Robby"
 		]
 	},
+	"smitespam-desc": "Weist eng [[Special:SmiteSpam|Spezialsäit]] déi den Administrateuren hëlleft fir Spamwikisäiten z'identifizéieren an ze läschen",
+	"smitespam-spam-pages-list-heading": "Méiglech Spamsäiten",
 	"smitespam-delete": "Läschen",
 	"smitespam-delete-page-success-msg": "Säit \"$1\" gouf geläscht.",
 	"smitespam-delete-page-failure-msg": "D'Säit \"$1\" konnt net geläscht ginn",
+	"smitespam-deleted-reason": "Als Spam vun der Erweiderung SmiteSpam identifizéiert.",
 	"action-smitespam": "D'Erweiderung 'SmiteSpam' benotzen",
 	"smitespam-probability-low": "Niddereg",
 	"smitespam-probability-medium": "Mëttel",
@@ -15,9 +18,13 @@
 	"smitespam-select": "Eraussichen:",
 	"smitespam-userdoesnotexist": "{{GENDER:$1|De Benotzer|D'Benotzerin}} \"$1\" gëtt et net.",
 	"smitespam-add-user-label": "Benotzer derbäisetzen",
+	"smitespam-trust": "Trauen",
 	"smitespam-timestamp": "Zäitstempel",
 	"smitespam-remove": "Ewechhuelen",
 	"smitespam-block": "Spären",
 	"smitespam-blocked": "Gespaart",
-	"smitespam-block-failed": "Konnt net gespaart ginn"
+	"smitespam-block-failed": "Konnt net gespaart ginn",
+	"smitespam-blocked-user-success-msg": "{{GENDER:$1|Gespaarte Benotzer|Gespaart Benotzerin}} \"$1\".",
+	"smitespam-blocked-user-failure-msg": "{{GENDER:$1|De Benotzer|D'Benotzerin}} \"$1\" konnt net gespaart ginn.",
+	"smitespam-view-trusted-users": "Vertrauenswürdeg Benotzer weisen"
 }

@@ -21,7 +21,7 @@
 	"smitespamtrustedusers": "SmiteSpam trusted users",
 	"smitespam-already-trusted": "User \"$1\" already {{GENDER:$1|trusted}}.",
 	"smitespam-trusted-user-message": "Trusted {{GENDER:$1|user}} \"$1\".",
-	"smitespam-userdoesnotexist": "((GENDER:$1|User}} \"$1\" does not exist.",
+	"smitespam-userdoesnotexist": "{{GENDER:$1|User}} \"$1\" does not exist.",
 	"smitespam-add-user-label": "Add user:",
 	"smitespam-trust": "Trust",
 	"smitespam-trusted": "Trusted",

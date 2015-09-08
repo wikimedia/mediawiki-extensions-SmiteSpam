@@ -1,0 +1,17 @@
+{
+	"@metadata": {
+		"authors": [
+			"Hiba Alshawi"
+		]
+	},
+	"smitespam-delete-page-success-msg": "صفحة محذوفة \"$ 1\".",
+	"smitespam-delete-page-failure-msg": "فشل في حذف الصفحة \"1 $\".",
+	"smitespam-select": "أختيار:",
+	"smitespam-add-user-label": "أضافة مستخدم",
+	"smitespam-trusted": "موثوق",
+	"smitespam-trusted-user": "مستخدم موثوق",
+	"smitespam-timestamp": "الطابع الزمني",
+	"smitespam-remove": "إزالة",
+	"smitespam-block": "حجب",
+	"smitespam-view-trusted-users": "عرض المستخدمين الموثوقين"
+}

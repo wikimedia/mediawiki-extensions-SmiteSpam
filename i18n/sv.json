@@ -2,16 +2,17 @@
 	"@metadata": {
 		"authors": [
 			"WikiPhoenix",
-			"Lokal Profil"
+			"Lokal Profil",
+			"Josve05a"
 		]
 	},
 	"smitespam": "Bekämpa spam",
 	"smitespam-desc": "Tillhandahåller en [[Special:SmiteSpam|specialsida]] för att hjälpa administratörer att identifiera radera spam på wikisidor.",
+	"smitespam-delete": "Radera",
 	"smitespam-delete-page-success-msg": "Radera sida",
 	"smitespam-delete-page-failure-msg": "Misslyckades med att radera sida",
-	"smitespam-page": "Sida",
-	"smitespam-delete": "Radera",
-	"smitespam-probability": "Sannolikhet",
 	"smitespam-created-by": "Skapad av",
-	"smitespam-preview-text": "Förhandsgranska text"
+	"smitespam-trusted": "Betrodd",
+	"smitespam-trusted-user": "Betrodd användare",
+	"smitespam-blocked": "Blockerad"
 }

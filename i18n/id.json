@@ -1,0 +1,13 @@
+{
+	"@metadata": {
+		"authors": [
+			"Ilham"
+		]
+	},
+	"smitespam-delete-page-success-msg": "Hapus halaman \"$\".",
+	"smitespam-select": "Pilih:",
+	"smitespam-trusted-user": "Pengguna terpercaya",
+	"smitespam-timestamp": "Stempel waktu",
+	"smitespam-remove": "Hapus",
+	"smitespam-block": "Blokir"
+}

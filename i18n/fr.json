@@ -1,10 +1,31 @@
 {
 	"@metadata": {
 		"authors": [
-			"Macofe"
+			"Macofe",
+			"Wladek92"
 		]
 	},
-	"smitespam-page": "Page",
 	"smitespam-delete": "Supprimer",
-	"smitespam-probability": "Probabilité"
+	"smitespam-delete-page-success-msg": "Page \"$1\" supprimée .",
+	"action-smitespam": "utiliser l'extension SmiteSpam",
+	"smitespam-probability-low": "Bas",
+	"smitespam-probability-medium": "Moyen",
+	"smitespam-probability-high": "Elevé",
+	"smitespam-probability-very-high": "Très élevé",
+	"smitespam-select": "Choisir :",
+	"smitespamtrustedusers": "Utilisateurs confirmés SmiteSpam",
+	"smitespam-add-user-label": "Ajouter l'utilisateur :",
+	"smitespam-trusted": "Confirmé",
+	"smitespam-trust-failed": "Echec pendant la confirmation",
+	"smitespam-trusted-user": "Utilisateur de confiance",
+	"smitespam-timestamp": "Horodatage",
+	"smitespam-trusting-admin": "Confirmation de l'administrateur",
+	"smitespam-remove": "Supprimer",
+	"smitespam-block-reason": "Pollution par courriels",
+	"smitespam-block": "Bloc",
+	"smitespam-blocked": "Bloqué",
+	"smitespam-block-failed": "Echec pendant le blocage",
+	"smitespam-blocked-user-success-msg": "{{GENDER:$1|utilisateur}} bloqué \"$1\".",
+	"smitespam-blocked-user-failure-msg": "Echec pendant le blocage de l'{{GENDER:$1|utilisateur}} \"$1\".",
+	"smitespam-view-trusted-users": "Visualiser les utilisateurs confirmés"
 }

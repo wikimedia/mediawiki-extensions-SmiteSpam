@@ -19,6 +19,8 @@
 	"smitespam-userdoesnotexist": "{{GENDER:$1|De Benotzer|D'Benotzerin}} \"$1\" gëtt et net.",
 	"smitespam-add-user-label": "Benotzer derbäisetzen",
 	"smitespam-trust": "Trauen",
+	"smitespam-trusted": "Deem een traue kann",
+	"smitespam-trusted-user": "Benotzer deem een traue kann",
 	"smitespam-timestamp": "Zäitstempel",
 	"smitespam-remove": "Ewechhuelen",
 	"smitespam-block": "Spären",

@@ -6,12 +6,12 @@
 		]
 	},
 	"smitespam-spam-pages-list-heading": "Possibili pagine di spam",
-	"smitespam-delete-page-success-msg": "Pagina cancellata",
-	"smitespam-page": "Pagina",
 	"smitespam-delete": "Cancella",
-	"smitespam-probability": "Probabilità",
+	"smitespam-delete-page-success-msg": "Pagina cancellata",
 	"smitespam-created-by": "Creato da",
-	"smitespam-preview-text": "Testo in anteprima",
-	"smitespam-delete-selected": "Cancella ciò che è selezionato",
-	"smitespam-deleted-reason": "Identificato come spam da Estensione:SmiteSpam."
+	"smitespam-deleted-reason": "Identificato come spam da Estensione:SmiteSpam.",
+	"smitespam-select": "Seleziona:",
+	"smitespam-remove": "Rimuovi",
+	"smitespam-block": "Blocca",
+	"smitespam-blocked": "Bloccato"
 }

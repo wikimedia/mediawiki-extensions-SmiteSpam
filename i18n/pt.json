@@ -1,7 +1,8 @@
 {
 	"@metadata": {
 		"authors": [
-			"Vitorvicentevalente"
+			"Vitorvicentevalente",
+			"Macofe"
 		]
 	},
 	"smitespam": "Eliminar spam",
@@ -9,9 +10,9 @@
 	"smitespam-spam-pages-list-heading": "Possíveis páginas de spam",
 	"smitespam-delete": "Eliminar",
 	"smitespam-delete-page-success-msg": "Página $1 eliminada.",
-	"smitespam-delete-page-failure-msg": "Falha ao eliminar a página",
+	"smitespam-delete-page-failure-msg": "Falha ao eliminar a página \"$1\".",
 	"smitespam-created-by": "{{GENDER:$1|Criada}} por $1",
-	"smitespam-deleted-reason": "Identificado como spam pela Extensão:SmiteSpam.",
+	"smitespam-deleted-reason": "Identificado como spam pela extensão SmiteSpam.",
 	"action-smitespam": "usar a extensão EliminarSpam",
 	"smitespam-probability-low": "Baixa",
 	"smitespam-probability-medium": "Média",

@@ -4,7 +4,10 @@
 			"Macofe"
 		]
 	},
-	"smitespam-page": "Pàgina",
 	"smitespam-delete": "Esborrar",
-	"smitespam-probability": "Probabilitat"
+	"smitespam-select": "Selecciona:",
+	"smitespam-add-user-label": "Afegeix usuari:",
+	"smitespam-remove": "Elimina",
+	"smitespam-block": "Bloca",
+	"smitespam-blocked": "Bloquejat"
 }

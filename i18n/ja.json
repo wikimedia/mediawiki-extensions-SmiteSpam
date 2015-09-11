@@ -1,0 +1,11 @@
+{
+	"@metadata": {
+		"authors": [
+			"Sujiniku"
+		]
+	},
+	"smitespam-select": "選択:",
+	"smitespam-timestamp": "タイムスタンプ",
+	"smitespam-remove": "除去",
+	"smitespam-block": "ブロック"
+}

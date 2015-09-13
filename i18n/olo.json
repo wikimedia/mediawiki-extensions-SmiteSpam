@@ -4,9 +4,12 @@
 			"Mashoi7"
 		]
 	},
+	"smitespam-delete-page-success-msg": "Iäre otettu sivu \"$1\"",
+	"smitespam-created-by": "{{GENDER:$1|Luadinuh}} $1",
 	"smitespam-select": "Valliče:",
 	"smitespam-add-user-label": "Ližiä käyttäi:",
 	"smitespam-timestamp": "Aiguštampu",
 	"smitespam-block": "Estä",
-	"smitespam-blocked": "Estetty"
+	"smitespam-blocked": "Estetty",
+	"smitespam-blocked-user-success-msg": "Estetty {{GENDER:$1|käyttäi}} \"$1\"."
 }

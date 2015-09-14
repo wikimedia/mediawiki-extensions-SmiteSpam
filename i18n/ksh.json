@@ -16,5 +16,12 @@
 	"smitespam-probability-low": "Kleijn",
 	"smitespam-probability-medium": "Meddel",
 	"smitespam-probability-high": "Huh",
-	"smitespam-probability-very-high": "Ärsch huh"
+	"smitespam-probability-very-high": "Ärsch huh",
+	"smitespam-select": "Ußsöhke:",
+	"smitespam-already-trusted": "{{GENDER:$1|Däm|Däm|Däm Metmaacher|Dä|Däm}} „$1“ vertroue mer alld.",
+	"smitespam-userdoesnotexist": "{{GENDER:$1|Dä|Dä|Dä Metmaacher|Dä|Dä}} „$1“ jidd_et nit.",
+	"smitespam-add-user-label": "Donn ene Metmaacher derbei:",
+	"smitespam-trust": "Vertroue",
+	"smitespam-timestamp": "Dattum un Zigg",
+	"smitespam-remove": "Fott nämme"
 }

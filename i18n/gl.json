@@ -31,6 +31,7 @@
 	"smitespam-timestamp": "Data e hora",
 	"smitespam-trusting-admin": "Administrador de confianza",
 	"smitespam-remove": "Eliminar",
+	"smitespam-block-reason": "Publicidade por correo",
 	"smitespam-block": "Bloquear",
 	"smitespam-blocked": "Bloqueado",
 	"smitespam-block-failed": "Non se puido bloquear",

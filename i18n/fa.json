@@ -1,0 +1,17 @@
+{
+	"@metadata": {
+		"authors": [
+			"Reza1615"
+		]
+	},
+	"smitespam-delete": "حذف",
+	"smitespam-probability-low": "پایین",
+	"smitespam-probability-medium": "تکنیک/سبک",
+	"smitespam-probability-high": "بالا",
+	"smitespam-select": "انتخاب:",
+	"smitespam-trusted": "مطمئن",
+	"smitespam-timestamp": "برچسب زمان",
+	"smitespam-remove": "حذف",
+	"smitespam-block": "بستن",
+	"smitespam-blocked": "بسته شده"
+}

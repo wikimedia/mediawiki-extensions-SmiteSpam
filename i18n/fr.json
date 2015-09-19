@@ -2,11 +2,12 @@
 	"@metadata": {
 		"authors": [
 			"Macofe",
-			"Wladek92"
+			"Wladek92",
+			"Orlodrim"
 		]
 	},
 	"smitespam-delete": "Supprimer",
-	"smitespam-delete-page-success-msg": "Page \"$1\" supprimée .",
+	"smitespam-delete-page-success-msg": "Page « $1 » supprimée.",
 	"action-smitespam": "utiliser l'extension SmiteSpam",
 	"smitespam-probability-low": "Bas",
 	"smitespam-probability-medium": "Moyen",
@@ -26,6 +27,6 @@
 	"smitespam-blocked": "Bloqué",
 	"smitespam-block-failed": "Echec pendant le blocage",
 	"smitespam-blocked-user-success-msg": "{{GENDER:$1|utilisateur}} bloqué \"$1\".",
-	"smitespam-blocked-user-failure-msg": "Echec pendant le blocage de l'{{GENDER:$1|utilisateur}} \"$1\".",
+	"smitespam-blocked-user-failure-msg": "Échec du blocage de l'{{GENDER:$1|utilisateur}} « $1 ».",
 	"smitespam-view-trusted-users": "Visualiser les utilisateurs confirmés"
 }

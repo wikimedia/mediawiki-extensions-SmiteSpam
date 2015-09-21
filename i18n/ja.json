@@ -5,7 +5,11 @@
 		]
 	},
 	"smitespam-select": "選択:",
+	"smitespam-trust": "信頼",
+	"smitespam-trusted-user": "信頼された利用者",
 	"smitespam-timestamp": "タイムスタンプ",
+	"smitespam-trusting-admin": "信頼元の管理者",
 	"smitespam-remove": "除去",
+	"smitespam-block-reason": "スパム",
 	"smitespam-block": "ブロック"
 }

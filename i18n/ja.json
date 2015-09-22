@@ -11,5 +11,6 @@
 	"smitespam-trusting-admin": "信頼元の管理者",
 	"smitespam-remove": "除去",
 	"smitespam-block-reason": "スパム",
-	"smitespam-block": "ブロック"
+	"smitespam-block": "ブロック",
+	"smitespam-blocked": "ブロック済み"
 }

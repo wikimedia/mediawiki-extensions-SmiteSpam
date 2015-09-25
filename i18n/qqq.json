@@ -7,6 +7,7 @@
 		]
 	},
 	"smitespam": "The name of the extension's entry in Special:SpecialPages. The word \"smite\" means to strike a heavy blow with a weapon or the hand.",
+	"smitespam-extensionname": "{{name}}",
 	"smitespam-desc": "Description of what Extension:SmiteSpam does.",
 	"smitespam-spam-pages-list-heading": "Heading for the list of possible spam pages.",
 	"smitespam-delete": "The verb 'delete'.\n{{Identical|Delete}}",

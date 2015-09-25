@@ -5,6 +5,7 @@
 		]
 	},
 	"smitespam": "Борба со спам",
+	"smitespam-extensionname": "Борба со спам",
 	"smitespam-desc": "Дава [[Special:SmiteSpam|службена страница]] која им помага на администраторите да препознаваат и бришат спам-страници на викито.",
 	"smitespam-spam-pages-list-heading": "Можни страници со спам",
 	"smitespam-delete": "Избриши",

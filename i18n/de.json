@@ -6,6 +6,7 @@
 		]
 	},
 	"smitespam": "Spam bekämpfen",
+	"smitespam-extensionname": "Smite spam",
 	"smitespam-desc": "Bietet eine [[Special:SmiteSpam|Spezialseite]], um Administratoren beim Identifizieren und Löschen von Spam-Seiten im Wiki zu helfen",
 	"smitespam-spam-pages-list-heading": "Mögliche Spamseiten",
 	"smitespam-delete": "Löschen",

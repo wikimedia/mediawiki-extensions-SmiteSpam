@@ -7,7 +7,7 @@ if ( !defined( 'MEDIAWIKI' ) ) {
 $wgExtensionCredits['antispam'][] = array(
 	'path' => __FILE__,
 	'name' => 'SmiteSpam',
-	'namemsg' => 'smitespam',
+	'namemsg' => 'smitespam-extensionname',
 	'author' => 'Vivek Ghaisas',
 	'descriptionmsg'  => 'smitespam-desc',
 	'license-name' => 'GPL-2.0',

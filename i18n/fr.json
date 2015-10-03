@@ -6,8 +6,14 @@
 			"Orlodrim"
 		]
 	},
+	"smitespam": "Nettoyage du pollupostage",
+	"smitespam-desc": "Fournit une [[Special:SmiteSpam|page spéciale]] pour aider les administrateurs à identifier et supprimer les pages créées par des polluposteurs.",
+	"smitespam-spam-pages-list-heading": "Pages pouvant être des pollupostages",
 	"smitespam-delete": "Supprimer",
 	"smitespam-delete-page-success-msg": "Page « $1 » supprimée.",
+	"smitespam-delete-page-failure-msg": "Échec de suppression de la page « $1 ».",
+	"smitespam-created-by": "Créée par $1",
+	"smitespam-deleted-reason": "Identifié comme pollupostage par l’extension SmiteSpam.",
 	"action-smitespam": "utiliser l'extension SmiteSpam",
 	"smitespam-probability-low": "Bas",
 	"smitespam-probability-medium": "Moyen",
@@ -15,7 +21,11 @@
 	"smitespam-probability-very-high": "Très élevé",
 	"smitespam-select": "Choisir :",
 	"smitespamtrustedusers": "Utilisateurs confirmés SmiteSpam",
+	"smitespam-already-trusted": "L’{{GENDER:$1|utilisateur|utilisatrice}} « $1 » est déjà {{GENDER:$1|un utilisateur|une utilisatrice}} de confiance.",
+	"smitespam-trusted-user-message": "Confiance accordée à l’{{GENDER:$1|utilisateur|utilisatrice}} « $1 ».",
+	"smitespam-userdoesnotexist": "L’{{GENDER:$1|utilisateur|utilisatrice}} « $1 » n’existe pas.",
 	"smitespam-add-user-label": "Ajouter l'utilisateur :",
+	"smitespam-trust": "Faire confiance",
 	"smitespam-trusted": "Confirmé",
 	"smitespam-trust-failed": "Echec pendant la confirmation",
 	"smitespam-trusted-user": "Utilisateur de confiance",
@@ -28,5 +38,7 @@
 	"smitespam-block-failed": "Echec pendant le blocage",
 	"smitespam-blocked-user-success-msg": "{{GENDER:$1|utilisateur}} bloqué \"$1\".",
 	"smitespam-blocked-user-failure-msg": "Échec du blocage de l'{{GENDER:$1|utilisateur}} « $1 ».",
+	"smitespam-trusted-user-success-msg": "Confiance accordée à l’{{GENDER:$1|utilisateur|utilisatrice}} « $1 ».",
+	"smitespam-trusted-user-failure-msg": "Impossible d’accorder la confiance à l’{{GENDER:$1|utilisateur|utilisatrice}} « $1 ».",
 	"smitespam-view-trusted-users": "Visualiser les utilisateurs confirmés"
 }

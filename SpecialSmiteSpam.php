@@ -62,6 +62,6 @@ class SpecialSmiteSpam extends SpecialPage {
 	}
 
 	function getGroupName() {
-		return 'maintenance';
+		return 'spam';
 	}
 }

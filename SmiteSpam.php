@@ -30,6 +30,7 @@ $wgAPIModules['smitespamanalyze'] = 'SmiteSpamApiQuery';
 $wgAPIModules['smitespamtrustuser'] = 'SmiteSpamApiTrustUser';
 
 $wgHooks['LoadExtensionSchemaUpdates'][] = 'SmiteSpamHooks::createTables';
+$wgHooks['AdminLinks'][] = 'SmiteSpamHooks::addToAdminLinks';
 
 $wgResourceModules['ext.SmiteSpam.retriever'] = array(
 	'scripts' => 'js/ext.smitespam.js',

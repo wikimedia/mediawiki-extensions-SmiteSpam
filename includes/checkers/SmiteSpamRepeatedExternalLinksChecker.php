@@ -32,13 +32,9 @@ class SmiteSpamRepeatedExternalLinksChecker {
 
 		if ( $numDuplicates == 0 ) {
 			return 0;
-		}
-
-		elseif ( $numDuplicates == 1 ) {
+		} elseif ( $numDuplicates == 1 ) {
 			return 2;
-		}
-
-		else {
+		} else {
 			return 3;
 		}
 	}

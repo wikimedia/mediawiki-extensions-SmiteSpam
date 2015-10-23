@@ -19,20 +19,13 @@ class SmiteSpamExternalLinksChecker {
 
 		if ( $ratio < 0.02 ) {
 			return 0;
-		}
-
-		elseif ( $ratio < 0.03 ) {
+		} elseif ( $ratio < 0.03 ) {
 			return 0.5 * ( ( $ratio * 100 ) - 2 );
-		}
-
-		elseif ( $ratio < 0.04 ) {
+		} elseif ( $ratio < 0.04 ) {
 			return 0.5 + 0.5 * ( $ratio * 100 - 3 );
-		}
-
-		elseif ( $ratio < 0.1 ) {
+		} elseif ( $ratio < 0.1 ) {
 			return 1 + 2 * ( $ratio * 100 - 4 )/6;
-		}
-		else {
+		} else {
 			return 3;
 		}
 	}

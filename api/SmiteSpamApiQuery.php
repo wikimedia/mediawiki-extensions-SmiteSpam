@@ -73,7 +73,7 @@ class SmiteSpamApiQuery extends ApiBase {
 				mb_substr( $page->getMetadata( 'content' ), 0, 150 )
 			);
 
-			if ( strlen( $page->getMetadata( 'content' ) ) > 150  ) {
+			if ( strlen( $page->getMetadata( 'content' ) ) > 150 ) {
 				$previewText .= '...';
 			}
 
@@ -92,7 +92,7 @@ class SmiteSpamApiQuery extends ApiBase {
 		$result->addValue(
 			null,
 			$this->getModuleName(),
-			array (
+			array(
 				'pages' => $pages,
 				'users' => $users,
 			) );

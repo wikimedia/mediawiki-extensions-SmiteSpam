@@ -1,17 +1,20 @@
 {
 	"name": "mediawiki/smitespam",
 	"description": "MediaWiki SmiteSpam Extension",
-	"keywords": ["mediawiki", "smitespam"],
+	"keywords": [
+		"mediawiki",
+		"smitespam"
+	],
 	"type": "mediawiki-extension",
 	"license": "GPL-2.0",
 	"require-dev": {
-		"jakub-onderka/php-parallel-lint": "0.8.*",
-		"mediawiki/mediawiki-codesniffer": "0.2.0"
+		"jakub-onderka/php-parallel-lint": "0.9",
+		"mediawiki/mediawiki-codesniffer": "0.5.0"
 	},
 	"scripts": {
 		"test": [
 			"parallel-lint . --exclude vendor",
-			"phpcs --standard=vendor/mediawiki/mediawiki-codesniffer/MediaWiki --extensions=php,php5,inc --ignore=vendor -p ."
+			"phpcs -p -s"
 		]
 	}
 }

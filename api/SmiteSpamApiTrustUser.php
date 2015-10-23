@@ -40,7 +40,7 @@ class SmiteSpamApiTrustUser extends ApiBase {
 		$result->addValue(
 			null,
 			$this->getModuleName(),
-			array ( 'success' => 1 )
+			array( 'success' => 1 )
 		);
 		return true;
 	}

@@ -1,0 +1,42 @@
+{
+	"@metadata": {
+		"authors": [
+			"Xuacu"
+		]
+	},
+	"smitespam": "Smite spam",
+	"smitespam-desc": "Apurre una [[Special:SmiteSpam|páxina especial]] p'ayudar a los alministradores a identificar y desaniciar páxines wiki de puxarra.",
+	"smitespam-spam-pages-list-heading": "Posibles páxines de puxarra",
+	"smitespam-delete": "Desaniciar",
+	"smitespam-delete-page-success-msg": "Desanicióse la páxina «$1».",
+	"smitespam-delete-page-failure-msg": "Non pudo desaniciase la páxina «$1».",
+	"smitespam-created-by": "{{GENDER:$1|Creada}} por $1",
+	"smitespam-deleted-reason": "Identificada como puxarra pola estensión SmiteSpam.",
+	"action-smitespam": "usar la estensión SmiteSpam",
+	"smitespam-probability-low": "Baxa",
+	"smitespam-probability-medium": "Media",
+	"smitespam-probability-high": "Alta",
+	"smitespam-probability-very-high": "Bien alta",
+	"smitespam-select": "Seleicionar:",
+	"smitespamtrustedusers": "Usuarios d'enfotu de SmiteSpam",
+	"smitespam-already-trusted": "{{GENDER:$1|L'usuariu|La usuaria}} «$1» yá ye d'enfotu.",
+	"smitespam-trusted-user-message": "Hai enfotu {{GENDER:$1|nel usuariu|na usuaria}} «$1».",
+	"smitespam-userdoesnotexist": "{{GENDER:$1|L'usuariu|La usuaria}} «$1» nun esiste.",
+	"smitespam-add-user-label": "Amestar usuariu/a:",
+	"smitespam-trust": "Confiar",
+	"smitespam-trusted": "D'enfotu",
+	"smitespam-trust-failed": "Nun pudo confiase",
+	"smitespam-trusted-user": "Usuariu d'enfotu",
+	"smitespam-timestamp": "Marca d'hora",
+	"smitespam-trusting-admin": "Alministrador d'enfotu",
+	"smitespam-remove": "Desaniciar",
+	"smitespam-block-reason": "Inxertar puxarra",
+	"smitespam-block": "Bloquiar",
+	"smitespam-blocked": "Bloquiáu",
+	"smitespam-block-failed": "Non pudo bloquiase",
+	"smitespam-blocked-user-success-msg": "Bloquióse {{GENDER:$1|al usuariu|a la usuaria}} «$1».",
+	"smitespam-blocked-user-failure-msg": "Nun pudo bloquiase {{GENDER:$1|al usuariu|a la usuaria}} «$1».",
+	"smitespam-trusted-user-success-msg": "Hai enfotu {{GENDER:$1|nel usuariu|na usuaria}} «$1».",
+	"smitespam-trusted-user-failure-msg": "Nun pudo confiase {{GENDER:$1|nel usuariu|na usuaria}} «$1».",
+	"smitespam-view-trusted-users": "Ver los usuarios d'enfotu"
+}

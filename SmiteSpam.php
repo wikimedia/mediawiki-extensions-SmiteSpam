@@ -43,6 +43,7 @@ $wgResourceModules['ext.SmiteSpam.retriever'] = array(
 	),
 	'messages' => array(
 		'smitespam-block',
+		'smitespam-block-reason',
 		'smitespam-blocked',
 		'smitespam-block-failed',
 		'smitespam-created-by',

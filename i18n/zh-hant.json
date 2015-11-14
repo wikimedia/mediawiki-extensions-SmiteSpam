@@ -12,5 +12,6 @@
 	"smitespam-probability-low": "低",
 	"smitespam-probability-medium": "中",
 	"smitespam-probability-high": "高",
-	"smitespam-probability-very-high": "非常高"
+	"smitespam-probability-very-high": "非常高",
+	"smitespam-block": "封鎖"
 }

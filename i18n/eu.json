@@ -1,9 +1,10 @@
 {
 	"@metadata": {
 		"authors": [
-			"Subi"
+			"Subi",
+			"An13sa"
 		]
 	},
 	"smitespam-delete": "Ezabatu",
-	"smitespam-delete-page-success-msg": "Ezabatu orria"
+	"smitespam-delete-page-success-msg": " \"$1\" orria ezabatu da."
 }

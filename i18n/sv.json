@@ -9,9 +9,9 @@
 	"smitespam": "Bekämpa spam",
 	"smitespam-desc": "Tillhandahåller en [[Special:SmiteSpam|specialsida]] för att hjälpa administratörer att identifiera radera spam på wikisidor.",
 	"smitespam-delete": "Radera",
-	"smitespam-delete-page-success-msg": "Radera sida",
-	"smitespam-delete-page-failure-msg": "Misslyckades med att radera sida",
-	"smitespam-created-by": "Skapad av",
+	"smitespam-delete-page-success-msg": "Raderade sidan \"$1\".",
+	"smitespam-delete-page-failure-msg": "Kunde inte radera sidan \"$1\".",
+	"smitespam-created-by": "{{GENDER:$1|Skapades}} av $1",
 	"smitespam-trusted": "Betrodd",
 	"smitespam-trusted-user": "Betrodd användare",
 	"smitespam-blocked": "Blockerad"

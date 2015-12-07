@@ -5,7 +5,7 @@
 		]
 	},
 	"smitespam": "Smite spam",
-	"smitespam-extensionname": "Smite spam",
+	"smitespam-extensionname": "SmiteSpam",
 	"smitespam-desc": "Provides a [[Special:SmiteSpam|special page]] to help administrators identify and delete spam wiki pages",
 	"smitespam-spam-pages-list-heading": "Possible spam pages",
 	"smitespam-delete": "Delete",

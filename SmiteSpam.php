@@ -12,6 +12,7 @@ $wgExtensionCredits['antispam'][] = array(
 	'descriptionmsg'  => 'smitespam-desc',
 	'license-name' => 'GPL-2.0',
 	'version' => '0.1',
+	'url' => 'https://www.mediawiki.org/wiki/Extension:SmiteSpam',
 );
 
 $ssRoot = __DIR__;

@@ -442,7 +442,9 @@
 	function init() {
 		var $pagination = $( '#pagination' );
 		// TODO i18n
-		$( '<input>', { type: 'submit', value: 'Smite Spam!' } ).prependTo( '#smitespam-delete-pages' );
+		var $submitButton = $( '<input>', { type: 'submit', value: 'Smite Spam!' } ).prependTo( '#smitespam-delete-pages' );
+		$submitButton.clone().insertAfter( '#smitespam-page-list' );
+
 		$( '#smitespam-delete-pages' ).on( 'submit', function () {
 			ajaxQueries.blockUser.send();
 			return false;

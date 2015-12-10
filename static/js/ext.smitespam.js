@@ -188,10 +188,12 @@
 		if ( displayOffset + displaySize > results.length &&
 			ajaxQueries.pages.numSent * querySize < numPages ) {
 			$( '#smitespam-loading' ).show();
+			$( '.smitespam-submit-button' ).hide();
 			ajaxQueries.pages.send();
 			return;
 		}
 		$( '#smitespam-loading' ).hide();
+		$( '.smitespam-submit-button' ).show();
 
 		var resultsToDisplay = results.slice( displayOffset, displayOffset + displaySize );
 
@@ -442,8 +444,9 @@
 	function init() {
 		var $pagination = $( '#pagination' );
 		// TODO i18n
-		var $submitButton = $( '<input>', { type: 'submit', value: 'Smite Spam!' } ).prependTo( '#smitespam-delete-pages' );
+		var $submitButton = $( '<input>', { type: 'submit', value: 'Smite Spam!' } ).addClass( 'smitespam-submit-button' ).prependTo( '#smitespam-delete-pages' );
 		$submitButton.clone().insertAfter( '#smitespam-page-list' );
+		$( '.smitespam-submit-button' ).hide();
 
 		$( '#smitespam-delete-pages' ).on( 'submit', function () {
 			ajaxQueries.blockUser.send();

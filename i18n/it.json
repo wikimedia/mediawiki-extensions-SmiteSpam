@@ -3,15 +3,25 @@
 		"authors": [
 			"Alexmar983",
 			"Macofe",
-			"Beta16"
+			"Beta16",
+			"Lord Ghiraim"
 		]
 	},
+	"smitespam": "Smite spam",
+	"smitespam-desc": "Fornisce una [[Special:SmiteSpam|pagina speciale]] per aiutare gli amministratori a riconoscere e cancellare le pagine spam della wiki",
 	"smitespam-spam-pages-list-heading": "Possibili pagine di spam",
 	"smitespam-delete": "Cancella",
 	"smitespam-delete-page-success-msg": "Pagina \"$1\" cancellata.",
+	"smitespam-delete-page-failure-msg": "Impossibile eliminare la pagina \"$1\".",
 	"smitespam-created-by": "{{GENDER:$1|Creato}} da $1",
 	"smitespam-deleted-reason": "Identificato come spam dall'estensione SmiteSpam.",
+	"action-smitespam": "Usa l'estensione SmiteSpam",
+	"smitespam-probability-low": "Basso",
+	"smitespam-probability-medium": "Medio",
+	"smitespam-probability-high": "Alto",
+	"smitespam-probability-very-high": "Molto alto",
 	"smitespam-select": "Seleziona:",
+	"smitespam-add-user-label": "Aggiungi utente:",
 	"smitespam-remove": "Rimuovi",
 	"smitespam-block": "Blocca",
 	"smitespam-blocked": "Bloccato"

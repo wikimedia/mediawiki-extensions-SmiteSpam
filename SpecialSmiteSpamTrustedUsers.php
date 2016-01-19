@@ -6,6 +6,10 @@ class SpecialSmiteSpamTrustedUsers extends SpecialPage {
 		parent::__construct( 'SmiteSpamTrustedUsers', 'smitespam' );
 	}
 
+	public function doesWrites() {
+		return true;
+	}
+
 	public function execute( $subPage ) {
 		if ( !$this->userCanExecute( $this->getUser() ) ) {
 			$this->displayRestrictionError();

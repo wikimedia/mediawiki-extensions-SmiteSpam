@@ -1,0 +1,42 @@
+{
+	"@metadata": {
+		"authors": [
+			"Piramidion"
+		]
+	},
+	"smitespam": "Знищення спаму",
+	"smitespam-desc": "Забезпечує [[Special:SmiteSpam|спеціальну сторінку]], що має допомагати адміністраторам виявляти та вилучати вікісторінки, що містять спам",
+	"smitespam-spam-pages-list-heading": "Сторінки із потенційним спамом",
+	"smitespam-delete": "Вилучити",
+	"smitespam-delete-page-success-msg": "Вилучена сторінка «$1»",
+	"smitespam-delete-page-failure-msg": "Не вдалося вилучити сторінку «$1».",
+	"smitespam-created-by": "Створено {{GENDER:$1|користувачем|користувачкою}} $1",
+	"smitespam-deleted-reason": "Ідентифіковано як спам розширенням SmiteSpam.",
+	"action-smitespam": "використати розширення SmiteSpam",
+	"smitespam-probability-low": "Низька",
+	"smitespam-probability-medium": "Середня",
+	"smitespam-probability-high": "Висока",
+	"smitespam-probability-very-high": "Дуже висока",
+	"smitespam-select": "Вибрати:",
+	"smitespamtrustedusers": "Довірені користувачі SmiteSpam",
+	"smitespam-already-trusted": "{{GENDER:$1|Користувач|Користувачка}} «$1» вже перебуває в списку довірених.",
+	"smitespam-trusted-user-message": "{{GENDER:$1|Довірений користувач|Довірена користувачка}} «$1».",
+	"smitespam-userdoesnotexist": "{{GENDER:$1|Користувач|Користувачка}} «$1» не існує.",
+	"smitespam-add-user-label": "Додати користувача:",
+	"smitespam-trust": "Довірити",
+	"smitespam-trusted": "Довірений",
+	"smitespam-trust-failed": "Не вдалося довірити",
+	"smitespam-trusted-user": "Довірений користувач",
+	"smitespam-timestamp": "Часова мітка",
+	"smitespam-trusting-admin": "Адмін, що надав довіру",
+	"smitespam-remove": "Видалити",
+	"smitespam-block-reason": "Спам",
+	"smitespam-block": "Заблокувати",
+	"smitespam-blocked": "Заблоковано",
+	"smitespam-block-failed": "Не вдалося заблокувати",
+	"smitespam-blocked-user-success-msg": "{{GENDER:$1|Заблокований користувач|Заблокована користувачка}} «$1».",
+	"smitespam-blocked-user-failure-msg": "Не вдалося заблокувати {{GENDER:$1|користувача|користувачку}} «$1».",
+	"smitespam-trusted-user-success-msg": "{{GENDER:$1|Довірений користувач|Довірена користувачка}} «$1».",
+	"smitespam-trusted-user-failure-msg": "Не вдалося позначити {{GENDER:$1|довіреним користувача|довіреною користувачку}} «$1».",
+	"smitespam-view-trusted-users": "Переглянути довірених користувачів"
+}

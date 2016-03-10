@@ -45,11 +45,6 @@ class SmiteSpamApiTrustUser extends ApiBase {
 		return true;
 	}
 
-	// Description
-	public function getDescription() {
-		return 'Trust a user so that SmiteSpam ignores pages created by the user.';
-	}
-
 	// Face parameter.
 	public function getAllowedParams() {
 		return array_merge( parent::getAllowedParams(), array(
@@ -57,13 +52,6 @@ class SmiteSpamApiTrustUser extends ApiBase {
 				ApiBase::PARAM_TYPE => 'string',
 				ApiBase::PARAM_REQUIRED => true
 			)
-		) );
-	}
-
-	// Describe the parameter
-	public function getParamDescription() {
-		return array_merge( parent::getParamDescription(), array(
-			'username' => 'Username of user to trust.',
 		) );
 	}
 

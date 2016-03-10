@@ -99,11 +99,6 @@ class SmiteSpamApiQuery extends ApiBase {
 		return true;
 	}
 
-	// Description
-	public function getDescription() {
-		return 'Get pages analyzed in the SmiteSpam way.';
-	}
-
 	// Face parameter.
 	public function getAllowedParams() {
 		return array_merge( parent::getAllowedParams(), array(
@@ -115,14 +110,6 @@ class SmiteSpamApiQuery extends ApiBase {
 				ApiBase::PARAM_TYPE => 'integer',
 				ApiBase::PARAM_REQUIRED => false
 			)
-		) );
-	}
-
-	// Describe the parameter
-	public function getParamDescription() {
-		return array_merge( parent::getParamDescription(), array(
-			'offset' => 'SQL OFFSET.',
-			'limit' => 'SQL LIMIT.'
 		) );
 	}
 

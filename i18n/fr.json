@@ -40,5 +40,8 @@
 	"smitespam-blocked-user-failure-msg": "Échec du blocage de l'{{GENDER:$1|utilisateur}} « $1 ».",
 	"smitespam-trusted-user-success-msg": "Confiance accordée à l’{{GENDER:$1|utilisateur|utilisatrice}} « $1 ».",
 	"smitespam-trusted-user-failure-msg": "Impossible d’accorder la confiance à l’{{GENDER:$1|utilisateur|utilisatrice}} « $1 ».",
-	"smitespam-view-trusted-users": "Visualiser les utilisateurs confirmés"
+	"smitespam-view-trusted-users": "Visualiser les utilisateurs confirmés",
+	"apihelp-smitespamanalyze-param-offset": "SQL <code>OFFSET</code> pour la liste des pages",
+	"apihelp-smitespamanalyze-param-limit": "SQL <code>LIMIT</code> pour la liste des pages",
+	"apihelp-smitespamtrustuser-param-username": "Nom d'utilisateur de l'utilisateur de confiance."
 }

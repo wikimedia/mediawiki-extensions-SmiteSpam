@@ -40,5 +40,10 @@
 	"smitespam-blocked-user-failure-msg": "{{GENDER:$1|Der Benutzer|Die Benutzerin}} „$1“ konnte nicht gesperrt werden.",
 	"smitespam-trusted-user-success-msg": "{{GENDER:$1|Dem Benutzer|Der Benutzerin}} „$1“ vertrauen.",
 	"smitespam-trusted-user-failure-msg": "{{GENDER:$1|Dem Benutzer|Der Benutzerin}} „$1“ konnte nicht vertraut werden.",
-	"smitespam-view-trusted-users": "Vertrauenswürdige Benutzer ansehen"
+	"smitespam-view-trusted-users": "Vertrauenswürdige Benutzer ansehen",
+	"apihelp-smitespamanalyze-description": "Ruft eine Liste mit möglichen Spamseiten der Erweiterung „SmiteSpam“ ab.",
+	"apihelp-smitespamanalyze-param-offset": "SQL-<code>OFFSET</code> für die Seitenliste",
+	"apihelp-smitespamanalyze-param-limit": "SQL-<code>LIMIT</code> für die Seitenliste",
+	"apihelp-smitespamtrustuser-description": "Vertraut einem Benutzer, so dass SmiteSpam Seiten ignoriert, die von diesem erstellt wurden.",
+	"apihelp-smitespamtrustuser-param-username": "Name des Benutzers, dem vertraut werden soll."
 }

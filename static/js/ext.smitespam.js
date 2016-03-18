@@ -458,6 +458,7 @@
 			.text( mw.msg( 'powersearch-toggleall' ) )
 			.on( 'click', function () {
 				$( '.creator-card input[type="checkbox"]' ).prop( 'checked', true ).change();
+				$( '.card-info-section input[type="checkbox"]:not(:checked)' ).prop( 'checked', true ).change();
 			} )
 			.appendTo( '#smitespam-select-options' );
 		$( '#smitespam-select-options' ).append( ' &middot; ' );
@@ -465,6 +466,7 @@
 			.text( mw.msg( 'powersearch-togglenone' ) )
 			.on( 'click', function () {
 				$( '.creator-card input[type="checkbox"]' ).prop( 'checked', false ).change();
+				$( '.card-info-section input[type="checkbox"]:checked' ).prop( 'checked', false ).change();
 			} )
 			.appendTo( '#smitespam-select-options' );
 

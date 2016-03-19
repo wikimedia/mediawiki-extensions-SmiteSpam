@@ -12,7 +12,20 @@
 	"smitespam-delete-page-success-msg": "Raderade sidan \"$1\".",
 	"smitespam-delete-page-failure-msg": "Kunde inte radera sidan \"$1\".",
 	"smitespam-created-by": "{{GENDER:$1|Skapades}} av $1",
+	"smitespam-probability-low": "Låg",
+	"smitespam-probability-medium": "Medel",
+	"smitespam-probability-high": "Hög",
+	"smitespam-probability-very-high": "Mycket hög",
+	"smitespam-select": "Välj:",
+	"smitespam-add-user-label": "Lägg till användare:",
 	"smitespam-trusted": "Betrodd",
 	"smitespam-trusted-user": "Betrodd användare",
-	"smitespam-blocked": "Blockerad"
+	"smitespam-timestamp": "Tidsstämpel",
+	"smitespam-remove": "Ta bort",
+	"smitespam-block-reason": "Spam",
+	"smitespam-block": "Blockera",
+	"smitespam-blocked": "Blockerad",
+	"smitespam-blocked-user-success-msg": "Blockerade {{GENDER:$1|användaren}} \"$1\".",
+	"apihelp-smitespamtrustuser-description": "Lita på en användare så att SmiteSpam ignorerar sidor som skapas av användaren.",
+	"apihelp-smitespamtrustuser-param-username": "Användarnamnet för användaren att lita på."
 }

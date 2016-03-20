@@ -24,5 +24,7 @@
 	"smitespam-add-user-label": "Aggiungi utente:",
 	"smitespam-remove": "Rimuovi",
 	"smitespam-block": "Blocca",
-	"smitespam-blocked": "Bloccato"
+	"smitespam-blocked": "Bloccato",
+	"apihelp-smitespamanalyze-param-offset": "<code>OFFSET</code> SQL per l'elenco delle pagine",
+	"apihelp-smitespamanalyze-param-limit": "<code>LIMIT</code> SQL per l'elenco delle pagine"
 }

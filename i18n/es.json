@@ -39,5 +39,7 @@
 	"smitespam-blocked-user-failure-msg": "No se pudo bloquear {{GENDER:$1|al usuario|a la usuaria}} \"$1\".",
 	"smitespam-trusted-user-success-msg": "Se confió en {{GENDER:$1|el usuario|la usuaria}} \"$1\".",
 	"smitespam-trusted-user-failure-msg": "No se pudo confiar en {{GENDER:$1|el usuario|la usuaria}} \"$1\".",
-	"smitespam-view-trusted-users": "Ver usuarios de confianza"
+	"smitespam-view-trusted-users": "Ver usuarios de confianza",
+	"apihelp-smitespamanalyze-description": "Obtener una lista de posibles páginas de spam de Extensión:SmiteSpam.",
+	"apihelp-smitespamtrustuser-param-username": "Nombre de usuario en el que confiar."
 }

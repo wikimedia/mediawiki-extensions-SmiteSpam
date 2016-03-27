@@ -1,0 +1,8 @@
+{
+	"@metadata": {
+		"authors": [
+			"Mikahama"
+		]
+	},
+	"apihelp-smitespamtrustuser-description": "Luota käyttäjään niin, että SmiteSpam ohittaa käyttäjän luomat sivut."
+}

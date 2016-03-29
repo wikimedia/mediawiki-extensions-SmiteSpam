@@ -39,5 +39,6 @@
 	"smitespam-blocked-user-failure-msg": "Non se puido bloquear {{GENDER:$1|ó usuario|á usuaria}} \"$1\".",
 	"smitespam-trusted-user-success-msg": "Confíase {{GENDER:$1|no usuario|na usuaria}} \"$1\".",
 	"smitespam-trusted-user-failure-msg": "Non se puido confiar {{GENDER:$1|no usuario|na usuaria}} \"$1\".",
-	"smitespam-view-trusted-users": "Ver usuarios de confianza"
+	"smitespam-view-trusted-users": "Ver usuarios de confianza",
+	"apihelp-smitespamtrustuser-param-username": "Nome de usuario do usuario no que confiar."
 }

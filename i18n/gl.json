@@ -40,5 +40,7 @@
 	"smitespam-trusted-user-success-msg": "Confíase {{GENDER:$1|no usuario|na usuaria}} \"$1\".",
 	"smitespam-trusted-user-failure-msg": "Non se puido confiar {{GENDER:$1|no usuario|na usuaria}} \"$1\".",
 	"smitespam-view-trusted-users": "Ver usuarios de confianza",
+	"apihelp-smitespamanalyze-param-offset": "SQL <code>OFFSET</code> para a lista de páxinas",
+	"apihelp-smitespamanalyze-param-limit": "SQL <code>LIMIT</code> para a lista de páxinas",
 	"apihelp-smitespamtrustuser-param-username": "Nome de usuario do usuario no que confiar."
 }

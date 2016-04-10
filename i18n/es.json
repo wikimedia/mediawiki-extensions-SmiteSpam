@@ -2,7 +2,8 @@
 	"@metadata": {
 		"authors": [
 			"Fitoschido",
-			"Macofe"
+			"Macofe",
+			"AlvaroMolina"
 		]
 	},
 	"smitespam": "Smite spam",
@@ -41,5 +42,8 @@
 	"smitespam-trusted-user-failure-msg": "No se pudo confiar en {{GENDER:$1|el usuario|la usuaria}} \"$1\".",
 	"smitespam-view-trusted-users": "Ver usuarios de confianza",
 	"apihelp-smitespamanalyze-description": "Obtener una lista de posibles páginas de spam de Extensión:SmiteSpam.",
+	"apihelp-smitespamanalyze-param-offset": "SQL <code>DESPLAZAMIENTO</code> por la lista de páginas",
+	"apihelp-smitespamanalyze-param-limit": "SQL <code>LÍMITE</code> para la lista de páginas",
+	"apihelp-smitespamtrustuser-description": "Confiar en un usuario, de modo que SmiteSpam ignore las páginas creadas por él.",
 	"apihelp-smitespamtrustuser-param-username": "Nombre de usuario en el que confiar."
 }

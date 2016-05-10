@@ -16,9 +16,9 @@ class SmiteSpamApiTrustUser extends ApiBase {
 		$dbr = wfGetDB( DB_SLAVE );
 
 		$result = $dbr->selectRow(
-			array( 'smitespam_trusted_user' ),
+			[ 'smitespam_trusted_user' ],
 			'trusted_user_id',
-			array( 'trusted_user_id = ' . $user->getId() )
+			[ 'trusted_user_id = ' . $user->getId() ]
 		);
 
 		if ( $result ) {
@@ -29,37 +29,37 @@ class SmiteSpamApiTrustUser extends ApiBase {
 
 		$dbw->insert(
 			'smitespam_trusted_user',
-			array(
+			[
 				'trusted_user_id' => $user->getId(),
 				'trusted_user_timestamp' => $dbw->timestamp(),
 				'trusted_user_admin_id' => $this->getUser()->getID()
-			)
+			]
 		);
 
 		$result = $this->getResult();
 		$result->addValue(
 			null,
 			$this->getModuleName(),
-			array( 'success' => 1 )
+			[ 'success' => 1 ]
 		);
 		return true;
 	}
 
 	// Face parameter.
 	public function getAllowedParams() {
-		return array_merge( parent::getAllowedParams(), array(
-			'username' => array(
+		return array_merge( parent::getAllowedParams(), [
+			'username' => [
 				ApiBase::PARAM_TYPE => 'string',
 				ApiBase::PARAM_REQUIRED => true
-			)
-		) );
+			]
+		] );
 	}
 
 	// Get examples
 	public function getExamples() {
-		return array(
+		return [
 			'api.php?action=smitespamtrustuser&username=Admin'
 			=> 'Trust user "Admin"'
-		);
+		];
 	}
 }

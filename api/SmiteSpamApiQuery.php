@@ -16,8 +16,8 @@ class SmiteSpamApiQuery extends ApiBase {
 		$ss = new SmiteSpamAnalyzer( false );
 		$spamPages = $ss->run( $offset, $limit );
 
-		$pages = array();
-		$users = array();
+		$pages = [];
+		$users = [];
 
 		foreach ( $spamPages as $page ) {
 			$title = $page->getTitle();
@@ -25,7 +25,7 @@ class SmiteSpamApiQuery extends ApiBase {
 			$titleLink = Linker::link(
 				$title,
 				null,
-				array( 'target' => '_blank' )
+				[ 'target' => '_blank' ]
 			);
 
 			$oldestRevision = $page->getOldestRevision();
@@ -43,14 +43,14 @@ class SmiteSpamApiQuery extends ApiBase {
 						if ( Block::newFromTarget( $creator, $creator ) ) {
 							$blocked = true;
 						}
-						$users[$creator] = array(
+						$users[$creator] = [
 							'link' => Linker::link(
 								SpecialPage::getTitleFor( 'Contributions', $creator ),
 								Sanitizer::escapeHtmlAllowEntities( $creator ),
-								array( 'target' => '_blank' )
+								[ 'target' => '_blank' ]
 							),
 							'blocked' => (int)$blocked,
-						);
+						];
 					}
 				} else {
 					$creator = '-';
@@ -77,7 +77,7 @@ class SmiteSpamApiQuery extends ApiBase {
 				$previewText .= '...';
 			}
 
-			$pages[] = array(
+			$pages[] = [
 				'id' => $page->getID(),
 				'link' => $titleLink,
 				'creator' => $creator,
@@ -85,39 +85,39 @@ class SmiteSpamApiQuery extends ApiBase {
 				'spam-probability-level' => $spamProbabilityLevel,
 				'preview' => $previewText,
 				'timestamp' => $timestamp
-			);
+			];
 		}
 
 		$result = $this->getResult();
 		$result->addValue(
 			null,
 			$this->getModuleName(),
-			array(
+			[
 				'pages' => $pages,
 				'users' => $users,
-			) );
+			] );
 		return true;
 	}
 
 	// Face parameter.
 	public function getAllowedParams() {
-		return array_merge( parent::getAllowedParams(), array(
-			'offset' => array(
+		return array_merge( parent::getAllowedParams(), [
+			'offset' => [
 				ApiBase::PARAM_TYPE => 'integer',
 				ApiBase::PARAM_REQUIRED => true
-			),
-			'limit' => array(
+			],
+			'limit' => [
 				ApiBase::PARAM_TYPE => 'integer',
 				ApiBase::PARAM_REQUIRED => false
-			)
-		) );
+			]
+		] );
 	}
 
 	// Get examples
 	public function getExamples() {
-		return array(
+		return [
 			'api.php?action=smitespamanalyze&offset=5&limit=10'
 			=> 'Analyze pages from 5 to 10'
-		);
+		];
 	}
 }

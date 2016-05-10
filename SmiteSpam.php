@@ -4,7 +4,7 @@ if ( !defined( 'MEDIAWIKI' ) ) {
 	die( 'Not a valid entry point.' );
 }
 
-$wgExtensionCredits['antispam'][] = array(
+$wgExtensionCredits['antispam'][] = [
 	'path' => __FILE__,
 	'name' => 'SmiteSpam',
 	'namemsg' => 'smitespam-extensionname',
@@ -13,7 +13,7 @@ $wgExtensionCredits['antispam'][] = array(
 	'license-name' => 'GPL-2.0',
 	'version' => '0.1',
 	'url' => 'https://www.mediawiki.org/wiki/Extension:SmiteSpam',
-);
+];
 
 $ssRoot = __DIR__;
 
@@ -33,16 +33,16 @@ $wgAPIModules['smitespamtrustuser'] = 'SmiteSpamApiTrustUser';
 $wgHooks['LoadExtensionSchemaUpdates'][] = 'SmiteSpamHooks::createTables';
 $wgHooks['AdminLinks'][] = 'SmiteSpamHooks::addToAdminLinks';
 
-$wgResourceModules['ext.SmiteSpam.retriever'] = array(
+$wgResourceModules['ext.SmiteSpam.retriever'] = [
 	'scripts' => 'js/ext.smitespam.js',
 	'styles' => 'css/smitespam.css',
 	'localBasePath' => "$ssRoot/static",
 	'remoteExtPath' => 'SmiteSpam/static',
-	'dependencies' => array(
+	'dependencies' => [
 		'mediawiki.jqueryMsg',
 		'jquery.spinner'
-	),
-	'messages' => array(
+	],
+	'messages' => [
 		'smitespam-block',
 		'smitespam-block-reason',
 		'smitespam-blocked',
@@ -68,17 +68,17 @@ $wgResourceModules['ext.SmiteSpam.retriever'] = array(
 		'smitespam-probability-medium',
 		'smitespam-probability-high',
 		'smitespam-probability-very-high'
-	),
-);
+	],
+];
 
 // Config options
 
 // List of enabled checkers and respective weights
-$wgSmiteSpamCheckers = array(
+$wgSmiteSpamCheckers = [
 	'ExternalLinks' => 1,
 	'RepeatedExternalLinks' => 1,
 	'Wikitext' => 1,
-);
+];
 
 // Threshold (tolerance)
 // Pages analyzed as having a spam "probability" higher than this will be shown on Special Page

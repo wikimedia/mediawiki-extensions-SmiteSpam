@@ -23,7 +23,7 @@ class SpecialSmiteSpam extends SpecialPage {
 			Linker::link(
 				SpecialPage::getTitleFor( 'SmiteSpamTrustedUsers' ),
 				wfMessage( 'smitespam-view-trusted-users' )->text(),
-				array( 'target' => '_blank' )
+				[ 'target' => '_blank' ]
 			)
 		);
 
@@ -32,10 +32,10 @@ class SpecialSmiteSpam extends SpecialPage {
 		$out->addHTML( '<div id="pagination"></div>' );
 
 		$out->addHTML(
-			Html::openElement( 'form', array(
+			Html::openElement( 'form', [
 					'method' => 'post',
 					'id' => 'smitespam-delete-pages',
-				)
+				]
 			)
 		);
 
@@ -43,9 +43,9 @@ class SpecialSmiteSpam extends SpecialPage {
 
 		$out->addHTML( '<input type="submit" value="'
 			. $this->msg( 'smitespam-delete-selected' ) . '" style="display:none;">' );
-		$out->addHTML( Html::openElement( 'div', array(
+		$out->addHTML( Html::openElement( 'div', [
 			'id' => 'smitespam-page-list',
-		) ) );
+		] ) );
 
 		$out->addHTML( Html::closeElement( 'div' ) );
 		$out->addHTML( '<input type="submit" value="'
@@ -54,11 +54,11 @@ class SpecialSmiteSpam extends SpecialPage {
 
 		$out->addModules( 'ext.SmiteSpam.retriever' );
 		global $wgQueryPageSize, $wgDisplayPageSize;
-		$out->addJsConfigVars( array(
+		$out->addJsConfigVars( [
 			'numPages' => $numPages,
 			'queryPageSize' => $wgQueryPageSize,
 			'displayPageSize' => $wgDisplayPageSize,
-		) );
+		] );
 	}
 
 	function getGroupName() {

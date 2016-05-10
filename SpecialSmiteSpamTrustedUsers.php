@@ -26,9 +26,9 @@ class SpecialSmiteSpamTrustedUsers extends SpecialPage {
 				if ( $user && $user->getId() !== 0 ) {
 					$dbr = wfGetDB( DB_SLAVE );
 					$result = $dbr->selectRow(
-						array( 'smitespam_trusted_user' ),
+						[ 'smitespam_trusted_user' ],
 						'trusted_user_id',
-						array( 'trusted_user_id = ' . $user->getId() )
+						[ 'trusted_user_id = ' . $user->getId() ]
 					);
 
 					if ( $result ) {
@@ -42,11 +42,11 @@ class SpecialSmiteSpamTrustedUsers extends SpecialPage {
 
 						$dbw->insert(
 							'smitespam_trusted_user',
-							array(
+							[
 								'trusted_user_id' => $user->getId(),
 								'trusted_user_timestamp' => $dbw->timestamp(),
 								'trusted_user_admin_id' => $this->getUser()->getID()
-							)
+							]
 						);
 						$out->addHTML(
 							'<div class="successbox">' .
@@ -69,7 +69,7 @@ class SpecialSmiteSpamTrustedUsers extends SpecialPage {
 						$dbw = wfGetDB( DB_MASTER );
 						$dbw->delete(
 							'smitespam_trusted_user',
-							array( 'trusted_user_id = ' . $user->getId() )
+							[ 'trusted_user_id = ' . $user->getId() ]
 						);
 						$out->addHTML(
 							'<div class="successbox">' .
@@ -83,13 +83,13 @@ class SpecialSmiteSpamTrustedUsers extends SpecialPage {
 
 		$dbr = wfGetDB( DB_SLAVE );
 		$result = $dbr->select(
-			array( 'smitespam_trusted_user' ),
-			array( 'trusted_user_id', 'trusted_user_timestamp', 'trusted_user_admin_id' ),
-			array(),
+			[ 'smitespam_trusted_user' ],
+			[ 'trusted_user_id', 'trusted_user_timestamp', 'trusted_user_admin_id' ],
+			[],
 			__METHOD__,
-			array(
+			[
 				"ORDER BY" => "trusted_user_timestamp ASC",
-			)
+			]
 		);
 
 		$out->addHTML( "<form method=\"post\">" );
@@ -111,7 +111,7 @@ class SpecialSmiteSpamTrustedUsers extends SpecialPage {
 			$trustedUserContribsLink = Linker::link(
 				SpecialPage::getTitleFor( 'Contributions', $trustedUser ),
 				Sanitizer::escapeHtmlAllowEntities( $trustedUser ),
-				array( 'target' => '_blank' )
+				[ 'target' => '_blank' ]
 			);
 			$timestamp = $this->getLanguage()->userTimeAndDate(
 				$row->trusted_user_timestamp,
@@ -121,7 +121,7 @@ class SpecialSmiteSpamTrustedUsers extends SpecialPage {
 			$adminContribsLink = Linker::link(
 				SpecialPage::getTitleFor( 'Contributions', $admin ),
 				Sanitizer::escapeHtmlAllowEntities( $admin ),
-				array( 'target' => '_blank' )
+				[ 'target' => '_blank' ]
 			);
 
 			// TODO i18n

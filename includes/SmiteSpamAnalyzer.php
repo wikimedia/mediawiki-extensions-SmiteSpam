@@ -13,13 +13,13 @@ class SmiteSpamAnalyzer {
 		global $wgSmiteSpamCheckers, $wgSmiteSpamThreshold;
 		global $wgSmiteSpamIgnorePagesWithNoExternalLinks;
 		global $wgSmiteSpamIgnoreSmallPages;
-		$this->config = array(
+		$this->config = [
 			'checkers' => $wgSmiteSpamCheckers,
 			'threshold' => $wgSmiteSpamThreshold,
 			'ignorePagesWithNoExternalLinks' => $wgSmiteSpamIgnorePagesWithNoExternalLinks,
 			'ignoreSmallPages' => $wgSmiteSpamIgnoreSmallPages,
 			'sort' => $sort,
-		);
+		];
 	}
 	/**
 	 * Retrieves a list of pages in the wiki based on the offset and limit
@@ -33,33 +33,33 @@ class SmiteSpamAnalyzer {
 		$dbr = wfGetDB( DB_SLAVE );
 
 		$usersResult = $dbr->select(
-			array( 'smitespam_trusted_user' ),
+			[ 'smitespam_trusted_user' ],
 			'trusted_user_id'
 		);
 
-		$trustedUsers = array();
+		$trustedUsers = [];
 
 		foreach ( $usersResult as $row ) {
 			$trustedUsers[] = $row->trusted_user_id;
 		}
 
 		$result = $dbr->select(
-			array( 'page' ),
+			[ 'page' ],
 			'page_id',
-			array(
+			[
 				'page_is_redirect = 0',
-			),
+			],
 			__METHOD__,
-			array(
+			[
 				"ORDER BY" => "page_id ASC",
 				"OFFSET" => $offset,
 				"LIMIT" => $limit,
-			)
+			]
 		);
 
 		$checkers = $this->config['checkers'];
 
-		$spamPages = array();
+		$spamPages = [];
 
 		foreach ( $result as $row ) {
 			$page = new SmiteSpamWikiPage( $row->page_id );

@@ -30,7 +30,7 @@ class SmiteSpamWikiPage extends WikiPage {
 			return null;
 		}
 		parent::__construct( $title );
-		$this->metadata = array();
+		$this->metadata = [];
 	}
 
 	public function getOldestRevision() {
@@ -68,14 +68,14 @@ class SmiteSpamWikiPage extends WikiPage {
 				foreach ( $templates as $template ) {
 					$content = str_replace( "{{$template}}", '', $content );
 				}
-				$matches = array();
+				$matches = [];
 				preg_match_all( '/(' . wfUrlProtocols() . ')([^\s\]\"]*)/', $content, $matches );
 				$this->metadata['externalLinks'] = $matches[0];
 				break;
 
 			case 'internalLinks':
 				$content = $this->getMetadata( 'content' );
-				$matches = array();
+				$matches = [];
 				preg_match_all( '/\[\[(.*?)\]\]/', $content, $matches );
 				$this->metadata['internalLinks'] = $matches[1];
 				break;
@@ -86,14 +86,14 @@ class SmiteSpamWikiPage extends WikiPage {
 
 			case 'headings':
 				$content = $this->getContent()->getNativeData();
-				$matches = array();
+				$matches = [];
 				preg_match_all( '/^==?=?\s*(.*?)\s*==?=?\s*$/m', $content, $matches );
 				$this->metadata['headings'] = $matches[1];
 				break;
 
 			case 'templates':
 				$content = $this->getContent()->getNativeData();
-				$matches = array();
+				$matches = [];
 				preg_match_all( '/{{(.*?)}}/s', $content, $matches );
 				$this->metadata['templates'] = $matches[1];
 				break;

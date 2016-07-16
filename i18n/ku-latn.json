@@ -1,8 +1,12 @@
 {
 	"@metadata": {
 		"authors": [
-			"Bikarhêner"
+			"Bikarhêner",
+			"George Animal"
 		]
 	},
-	"smitespam-created-by": "Çêkirin ji alî"
+	"smitespam-delete": "Jê bibe",
+	"smitespam-delete-page-success-msg": "Rûpela \"$1\" jê bir.",
+	"smitespam-created-by": "Çêkirin ji alî",
+	"smitespam-select": "Hilbijêre:"
 }

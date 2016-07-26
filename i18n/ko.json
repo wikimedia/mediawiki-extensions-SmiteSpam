@@ -3,13 +3,14 @@
 		"authors": [
 			"Alex00728",
 			"Hwangjy9",
-			"Revi"
+			"Revi",
+			"아라"
 		]
 	},
 	"smitespam-delete": "삭제",
 	"smitespam-delete-page-success-msg": "\"$1\" 문서를 삭제했습니다.",
 	"smitespam-delete-page-failure-msg": "\"$1\" 문서 삭제에 실패했습니다.",
-	"smitespam-created-by": "$1 사용자가 {{GENDER:$1|생성함}}",
+	"smitespam-created-by": "$1님이 {{GENDER:$1|만듦}}",
 	"smitespam-deleted-reason": "SmiteSpam 확장 기능에 의해 스팸으로 판별되었습니다.",
 	"action-smitespam": "SmiteSpam 확장 기능 사용하기",
 	"smitespam-probability-low": "낮음",

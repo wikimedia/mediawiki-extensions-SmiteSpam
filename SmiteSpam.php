@@ -50,7 +50,6 @@ $wgResourceModules['ext.SmiteSpam.retriever'] = [
 		'smitespam-created-by',
 		'smitespam-delete',
 		'smitespam-delete-page-failure-msg',
-		'smitespam-loading',
 		'smitespam-trust',
 		'smitespam-trusted',
 		'table_pager_next',

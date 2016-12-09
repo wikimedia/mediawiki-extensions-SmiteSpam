@@ -106,11 +106,12 @@ class SpecialSmiteSpamTrustedUsers extends SpecialPage {
 			'<th>' . wfMessage( 'smitespam-remove' )->text() . '</th>' .
 			'</tr>'
 		);
+		$linkRenderer = $this->getLinkRenderer();
 		foreach ( $result as $row ) {
 			$trustedUser = User::newFromID( $row->trusted_user_id )->getName();
-			$trustedUserContribsLink = Linker::link(
+			$trustedUserContribsLink = $linkRenderer->makeLink(
 				SpecialPage::getTitleFor( 'Contributions', $trustedUser ),
-				Sanitizer::escapeHtmlAllowEntities( $trustedUser ),
+				$trustedUser,
 				[ 'target' => '_blank' ]
 			);
 			$timestamp = $this->getLanguage()->userTimeAndDate(
@@ -118,9 +119,9 @@ class SpecialSmiteSpamTrustedUsers extends SpecialPage {
 				$this->getUser()
 			);
 			$admin = User::newFromID( $row->trusted_user_admin_id )->getName();
-			$adminContribsLink = Linker::link(
+			$adminContribsLink = $linkRenderer->makeLink(
 				SpecialPage::getTitleFor( 'Contributions', $admin ),
-				Sanitizer::escapeHtmlAllowEntities( $admin ),
+				$admin,
 				[ 'target' => '_blank' ]
 			);
 

@@ -20,7 +20,7 @@ class SpecialSmiteSpam extends SpecialPage {
 		$numPages = SiteStats::pages();
 
 		$out->addHTML(
-			Linker::link(
+			$this->getLinkRenderer()->makeLink(
 				SpecialPage::getTitleFor( 'SmiteSpamTrustedUsers' ),
 				wfMessage( 'smitespam-view-trusted-users' )->text(),
 				[ 'target' => '_blank' ]

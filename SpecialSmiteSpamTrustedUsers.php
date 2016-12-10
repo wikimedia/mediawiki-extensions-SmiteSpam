@@ -34,7 +34,7 @@ class SpecialSmiteSpamTrustedUsers extends SpecialPage {
 					if ( $result ) {
 						$out->addHTML(
 							'<div class="errorbox">' .
-							"<p>" . wfMessage( 'smitespam-already-trusted', $username )->text() . "</p>" .
+							"<p>" . $this->msg( 'smitespam-already-trusted', $username )->escaped() . "</p>" .
 							'</div>'
 						);
 					} else {
@@ -50,14 +50,14 @@ class SpecialSmiteSpamTrustedUsers extends SpecialPage {
 						);
 						$out->addHTML(
 							'<div class="successbox">' .
-							"<p>" . wfMessage( 'smitespam-trusted-user-message', $username )->escaped() . "</p>" .
+							"<p>" . $this->msg( 'smitespam-trusted-user-message', $username )->escaped() . "</p>" .
 							'</div>'
 						);
 					}
 				} else {
 					$out->addHTML(
 						'<div class="errorbox">' .
-						"<p>" . wfMessage( 'smitespam-userdoesnotexist', $username )->escaped() . "</p>" .
+						"<p>" . $this->msg( 'smitespam-userdoesnotexist', $username )->escaped() . "</p>" .
 						'</div>'
 					);
 				}
@@ -94,16 +94,16 @@ class SpecialSmiteSpamTrustedUsers extends SpecialPage {
 
 		$out->addHTML( "<form method=\"post\">" );
 
-		$out->addHTML( '<label>' . wfMessage( 'smitespam-add-user-label' )->text() .
+		$out->addHTML( '<label>' . $this->msg( 'smitespam-add-user-label' )->escaped() .
 			'<input type="text" name="username"></label>' .
-			' <input type="submit" value="' . wfMessage( 'smitespam-trust' )->text() .
+			' <input type="submit" value="' . $this->msg( 'smitespam-trust' )->escaped() .
 			'" name="add">' );
 
 		$out->addHTML( '<table class="wikitable"><tr>' .
-			'<th>' . wfMessage( 'smitespam-trusted-user' )->text() . '</th>' .
-			'<th>' . wfMessage( 'smitespam-timestamp' )->text() . '</th>' .
-			'<th>' . wfMessage( 'smitespam-trusting-admin' )->text() . '</th>' .
-			'<th>' . wfMessage( 'smitespam-remove' )->text() . '</th>' .
+			'<th>' . $this->msg( 'smitespam-trusted-user' )->escaped() . '</th>' .
+			'<th>' . $this->msg( 'smitespam-timestamp' )->escaped() . '</th>' .
+			'<th>' . $this->msg( 'smitespam-trusting-admin' )->escaped() . '</th>' .
+			'<th>' . $this->msg( 'smitespam-remove' )->escaped() . '</th>' .
 			'</tr>'
 		);
 		$linkRenderer = $this->getLinkRenderer();
@@ -131,7 +131,7 @@ class SpecialSmiteSpamTrustedUsers extends SpecialPage {
 				"<td>$timestamp</td>" .
 				"<td>$adminContribsLink</td>" .
 				"<td><button type=\"submit\" name=\"remove\" value=\"$trustedUser\">" .
-				wfMessage( 'smitespam-remove' )->text() . "</button></tr>"
+				$this->msg( 'smitespam-remove' )->escaped() . "</button></tr>"
 			);
 		}
 		$out->addHTML( '</table>' );

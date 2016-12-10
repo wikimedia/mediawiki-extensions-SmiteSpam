@@ -22,12 +22,12 @@ class SpecialSmiteSpam extends SpecialPage {
 		$out->addHTML(
 			$this->getLinkRenderer()->makeLink(
 				SpecialPage::getTitleFor( 'SmiteSpamTrustedUsers' ),
-				wfMessage( 'smitespam-view-trusted-users' )->text(),
+				$this->msg( 'smitespam-view-trusted-users' )->text(),
 				[ 'target' => '_blank' ]
 			)
 		);
 
-		$out->addHTML( '<h2>' . $this->msg( 'smitespam-spam-pages-list-heading' )->text() . '</h2>' );
+		$out->addHTML( '<h2>' . $this->msg( 'smitespam-spam-pages-list-heading' )->escaped() . '</h2>' );
 
 		$out->addHTML( '<div id="pagination"></div>' );
 
@@ -42,14 +42,14 @@ class SpecialSmiteSpam extends SpecialPage {
 		$out->addHTML( '<div id="smitespam-select-options"></div>' );
 
 		$out->addHTML( '<input type="submit" value="'
-			. $this->msg( 'smitespam-delete-selected' ) . '" style="display:none;">' );
+			. $this->msg( 'smitespam-delete-selected' )->escaped() . '" style="display:none;">' );
 		$out->addHTML( Html::openElement( 'div', [
 			'id' => 'smitespam-page-list',
 		] ) );
 
 		$out->addHTML( Html::closeElement( 'div' ) );
 		$out->addHTML( '<input type="submit" value="'
-			. $this->msg( 'smitespam-delete-selected' ) . '" style="display:none;">' );
+			. $this->msg( 'smitespam-delete-selected' )->escaped() . '" style="display:none;">' );
 		$out->addHTML( Html::closeElement( 'form' ) );
 
 		$out->addModules( 'ext.SmiteSpam.retriever' );

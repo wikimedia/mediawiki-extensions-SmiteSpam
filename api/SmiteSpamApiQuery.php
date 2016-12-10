@@ -1,5 +1,7 @@
 <?php
 
+use MediaWiki\MediaWikiServices;
+
 class SmiteSpamApiQuery extends ApiBase {
 	public function execute() {
 		$offset = $this->getMain()->getVal( 'offset' );
@@ -19,10 +21,11 @@ class SmiteSpamApiQuery extends ApiBase {
 		$pages = [];
 		$users = [];
 
+		$linkRenderer = MediaWikiServices::getInstance()->getLinkRenderer();
 		foreach ( $spamPages as $page ) {
 			$title = $page->getTitle();
 
-			$titleLink = Linker::link(
+			$titleLink = $linkRenderer->makeLink(
 				$title,
 				null,
 				[ 'target' => '_blank' ]
@@ -44,9 +47,9 @@ class SmiteSpamApiQuery extends ApiBase {
 							$blocked = true;
 						}
 						$users[$creator] = [
-							'link' => Linker::link(
+							'link' => $linkRenderer->makeLink(
 								SpecialPage::getTitleFor( 'Contributions', $creator ),
-								Sanitizer::escapeHtmlAllowEntities( $creator ),
+								$creator,
 								[ 'target' => '_blank' ]
 							),
 							'blocked' => (int)$blocked,

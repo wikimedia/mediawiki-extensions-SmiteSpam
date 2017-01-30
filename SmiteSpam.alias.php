@@ -1,10 +1,4 @@
 <?php
-
-$specialPageAliases = array();
-
-/** English
- * @author polybuildr
- */
 // @codingStandardsIgnoreFile
 
 $specialPageAliases = array();

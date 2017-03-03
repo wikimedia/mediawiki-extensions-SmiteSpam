@@ -4,7 +4,8 @@
 			"Alex00728",
 			"Hwangjy9",
 			"Revi",
-			"아라"
+			"아라",
+			"Jerrykim306"
 		]
 	},
 	"smitespam-delete": "삭제",
@@ -22,5 +23,7 @@
 	"smitespam-trusted": "신뢰된 사용자",
 	"smitespam-timestamp": "타임스탬프",
 	"smitespam-block": "차단하기",
-	"smitespam-blocked": "차단됨"
+	"smitespam-blocked": "차단됨",
+	"smitespam-block-failed": "차단 실패",
+	"smitespam-blocked-user-failure-msg": "{{GENDER:$1|사용자}} \"$1\" 차단 실패."
 }

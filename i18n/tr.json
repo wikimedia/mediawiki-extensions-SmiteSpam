@@ -3,7 +3,8 @@
 		"authors": [
 			"Uğurkent",
 			"Watermelon juice",
-			"KorkmazO"
+			"KorkmazO",
+			"Vito Genovese"
 		]
 	},
 	"smitespam-delete": "Sil",
@@ -17,7 +18,7 @@
 	"smitespam-trusted-user": "Güvenilir kullanıcı",
 	"smitespam-trusting-admin": "Güvenen yönetici",
 	"smitespam-remove": "Sil",
-	"smitespam-block": "Engel",
+	"smitespam-block": "Engelle",
 	"smitespam-blocked": "Engellendi",
 	"smitespam-blocked-user-success-msg": "Engellendi {{GENDER:$1|user}} \"$1\".",
 	"smitespam-blocked-user-failure-msg": "Engelleme başarasız {{GENDER:$1|trusted}}.",

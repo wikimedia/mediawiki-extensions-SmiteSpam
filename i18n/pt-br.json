@@ -1,0 +1,12 @@
+{
+	"@metadata": {
+		"authors": [
+			"Felipe L. Ewald"
+		]
+	},
+	"smitespam-probability-low": "Baixa",
+	"smitespam-probability-medium": "Média",
+	"smitespam-probability-high": "Alta",
+	"smitespam-probability-very-high": "Muito alta",
+	"smitespam-select": "Selecionar:"
+}

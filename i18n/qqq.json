@@ -44,8 +44,10 @@
 	"smitespam-trusted-user-failure-msg": "Failure message when a user could not be trusted. Username passed as parameter.",
 	"smitespam-view-trusted-users": "Link text to go to Special:SmiteSpamTrustedUsers page",
 	"apihelp-smitespamanalyze-description": "{{doc-apihelp-description|smitespamanalyze}}",
+	"apihelp-smitespamanalyze-summary": "{{doc-apihelp-summary|smitespamanalyze}}",
 	"apihelp-smitespamanalyze-param-offset": "{{doc-apihelp-param|smitespamanalyze|offset}}",
 	"apihelp-smitespamanalyze-param-limit": "{{doc-apihelp-param|smitespamanalyze|limit}}",
 	"apihelp-smitespamtrustuser-description": "{{doc-apihelp-description|smitespamtrustuser}}",
+	"apihelp-smitespamtrustuser-summary": "{{doc-apihelp-summary|smitespamtrustuser}}",
 	"apihelp-smitespamtrustuser-param-username": "{{doc-apihelp-param|smitespamtrustuser|username}}"
 }

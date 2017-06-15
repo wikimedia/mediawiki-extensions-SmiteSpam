@@ -41,8 +41,10 @@
 	"smitespam-trusted-user-failure-msg": "Не успеав да го прогласам {{GENDER:$1|корисникот}} „$1“ за докажан.",
 	"smitespam-view-trusted-users": "Погл. докажани корисници",
 	"apihelp-smitespamanalyze-description": "Испис на список на можни страници со спам преку додатокот „Борба со спам“.",
+	"apihelp-smitespamanalyze-summary": "Испис на список на можни страници со спам преку додатокот „Борба со спам“.",
 	"apihelp-smitespamanalyze-param-offset": "SQL <code>OFFSET</code> (отпочнување) за список на страници",
 	"apihelp-smitespamanalyze-param-limit": "SQL <code>LIMIT</code> (граница) за списокот на страници",
 	"apihelp-smitespamtrustuser-description": "Доделете му на корисник статус на доверлив за да може „Борба со спам“ да ги занемарува неговите страници.",
+	"apihelp-smitespamtrustuser-summary": "Доделете му на корисник статус на доверлив за да може „Борба со спам“ да ги занемарува неговите страници.",
 	"apihelp-smitespamtrustuser-param-username": "Корисничкото име што сакате да стане доверливо."
 }

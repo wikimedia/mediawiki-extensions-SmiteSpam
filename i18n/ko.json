@@ -5,7 +5,8 @@
 			"Hwangjy9",
 			"Revi",
 			"아라",
-			"Jerrykim306"
+			"Jerrykim306",
+			"Ykhwong"
 		]
 	},
 	"smitespam-delete": "삭제",
@@ -25,5 +26,7 @@
 	"smitespam-block": "차단하기",
 	"smitespam-blocked": "차단됨",
 	"smitespam-block-failed": "차단 실패",
-	"smitespam-blocked-user-failure-msg": "{{GENDER:$1|사용자}} \"$1\" 차단 실패."
+	"smitespam-blocked-user-failure-msg": "{{GENDER:$1|사용자}} \"$1\" 차단 실패.",
+	"apihelp-smitespamanalyze-summary": "Extension:SmiteSpam에서 잠재적인 스팸 문서의 목록을 가져옵니다.",
+	"apihelp-smitespamtrustuser-summary": "SmiteSpam이 사용자가 만든 문서를 무시하도록 사용자를 신뢰합니다."
 }

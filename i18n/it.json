@@ -26,6 +26,7 @@
 	"smitespam-block": "Blocca",
 	"smitespam-blocked": "Bloccato",
 	"apihelp-smitespamanalyze-description": "Ottieni un elenco di pagine di possibile spam da Extension:SmiteSpam.",
+	"apihelp-smitespamanalyze-summary": "Ottieni un elenco di pagine di possibile spam da Extension:SmiteSpam.",
 	"apihelp-smitespamanalyze-param-offset": "<code>OFFSET</code> SQL per l'elenco delle pagine",
 	"apihelp-smitespamanalyze-param-limit": "<code>LIMIT</code> SQL per l'elenco delle pagine"
 }

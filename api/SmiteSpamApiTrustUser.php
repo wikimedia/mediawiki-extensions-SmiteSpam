@@ -2,7 +2,6 @@
 
 class SmiteSpamApiTrustUser extends ApiBase {
 	public function execute() {
-
 		if ( !in_array( 'smitespam', $this->getUser()->getRights() ) ) {
 			$this->dieUsage( 'Permission error.', 'permissiondenied' );
 		}

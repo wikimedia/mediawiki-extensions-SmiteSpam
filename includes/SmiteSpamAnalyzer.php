@@ -83,8 +83,8 @@ class SmiteSpamAnalyzer {
 			}
 
 			if ( $this->config['ignorePagesWithNoExternalLinks']
-			    && count( $page->getMetadata( 'externalLinks' ) ) == 0 ) {
-			    continue;
+				&& count( $page->getMetadata( 'externalLinks' ) ) == 0 ) {
+				continue;
 			}
 
 			if ( $this->config['ignoreSmallPages']
@@ -117,7 +117,7 @@ class SmiteSpamAnalyzer {
 		if ( $this->config['sort'] ) {
 			usort(
 				$spamPages,
-				function( $pageA, $pageB ) {
+				function ( $pageA, $pageB ) {
 					return $pageA->spamProbability < $pageB->spamProbability;
 				}
 			);

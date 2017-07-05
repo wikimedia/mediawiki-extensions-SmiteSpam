@@ -2,7 +2,8 @@
 	"@metadata": {
 		"authors": [
 			"Macofe",
-			"Toniher"
+			"Toniher",
+			"Ssola"
 		]
 	},
 	"smitespam-delete": "Esborrar",
@@ -10,6 +11,6 @@
 	"smitespam-add-user-label": "Afegeix usuari:",
 	"smitespam-remove": "Elimina",
 	"smitespam-block": "Bloca",
-	"smitespam-blocked": "Bloquejat",
+	"smitespam-blocked": "Blocat",
 	"apihelp-smitespamtrustuser-param-username": "Nom d'usuari de l'usuari en què es confiarà."
 }

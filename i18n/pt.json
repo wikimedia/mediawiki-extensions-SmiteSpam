@@ -2,11 +2,12 @@
 	"@metadata": {
 		"authors": [
 			"Vitorvicentevalente",
-			"Macofe"
+			"Macofe",
+			"Hamilton Abreu"
 		]
 	},
 	"smitespam": "Eliminar spam",
-	"smitespam-desc": "Fornece uma [[Special:SmiteSpam|página especial]] para ajudar os administradores a identificar e eliminar páginas wiki com spam.",
+	"smitespam-desc": "Fornece uma [[Special:SmiteSpam|página especial]] para ajudar os administradores a identificar e eliminar páginas da wiki com spam",
 	"smitespam-spam-pages-list-heading": "Possíveis páginas de spam",
 	"smitespam-delete": "Eliminar",
 	"smitespam-delete-page-success-msg": "Página $1 eliminada.",

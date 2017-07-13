@@ -3,7 +3,8 @@
 		"authors": [
 			"Macofe",
 			"Wladek92",
-			"Orlodrim"
+			"Orlodrim",
+			"Gomoko"
 		]
 	},
 	"smitespam": "Nettoyage du pollupostage",
@@ -42,8 +43,10 @@
 	"smitespam-trusted-user-failure-msg": "Impossible d’accorder la confiance à l’{{GENDER:$1|utilisateur|utilisatrice}} « $1 ».",
 	"smitespam-view-trusted-users": "Visualiser les utilisateurs confirmés",
 	"apihelp-smitespamanalyze-description": "Obtenir une liste des pages spammées avec Extension:SmiteSpam.",
+	"apihelp-smitespamanalyze-summary": "Obtenir une liste des pages de pourriel possible pour Extension:SmiteSpam.",
 	"apihelp-smitespamanalyze-param-offset": "SQL <code>OFFSET</code> pour la liste des pages",
 	"apihelp-smitespamanalyze-param-limit": "SQL <code>LIMIT</code> pour la liste des pages",
 	"apihelp-smitespamtrustuser-description": "Faire confiance à un utilisateur, de telle sorte que SmiteSpam ignore les pages créées par cet utilisateur.",
+	"apihelp-smitespamtrustuser-summary": "Faire confiance à un utilisateur pour que SmiteSpam ignore les pages créées par l’utilisateur.",
 	"apihelp-smitespamtrustuser-param-username": "Nom d'utilisateur de l'utilisateur de confiance."
 }

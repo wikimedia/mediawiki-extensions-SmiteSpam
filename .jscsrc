@@ -1,4 +1,6 @@
 {
 	"preset": "wikimedia",
-	"requireMultipleVarDecl": null
+	"requireMultipleVarDecl": null,
+	"requireVarDeclFirst": false,
+	"requireSpacesInsideBrackets": false
 }

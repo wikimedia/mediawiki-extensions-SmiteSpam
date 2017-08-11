@@ -15,7 +15,7 @@ class SmiteSpamExternalLinksChecker {
 		if ( $numWords == 0 ) {
 			return false;
 		}
-		$ratio = $numLinks/$numWords;
+		$ratio = $numLinks / $numWords;
 
 		if ( $ratio < 0.02 ) {
 			return 0;
@@ -24,7 +24,7 @@ class SmiteSpamExternalLinksChecker {
 		} elseif ( $ratio < 0.04 ) {
 			return 0.5 + 0.5 * ( $ratio * 100 - 3 );
 		} elseif ( $ratio < 0.1 ) {
-			return 1 + 2 * ( $ratio * 100 - 4 )/6;
+			return 1 + 2 * ( $ratio * 100 - 4 ) / 6;
 		} else {
 			return 3;
 		}

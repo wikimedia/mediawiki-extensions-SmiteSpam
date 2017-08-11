@@ -106,7 +106,7 @@ class SmiteSpamAnalyzer {
 				}
 			}
 
-			$page->spamProbability = $value/$checkersUsed;
+			$page->spamProbability = $value / $checkersUsed;
 			if ( $page->spamProbability >= $this->config['threshold'] ) {
 				$spamPages[] = $page;
 			}

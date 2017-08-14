@@ -1,11 +1,12 @@
 {
 	"@metadata": {
 		"authors": [
-			"Hiba Alshawi"
+			"Hiba Alshawi",
+			"ديفيد"
 		]
 	},
-	"smitespam-delete-page-success-msg": "صفحة محذوفة \"$ 1\".",
-	"smitespam-delete-page-failure-msg": "فشل في حذف الصفحة \"1 $\".",
+	"smitespam-delete-page-success-msg": "صفحة محذوفة \"$1\".",
+	"smitespam-delete-page-failure-msg": "فشلت في حذف الصفحة \"$1\".",
 	"smitespam-select": "أختيار:",
 	"smitespam-add-user-label": "أضافة مستخدم",
 	"smitespam-trusted": "موثوق",

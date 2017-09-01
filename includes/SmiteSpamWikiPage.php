@@ -42,7 +42,7 @@ class SmiteSpamWikiPage extends WikiPage {
 
 	/**
 	 * Return particular field of metadata
-	 * @param  string $key
+	 * @param string $key
 	 * @throws MWException If an invalid key is passed
 	 * @return mixed
 	 */

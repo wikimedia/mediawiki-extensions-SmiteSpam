@@ -5,7 +5,7 @@
  */
 class SmiteSpamRepeatedExternalLinksChecker {
 	/**
-	 * @param  SmiteSpamWikiPage $page
+	 * @param SmiteSpamWikiPage $page
 	 * @return float
 	 */
 	public function getValue( SmiteSpamWikiPage $page ) {

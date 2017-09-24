@@ -12,7 +12,7 @@ class SmiteSpamApiTrustUser extends ApiBase {
 			$this->dieUsage( 'Not a valid username.', 'badparams' );
 		}
 
-		$dbr = wfGetDB( DB_SLAVE );
+		$dbr = wfGetDB( DB_REPLICA );
 
 		$result = $dbr->selectRow(
 			[ 'smitespam_trusted_user' ],

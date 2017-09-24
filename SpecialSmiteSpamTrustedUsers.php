@@ -24,7 +24,7 @@ class SpecialSmiteSpamTrustedUsers extends SpecialPage {
 				$username = $request->getText( 'username' );
 				$user = User::newFromName( $username );
 				if ( $user && $user->getId() !== 0 ) {
-					$dbr = wfGetDB( DB_SLAVE );
+					$dbr = wfGetDB( DB_REPLICA );
 					$result = $dbr->selectRow(
 						[ 'smitespam_trusted_user' ],
 						'trusted_user_id',
@@ -81,7 +81,7 @@ class SpecialSmiteSpamTrustedUsers extends SpecialPage {
 			}
 		}
 
-		$dbr = wfGetDB( DB_SLAVE );
+		$dbr = wfGetDB( DB_REPLICA );
 		$result = $dbr->select(
 			[ 'smitespam_trusted_user' ],
 			[ 'trusted_user_id', 'trusted_user_timestamp', 'trusted_user_admin_id' ],

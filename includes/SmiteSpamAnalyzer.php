@@ -30,7 +30,7 @@ class SmiteSpamAnalyzer {
 	 * @return array
 	 */
 	public function run( $offset = 0, $limit = 500 ) {
-		$dbr = wfGetDB( DB_SLAVE );
+		$dbr = wfGetDB( DB_REPLICA );
 
 		$usersResult = $dbr->select(
 			[ 'smitespam_trusted_user' ],

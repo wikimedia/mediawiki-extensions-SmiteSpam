@@ -4,7 +4,8 @@
 			"Macofe",
 			"Wladek92",
 			"Orlodrim",
-			"Gomoko"
+			"Gomoko",
+			"Urhixidur"
 		]
 	},
 	"smitespam": "Nettoyage du pollupostage",
@@ -37,8 +38,8 @@
 	"smitespam-block": "Bloc",
 	"smitespam-blocked": "Bloqué",
 	"smitespam-block-failed": "Echec pendant le blocage",
-	"smitespam-blocked-user-success-msg": "{{GENDER:$1|utilisateur}} bloqué \"$1\".",
-	"smitespam-blocked-user-failure-msg": "Échec du blocage de l'{{GENDER:$1|utilisateur}} « $1 ».",
+	"smitespam-blocked-user-success-msg": "{{GENDER:$1|utilisateur bloqué|utilisatrice bloquée}} « $1 ».",
+	"smitespam-blocked-user-failure-msg": "Échec du blocage de l’utilisat{{GENDER:$1|eur|rice}} « $1 ».",
 	"smitespam-trusted-user-success-msg": "Confiance accordée à l’{{GENDER:$1|utilisateur|utilisatrice}} « $1 ».",
 	"smitespam-trusted-user-failure-msg": "Impossible d’accorder la confiance à l’{{GENDER:$1|utilisateur|utilisatrice}} « $1 ».",
 	"smitespam-view-trusted-users": "Visualiser les utilisateurs confirmés",

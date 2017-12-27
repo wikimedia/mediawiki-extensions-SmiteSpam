@@ -1,12 +1,33 @@
 {
 	"@metadata": {
 		"authors": [
-			"Felipe L. Ewald"
+			"Felipe L. Ewald",
+			"Eduardo Addad de Oliveira"
 		]
 	},
+	"smitespam": "Eliminar spam",
+	"smitespam-desc": "Fornece uma [[Special:SmiteSpam|página especial]] para ajudar os administradores a identificar e eliminar páginas da wiki com spam",
+	"smitespam-spam-pages-list-heading": "Possíveis páginas de spam",
+	"smitespam-delete": "Deletar",
+	"smitespam-delete-page-success-msg": "Página $1 eliminada.",
+	"smitespam-delete-page-failure-msg": "Falha ao eliminar a página \"$1\".",
+	"smitespam-created-by": "{{GENDER:$1|Criada}} por $1",
+	"smitespam-deleted-reason": "Identificado como spam pela extensão SmiteSpam.",
+	"action-smitespam": "usar a extensão SmiteSpam",
 	"smitespam-probability-low": "Baixa",
 	"smitespam-probability-medium": "Média",
 	"smitespam-probability-high": "Alta",
 	"smitespam-probability-very-high": "Muito alta",
-	"smitespam-select": "Selecionar:"
+	"smitespam-select": "Selecionar:",
+	"smitespam-trust": "Confiar",
+	"smitespam-trusted": "De confiança",
+	"smitespam-trust-failed": "Pedido para confiar falhou",
+	"smitespam-trusted-user": "Utilizador de confiança",
+	"smitespam-timestamp": "Data e hora",
+	"smitespam-trusting-admin": "Administrador de confiança",
+	"smitespam-remove": "Remover",
+	"smitespam-block-reason": "Spam",
+	"smitespam-block": "Bloquear",
+	"smitespam-blocked": "Bloqueado",
+	"smitespam-block-failed": "Pedido para bloquear falhou"
 }

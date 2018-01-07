@@ -9,6 +9,9 @@ class SmiteSpamAnalyzer {
 	 */
 	protected $config;
 
+	/**
+	 * @param bool $sort
+	 */
 	public function __construct( $sort = true ) {
 		global $wgSmiteSpamCheckers, $wgSmiteSpamThreshold;
 		global $wgSmiteSpamIgnorePagesWithNoExternalLinks;
@@ -21,12 +24,15 @@ class SmiteSpamAnalyzer {
 			'sort' => $sort,
 		];
 	}
+
 	/**
 	 * Retrieves a list of pages in the wiki based on the offset and limit
 	 * and runs checks on each of them. Pages whose evaluated value exceeds the
 	 * threshold defined in the configuration are returned as an array.
 	 * @todo Perform DB queries in batches, else prone to timeouts
 	 *
+	 * @param int $offset
+	 * @param int $limit
 	 * @return array
 	 */
 	public function run( $offset = 0, $limit = 500 ) {

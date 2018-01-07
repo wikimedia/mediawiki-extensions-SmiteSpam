@@ -8,6 +8,9 @@ class SpecialSmiteSpam extends SpecialPage {
 		parent::__construct( 'SmiteSpam', 'smitespam' );
 	}
 
+	/**
+	 * @param string|null $subPage
+	 */
 	public function execute( $subPage ) {
 		if ( !$this->userCanExecute( $this->getUser() ) ) {
 			$this->displayRestrictionError();
@@ -61,6 +64,7 @@ class SpecialSmiteSpam extends SpecialPage {
 		] );
 	}
 
+	/** @inheritDoc */
 	function getGroupName() {
 		return 'spam';
 	}

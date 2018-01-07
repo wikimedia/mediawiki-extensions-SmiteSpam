@@ -33,6 +33,9 @@ class SmiteSpamWikiPage extends WikiPage {
 		$this->metadata = [];
 	}
 
+	/**
+	 * @return Revision|null
+	 */
 	public function getOldestRevision() {
 		if ( !$this->oldestRevision ) {
 			$this->oldestRevision = parent::getOldestRevision();

@@ -13,5 +13,6 @@
 	"smitespam-probability-medium": "中",
 	"smitespam-probability-high": "高",
 	"smitespam-probability-very-high": "非常高",
+	"smitespam-timestamp": "時間戳記",
 	"smitespam-block": "封鎖"
 }

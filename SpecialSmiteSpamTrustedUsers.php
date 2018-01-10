@@ -6,10 +6,14 @@ class SpecialSmiteSpamTrustedUsers extends SpecialPage {
 		parent::__construct( 'SmiteSpamTrustedUsers', 'smitespam' );
 	}
 
+	/** @inheritDoc */
 	public function doesWrites() {
 		return true;
 	}
 
+	/**
+	 * @param string|null $subPage
+	 */
 	public function execute( $subPage ) {
 		if ( !$this->userCanExecute( $this->getUser() ) ) {
 			$this->displayRestrictionError();

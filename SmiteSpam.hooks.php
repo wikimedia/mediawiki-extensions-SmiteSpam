@@ -1,13 +1,20 @@
 <?php
 
 class SmiteSpamHooks {
-	// Schema updates for update.php
+	/**
+	 * Schema updates for update.php
+	 * @param DatabaseUpdater $updater
+	 * @return true
+	 */
 	public static function createTables( DatabaseUpdater $updater ) {
 		$updater->addExtensionTable( 'smitespam_trusted_user',
 			__DIR__ . '/smitespam.sql' );
 		return true;
 	}
 
+	/**
+	 * @param ALTree &$adminLinksTree
+	 */
 	public static function addToAdminLinks( ALTree &$adminLinksTree ) {
 		$spamToolsMessage = wfMessage( 'specialpages-group-spam' )->text();
 

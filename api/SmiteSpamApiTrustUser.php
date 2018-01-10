@@ -44,7 +44,7 @@ class SmiteSpamApiTrustUser extends ApiBase {
 		return true;
 	}
 
-	// Face parameter.
+	/** @inheritDoc */
 	public function getAllowedParams() {
 		return array_merge( parent::getAllowedParams(), [
 			'username' => [
@@ -54,7 +54,7 @@ class SmiteSpamApiTrustUser extends ApiBase {
 		] );
 	}
 
-	// Get examples
+	/** @inheritDoc */
 	public function getExamples() {
 		return [
 			'api.php?action=smitespamtrustuser&username=Admin'

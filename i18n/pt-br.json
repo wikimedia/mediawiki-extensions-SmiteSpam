@@ -19,6 +19,7 @@
 	"smitespam-probability-high": "Alta",
 	"smitespam-probability-very-high": "Muito alta",
 	"smitespam-select": "Selecionar:",
+	"smitespamtrustedusers": "Usuários confiáveis SmiteSpam",
 	"smitespam-trust": "Confiar",
 	"smitespam-trusted": "De confiança",
 	"smitespam-trust-failed": "Pedido para confiar falhou",
@@ -29,5 +30,6 @@
 	"smitespam-block-reason": "Spam",
 	"smitespam-block": "Bloquear",
 	"smitespam-blocked": "Bloqueado",
-	"smitespam-block-failed": "Pedido para bloquear falhou"
+	"smitespam-block-failed": "Pedido para bloquear falhou",
+	"apihelp-smitespamtrustuser-param-username": "Nome de usuário para confiar."
 }

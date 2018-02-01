@@ -27,7 +27,7 @@
 	"smitespam-trusted-user-message": "Displayed when a user is successfully trusted. Username passed as parameter.",
 	"smitespam-userdoesnotexist": "Displayed when trying to trust a user that does not exist. Username passed as parameter.",
 	"smitespam-add-user-label": "Label for the textbox where the username should be entered\n{{Identical|Add user}}",
-	"smitespam-trust": "Text that appears on the button clicked to trust a user - the verb \"trust\".",
+	"smitespam-trust": "Text that appears on the button clicked to trust a user - the verb \"trust\".\n{{Identical|Trust}}",
 	"smitespam-trusted": "Status message displayed next to a username when the user is trusted",
 	"smitespam-trust-failed": "Status message displayed next to a username when the trust request has failed",
 	"smitespam-trusted-user": "Appears in the column heading of trusted users",

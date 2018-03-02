@@ -10,7 +10,7 @@ $wgExtensionCredits['antispam'][] = [
 	'namemsg' => 'smitespam-extensionname',
 	'author' => 'Vivek Ghaisas',
 	'descriptionmsg'  => 'smitespam-desc',
-	'license-name' => 'GPL-2.0',
+	'license-name' => 'GPL-2.0-only',
 	'version' => '0.1',
 	'url' => 'https://www.mediawiki.org/wiki/Extension:SmiteSpam',
 ];

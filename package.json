@@ -10,7 +10,7 @@
     "url": "https://gerrit.wikimedia.org/r/mediawiki/extensions/SmiteSpam"
   },
   "author": "Vivek Ghaisas",
-  "license": "GPL-2.0",
+  "license": "GPL-2.0-only",
   "devDependencies": {
     "grunt": "1.0.1",
     "grunt-banana-checker": "0.5.0",

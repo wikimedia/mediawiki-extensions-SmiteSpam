@@ -7,6 +7,6 @@
 	},
 	"smitespam-delete": "Jê bibe",
 	"smitespam-delete-page-success-msg": "Rûpela \"$1\" jê bir.",
-	"smitespam-created-by": "Çêkirin ji alî",
+	"smitespam-created-by": "Ji aliyê $1 ve hatiye {{GENDER:$1|çêkirin}}",
 	"smitespam-select": "Hilbijêre:"
 }

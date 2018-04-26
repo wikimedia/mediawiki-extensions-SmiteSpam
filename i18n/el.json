@@ -1,0 +1,21 @@
+{
+	"@metadata": {
+		"authors": [
+			"Nikosgranturismogt"
+		]
+	},
+	"smitespam-delete": "Διαγραφή",
+	"smitespam-delete-page-success-msg": "Η σελίδα \"$1\" διαγράφηκε.",
+	"smitespam-probability-low": "Χαμηλό",
+	"smitespam-probability-medium": "Μέτριο",
+	"smitespam-probability-high": "Υψηλό",
+	"smitespam-probability-very-high": "Πολύ Υψηλό",
+	"smitespam-select": "Επιλογή:",
+	"smitespam-add-user-label": "Πρόσθεση χρήστη:",
+	"smitespam-trust": "Εμπιστοσύνη",
+	"smitespam-trusted": "Αξιόπιστη",
+	"smitespam-trusted-user": "Έμπιστος χρήστες",
+	"smitespam-timestamp": "Ημερομηνία",
+	"smitespam-trusting-admin": "Έμπιστος διαχειριστής",
+	"smitespam-remove": "Αφαίρεση"
+}

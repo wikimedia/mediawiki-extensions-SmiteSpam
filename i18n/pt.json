@@ -24,7 +24,7 @@
 	"smitespam-already-trusted": "{{GENDER:$1|O utilizador|A utilizadora}} \"$1\" já é de confiança.",
 	"smitespam-trusted-user-message": "{{GENDER:$1|O utilizador|A utilizadora}} \"$1\" passa a ser de confiança.",
 	"smitespam-userdoesnotexist": "{{GENDER:$1|O utilizador|A utilizadora}} \"$1\" não existe.",
-	"smitespam-add-user-label": "Adicionar utilizador(a):",
+	"smitespam-add-user-label": "Adicionar utilizador:",
 	"smitespam-trust": "Confiar",
 	"smitespam-trusted": "De confiança",
 	"smitespam-trust-failed": "Pedido para confiar falhou",

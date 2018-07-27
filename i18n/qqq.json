@@ -43,6 +43,7 @@
 	"smitespam-trusted-user-success-msg": "Success message when a user is successfully trusted. Username passed as parameter.",
 	"smitespam-trusted-user-failure-msg": "Failure message when a user could not be trusted. Username passed as parameter.",
 	"smitespam-view-trusted-users": "Link text to go to Special:SmiteSpamTrustedUsers page",
+	"right-smitespam": "{{doc-right|smitespam}}",
 	"apihelp-smitespamanalyze-description": "{{doc-apihelp-description|smitespamanalyze}}",
 	"apihelp-smitespamanalyze-summary": "{{doc-apihelp-summary|smitespamanalyze}}",
 	"apihelp-smitespamanalyze-param-offset": "{{doc-apihelp-param|smitespamanalyze|offset}}",

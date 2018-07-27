@@ -40,6 +40,7 @@
 	"smitespam-trusted-user-success-msg": "Trusted {{GENDER:$1|user}} \"$1\".",
 	"smitespam-trusted-user-failure-msg": "Failed to trust {{GENDER:$1|user}} \"$1\".",
 	"smitespam-view-trusted-users": "View trusted users",
+	"right-smitespam": "Administer [[Special:SmiteSpam|SmiteSpam]]",
 	"apihelp-smitespamanalyze-description": "Get a list of possible spam pages from Extension:SmiteSpam.",
 	"apihelp-smitespamanalyze-summary": "Get a list of possible spam pages from Extension:SmiteSpam.",
 	"apihelp-smitespamanalyze-param-offset": "SQL <code>OFFSET</code> for the list of pages",

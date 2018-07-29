@@ -1,8 +1,10 @@
 {
 	"@metadata": {
 		"authors": [
-			"INS Pirat"
+			"INS Pirat",
+			"Vlad5250"
 		]
 	},
-	"smitespam-trusted-user": "Доверенный участник"
+	"smitespam-trusted-user": "Доверенный участник",
+	"right-smitespam": "администрирование [[Special:SmiteSpam|SmiteSpam]]"
 }

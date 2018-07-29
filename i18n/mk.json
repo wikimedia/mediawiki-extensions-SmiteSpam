@@ -40,6 +40,7 @@
 	"smitespam-trusted-user-success-msg": "{{GENDER:$1|Корисникот}} „$1“ е прогласен за докажан.",
 	"smitespam-trusted-user-failure-msg": "Не успеав да го прогласам {{GENDER:$1|корисникот}} „$1“ за докажан.",
 	"smitespam-view-trusted-users": "Погл. докажани корисници",
+	"right-smitespam": "Администрација на „[[Special:SmiteSpam|Борба со спам]]“",
 	"apihelp-smitespamanalyze-description": "Испис на список на можни страници со спам преку додатокот „Борба со спам“.",
 	"apihelp-smitespamanalyze-summary": "Испис на список на можни страници со спам преку додатокот „Борба со спам“.",
 	"apihelp-smitespamanalyze-param-offset": "SQL <code>OFFSET</code> (отпочнување) за список на страници",

@@ -43,6 +43,7 @@
 	"smitespam-trusted-user-success-msg": "Confiance accordée à l’{{GENDER:$1|utilisateur|utilisatrice}} « $1 ».",
 	"smitespam-trusted-user-failure-msg": "Impossible d’accorder la confiance à l’{{GENDER:$1|utilisateur|utilisatrice}} « $1 ».",
 	"smitespam-view-trusted-users": "Visualiser les utilisateurs confirmés",
+	"right-smitespam": "Administrer [[Special:SmiteSpam|SmiteSpam]]",
 	"apihelp-smitespamanalyze-description": "Obtenir une liste des pages spammées avec Extension:SmiteSpam.",
 	"apihelp-smitespamanalyze-summary": "Obtenir une liste des pages de pourriel possible pour Extension:SmiteSpam.",
 	"apihelp-smitespamanalyze-param-offset": "SQL <code>OFFSET</code> pour la liste des pages",

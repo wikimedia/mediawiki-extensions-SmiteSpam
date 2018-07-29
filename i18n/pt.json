@@ -41,6 +41,7 @@
 	"smitespam-trusted-user-success-msg": "{{GENDER:$1|O utilizador|A utilizadora}} \"$1\" passa a ser de confiança.",
 	"smitespam-trusted-user-failure-msg": "O pedido para confiar {{GENDER:$1|no utilizador|na utilizadora}} \"$1\" falhou.",
 	"smitespam-view-trusted-users": "Ver utilizadores de confiança",
+	"right-smitespam": "Administrar [[Special:SmiteSpam|SmiteSpam]]",
 	"apihelp-smitespamanalyze-description": "Obter uma lista de possíveis páginas de spam de Extensão:SmiteSpam.",
 	"apihelp-smitespamanalyze-summary": "Obter uma lista de possíveis páginas de spam de Extensão:SmiteSpam.",
 	"apihelp-smitespamanalyze-param-offset": "<code>OFFSET</code> (posição inicial) de SQL para a lista de páginas",

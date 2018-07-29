@@ -42,6 +42,7 @@
 	"smitespam-trusted-user-success-msg": "已信任{{GENDER:$1|使用者}}「$1」。",
 	"smitespam-trusted-user-failure-msg": "信任{{GENDER:$1|使用者}}「$1」失敗。",
 	"smitespam-view-trusted-users": "檢視已信任使用者",
+	"right-smitespam": "管理 [[Special:SmiteSpam|SmiteSpam]]",
 	"apihelp-smitespamanalyze-description": "從 Extension:SmiteSpam 取得可能是破壞頁面的清單。",
 	"apihelp-smitespamanalyze-summary": "從 Extension:SmiteSpam 取得可能是破壞頁面的清單。",
 	"apihelp-smitespamanalyze-param-offset": "用於頁面清單的 SQL <code>OFFSET</code>",

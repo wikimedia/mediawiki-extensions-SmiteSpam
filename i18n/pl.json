@@ -18,5 +18,6 @@
 	"smitespam-timestamp": "Sygnatura czasowa",
 	"smitespam-remove": "Usuń",
 	"smitespam-block": "Zablokuj",
-	"smitespam-blocked": "Zablokowany"
+	"smitespam-blocked": "Zablokowany",
+	"right-smitespam": "Administrowanie [[Special:SmiteSpam|SmiteSpam]]"
 }

@@ -3,7 +3,9 @@
 		"authors": [
 			"Fitoschido",
 			"Macofe",
-			"AlvaroMolina"
+			"AlvaroMolina",
+			"Jelou",
+			"MarcoAurelio"
 		]
 	},
 	"smitespam": "Smite spam",
@@ -29,7 +31,7 @@
 	"smitespam-trusted": "Confiable",
 	"smitespam-trust-failed": "No se pude confiar",
 	"smitespam-trusted-user": "Usuario de confianza",
-	"smitespam-timestamp": "Fecha y hora",
+	"smitespam-timestamp": "Marca de tiempo",
 	"smitespam-trusting-admin": "Administrador de confianza",
 	"smitespam-remove": "Eliminar",
 	"smitespam-block-reason": "Spam",
@@ -41,6 +43,7 @@
 	"smitespam-trusted-user-success-msg": "Se confió en {{GENDER:$1|el usuario|la usuaria}} \"$1\".",
 	"smitespam-trusted-user-failure-msg": "No se pudo confiar en {{GENDER:$1|el usuario|la usuaria}} \"$1\".",
 	"smitespam-view-trusted-users": "Ver usuarios de confianza",
+	"right-smitespam": "Administrar [[Special:SmiteSpam|SmiteSpam]]",
 	"apihelp-smitespamanalyze-description": "Obtener una lista de posibles páginas de spam de Extensión:SmiteSpam.",
 	"apihelp-smitespamanalyze-param-offset": "SQL <code>DESPLAZAMIENTO</code> por la lista de páginas",
 	"apihelp-smitespamanalyze-param-limit": "SQL <code>LÍMITE</code> para la lista de páginas",

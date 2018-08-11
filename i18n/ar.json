@@ -40,6 +40,7 @@
 	"smitespam-trusted-user-success-msg": "تمت الثقة في {{GENDER:$1|المستخدم|المستخدمة}} \"$1\".",
 	"smitespam-trusted-user-failure-msg": "فشل الوثوق ب{{GENDER:$1|المستخدم|المستخدمة}} \"$1\".",
 	"smitespam-view-trusted-users": "عرض المستخدمين الموثوقين",
+	"right-smitespam": "إدارة [[Special:SmiteSpam|اضرب السخام]]",
 	"apihelp-smitespamanalyze-description": "احصل على قائمة بصفحات السخام المحتملة من Extension:SmiteSpam.",
 	"apihelp-smitespamanalyze-summary": "احصل على قائمة بصفحات السخام المحتملة من Extension:SmiteSpam.",
 	"apihelp-smitespamanalyze-param-offset": "SQL <code>OFFSET</code> لقائمة الصفحات",

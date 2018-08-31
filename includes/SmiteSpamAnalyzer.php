@@ -57,7 +57,7 @@ class SmiteSpamAnalyzer {
 			],
 			__METHOD__,
 			[
-				"ORDER BY" => "page_id ASC",
+				"ORDER BY" => "page_id DESC",
 				"OFFSET" => $offset,
 				"LIMIT" => $limit,
 			]

@@ -1,10 +1,9 @@
 <?php
-// @codingStandardsIgnoreFile
 
-$specialPageAliases = array();
+$specialPageAliases = [];
 
 /** English (English) */
-$specialPageAliases['en'] = array(
-	'SmiteSpam' => array( 'SmiteSpam' ),
-	'SmiteSpamTrustedUsers' => array( 'SmiteSpamTrustedUsers' ),
-);
+$specialPageAliases['en'] = [
+	'SmiteSpam' => [ 'SmiteSpam' ],
+	'SmiteSpamTrustedUsers' => [ 'SmiteSpamTrustedUsers' ],
+];

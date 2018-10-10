@@ -1,0 +1,11 @@
+{
+	"@metadata": {
+		"authors": [
+			"Joetaras"
+		]
+	},
+	"smitespam": "Smite spam",
+	"smitespam-delete": "Scangìlle",
+	"smitespam-delete-page-success-msg": "Pàgene \"$1\" scangellate.",
+	"smitespam-select": "Scacchie:"
+}

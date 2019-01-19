@@ -2,10 +2,12 @@
 	"@metadata": {
 		"authors": [
 			"Hiba Alshawi",
-			"ديفيد"
+			"ديفيد",
+			"Meno25"
 		]
 	},
 	"smitespam": "اضرب السخام",
+	"smitespam-extensionname": "سمايت سبام",
 	"smitespam-desc": "يقدم [[Special:SmiteSpam|صفحة خاصة]] لمساعدة الإداريين على تحديد وحذف صفحات السخام في الويكي",
 	"smitespam-spam-pages-list-heading": "صفحات السخام المحتملة",
 	"smitespam-delete": "حذف",

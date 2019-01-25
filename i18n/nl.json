@@ -1,0 +1,30 @@
+{
+	"@metadata": {
+		"authors": [
+			"Mainframe98"
+		]
+	},
+	"smitespam-desc": "Voegt een [[Special:SmiteSpam|speciale pagina]] toe om administrators te helpen spampagina's te verwijderen",
+	"smitespam-delete": "Verwijderen",
+	"smitespam-delete-page-success-msg": "Pagina \"$1\" verwijderd",
+	"smitespam-delete-page-failure-msg": "Kon \"$1\" niet verwijderen",
+	"smitespam-created-by": "{{GENDER:$1|Aangemaakt}} door $1",
+	"smitespam-probability-low": "Laag",
+	"smitespam-probability-medium": "Gemiddeld",
+	"smitespam-probability-high": "Hoog",
+	"smitespam-probability-very-high": "Zeer hoog",
+	"smitespam-select": "Selecteer:",
+	"smitespam-already-trusted": "Gebruiker \"$1\" wordt al {{GENDER:$1|vertrouwd}}.",
+	"smitespam-userdoesnotexist": "{{GENDER:$1|Gebruiker}} \"$1\" bestaat niet.",
+	"smitespam-add-user-label": "Gebruiker toevoegen:",
+	"smitespam-trust": "Vertrouwen",
+	"smitespam-trusted": "Vertrouwd",
+	"smitespam-trusted-user": "Vertrouwde gebruikers",
+	"smitespam-timestamp": "Tijdstip",
+	"smitespam-remove": "Verwijderen",
+	"smitespam-block": "Blokkeren",
+	"smitespam-blocked": "Geblokkeerd",
+	"smitespam-blocked-user-success-msg": "{{GENDER:$1|Gebruiker}} \"$1\" geblokkeerd",
+	"smitespam-blocked-user-failure-msg": "Kon {{GENDER:$1|gebruiker}} \"$1\" niet blokkeren",
+	"smitespam-view-trusted-users": "Toon vertrouwde gebruikers"
+}

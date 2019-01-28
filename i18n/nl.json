@@ -1,7 +1,8 @@
 {
 	"@metadata": {
 		"authors": [
-			"Mainframe98"
+			"Mainframe98",
+			"Optilete"
 		]
 	},
 	"smitespam-desc": "Voegt een [[Special:SmiteSpam|speciale pagina]] toe om administrators te helpen spampagina's te verwijderen",
@@ -19,7 +20,7 @@
 	"smitespam-add-user-label": "Gebruiker toevoegen:",
 	"smitespam-trust": "Vertrouwen",
 	"smitespam-trusted": "Vertrouwd",
-	"smitespam-trusted-user": "Vertrouwde gebruikers",
+	"smitespam-trusted-user": "Vertrouwde gebruiker",
 	"smitespam-timestamp": "Tijdstip",
 	"smitespam-remove": "Verwijderen",
 	"smitespam-block": "Blokkeren",

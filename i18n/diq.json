@@ -4,5 +4,8 @@
 			"Mirzali"
 		]
 	},
-	"smitespam-delete": "Bestere"
+	"smitespam-delete": "Bestere",
+	"smitespam-remove": "Wedare",
+	"smitespam-block": "Kılit ke",
+	"smitespam-blocked": "Kılit biyo"
 }

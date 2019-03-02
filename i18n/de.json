@@ -43,8 +43,10 @@
 	"smitespam-view-trusted-users": "Vertrauenswürdige Benutzer ansehen",
 	"right-smitespam": "[[Special:SmiteSpam|SmiteSpam]] verwalten",
 	"apihelp-smitespamanalyze-description": "Ruft eine Liste mit möglichen Spamseiten der Erweiterung „SmiteSpam“ ab.",
+	"apihelp-smitespamanalyze-summary": "Ruft eine Liste möglicher Spamseiten von der Erweiterung „SmiteSpam“ ab.",
 	"apihelp-smitespamanalyze-param-offset": "SQL-<code>OFFSET</code> für die Seitenliste",
 	"apihelp-smitespamanalyze-param-limit": "SQL-<code>LIMIT</code> für die Seitenliste",
 	"apihelp-smitespamtrustuser-description": "Vertraut einem Benutzer, so dass SmiteSpam Seiten ignoriert, die von diesem erstellt wurden.",
+	"apihelp-smitespamtrustuser-summary": "Vertraut einem Benutzer, so dass SmiteSpam von dem Benutzer erstellte Seiten ignoriert.",
 	"apihelp-smitespamtrustuser-param-username": "Name des Benutzers, dem vertraut werden soll."
 }

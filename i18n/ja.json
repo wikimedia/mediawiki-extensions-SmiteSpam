@@ -2,7 +2,8 @@
 	"@metadata": {
 		"authors": [
 			"Sujiniku",
-			"Penn Station"
+			"Penn Station",
+			"Shirayuki"
 		]
 	},
 	"smitespam-select": "選択:",
@@ -14,5 +15,6 @@
 	"smitespam-remove": "除去",
 	"smitespam-block-reason": "スパム",
 	"smitespam-block": "ブロック",
-	"smitespam-blocked": "ブロック済"
+	"smitespam-blocked": "ブロック済",
+	"right-smitespam": "[[Special:SmiteSpam|SmiteSpam]] を管理"
 }

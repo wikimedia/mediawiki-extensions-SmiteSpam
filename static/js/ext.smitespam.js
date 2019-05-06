@@ -283,7 +283,7 @@
 				} else if ( $.inArray( groupCreator, usersFailedToBlock ) !== -1 ) {
 					$creatorCard.append( ' &middot; (' + mw.msg( 'smitespam-block-failed' ) + ')' );
 				} else {
-					var $blockCheckboxContainer = $( '<span>' ).addClass( 'block-checkbox-container' );
+					var $blockCheckboxContainer = $( '<label>' ).addClass( 'block-checkbox-container' );
 					var $blockCheckbox = $( '<input>', {
 						type: 'checkbox',
 						value: groupCreator
@@ -292,18 +292,20 @@
 					if ( $.inArray( $blockCheckbox.val(), usersToBlock ) !== -1 ) {
 						$blockCheckbox.attr( 'checked', 'checked' );
 					}
-					$blockCheckboxContainer.append( ' &middot; ' );
 					$blockCheckboxContainer.append( $blockCheckbox );
 					$blockCheckboxContainer.append( mw.msg( 'smitespam-block' ) );
-					$creatorCard.append( $blockCheckboxContainer );
 
 					var $trustUserButtonContainer = $( '<span>' ).addClass( 'trust-user-button-container' );
-					$trustUserButtonContainer.append( ' &middot; ' );
 					var $trustUserButton = $( '<button>' ).text( mw.msg( 'smitespam-trust' ) )
 						.on( 'click', onTrustUserButtonClick );
 
 					$trustUserButtonContainer.append( $trustUserButton );
-					$creatorCard.append( $trustUserButtonContainer );
+					$creatorCard.append(
+						' · ',
+						$blockCheckboxContainer,
+						' · ',
+						$trustUserButtonContainer
+					);
 				}
 			}
 			$userGroup.append( $creatorCard );

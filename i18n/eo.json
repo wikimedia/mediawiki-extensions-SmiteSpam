@@ -1,0 +1,25 @@
+{
+	"@metadata": {
+		"authors": [
+			"Mirin"
+		]
+	},
+	"smitespam-delete": "Forigi",
+	"smitespam-delete-page-success-msg": "Paĝo \"$1\" foriĝis.",
+	"smitespam-delete-page-failure-msg": "Forigo de paĝo \"$1\" malsukcesis.",
+	"smitespam-created-by": "{{GENDER:$1|Kreita}} de $1",
+	"smitespam-probability-low": "Malgranda",
+	"smitespam-probability-medium": "Meza",
+	"smitespam-probability-high": "Granda",
+	"smitespam-probability-very-high": "Grandega",
+	"smitespam-select": "Elekti:",
+	"smitespam-add-user-label": "Aldoni uzanton:",
+	"smitespam-trust": "Fidi",
+	"smitespam-trusted": "Fidata",
+	"smitespam-trusted-user": "Fidata uzanto",
+	"smitespam-remove": "Forigi",
+	"smitespam-block": "Forbari",
+	"smitespam-blocked": "Forbarata",
+	"smitespam-view-trusted-users": "Vidi fidatajn uzantojn",
+	"apihelp-smitespamtrustuser-param-username": "Uzantnomo de fidota uzanto."
+}

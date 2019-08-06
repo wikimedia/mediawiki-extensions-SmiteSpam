@@ -1,10 +1,11 @@
 {
 	"@metadata": {
 		"authors": [
-			"Geopoet"
+			"Geopoet",
+			"Brazal.dang"
 		]
 	},
 	"smitespam": "Pangkulon an Espam",
 	"smitespam-desc": "Minatao nin sarong [[Special:SmiteSpam|espesyal na pahina]] tanganing tabangan an mga administrador na mabisto asin puraon an mga pahina na espam sa wiki.",
-	"smitespam-created-by": "Pinagmukna ni"
+	"smitespam-created-by": "{{GENDER:$1|Pinagmukna}} ni $1"
 }

@@ -2,9 +2,13 @@
 	"@metadata": {
 		"authors": [
 			"INS Pirat",
-			"Vlad5250"
+			"Vlad5250",
+			"Марио"
 		]
 	},
 	"smitespam-trusted-user": "Доверенный участник",
+	"smitespam-block": "Блокировка",
+	"smitespam-block-failed": "Не удалось блокировать",
+	"smitespam-blocked-user-failure-msg": "Не удалось блокировать {{GENDER:$1|участника}} \"$1\"",
 	"right-smitespam": "администрирование [[Special:SmiteSpam|SmiteSpam]]"
 }

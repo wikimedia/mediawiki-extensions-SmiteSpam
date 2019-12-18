@@ -5,7 +5,8 @@
 			"Wladek92",
 			"Orlodrim",
 			"Gomoko",
-			"Urhixidur"
+			"Urhixidur",
+			"Thibaut120094"
 		]
 	},
 	"smitespam": "Nettoyage du pollupostage",
@@ -16,7 +17,7 @@
 	"smitespam-delete-page-failure-msg": "Échec de suppression de la page « $1 ».",
 	"smitespam-created-by": "Créée par $1",
 	"smitespam-deleted-reason": "Identifié comme pollupostage par l’extension SmiteSpam.",
-	"action-smitespam": "utiliser l'extension SmiteSpam",
+	"action-smitespam": "utiliser l’extension SmiteSpam",
 	"smitespam-probability-low": "Bas",
 	"smitespam-probability-medium": "Moyen",
 	"smitespam-probability-high": "Elevé",

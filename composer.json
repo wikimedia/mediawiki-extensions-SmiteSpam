@@ -20,8 +20,8 @@
 			"minus-x check ."
 		],
 		"fix": [
-			"phpcbf",
-			"minus-x fix ."
+			"minus-x fix .",
+			"phpcbf"
 		]
 	}
 }

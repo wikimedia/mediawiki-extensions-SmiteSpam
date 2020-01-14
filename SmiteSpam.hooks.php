@@ -19,13 +19,13 @@ class SmiteSpamHooks {
 		$spamToolsMessage = wfMessage( 'specialpages-group-spam' )->text();
 
 		$spamToolsSection = $adminLinksTree->getSection( $spamToolsMessage );
-		if ( is_null( $spamToolsSection ) ) {
+		if ( $spamToolsSection === null ) {
 			$spamToolsSection = new ALSection( $spamToolsMessage );
 			$adminLinksTree->addSection( $spamToolsSection );
 		}
 
 		$extensionsRow = $spamToolsSection->getRow( 'extensions' );
-		if ( is_null( $extensionsRow ) ) {
+		if ( $extensionsRow === null ) {
 			$extensionsRow = new ALRow( 'extensions' );
 			$spamToolsSection->addRow( $extensionsRow );
 		}

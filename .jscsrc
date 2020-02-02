@@ -1,6 +1,0 @@
-{
-	"preset": "wikimedia",
-	"requireMultipleVarDecl": null,
-	"requireVarDeclFirst": false,
-	"requireSpacesInsideBrackets": false
-}

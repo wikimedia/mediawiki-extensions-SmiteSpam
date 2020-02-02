@@ -1,0 +1,17 @@
+{
+	"root": true,
+	"extends": [
+		"wikimedia/client"
+	],
+	"globals": {
+		"mw": false,
+		"jQuery": false
+	},
+	"rules": {
+		"wrap-iife": "off",
+		"one-var": "off",
+		"vars-on-top": "off",
+		"no-use-before-define": "off",
+		"computed-property-spacing": "off"
+	}
+}

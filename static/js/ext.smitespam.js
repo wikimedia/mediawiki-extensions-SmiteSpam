@@ -35,10 +35,12 @@
 		numSent: 0,
 		send: function () {
 			var url = ajaxQueries.baseUrl + '/api.php?action=smitespamanalyze&format=json';
-			$.getJSON( url +
-				'&offset=' + ajaxQueries.pages.numSent * querySize +
-				'&limit=' + querySize,
-				ajaxQueries.pages.processResponse );
+			$.getJSON(
+				url +
+					'&offset=' + ajaxQueries.pages.numSent * querySize +
+					'&limit=' + querySize,
+				ajaxQueries.pages.processResponse
+			);
 			ajaxQueries.pages.numSent++;
 		},
 		processResponse: function ( data ) {
@@ -127,7 +129,7 @@
 				users[username].blocked = true;
 				$( '#smitespam-page-list .creator-card .block-checkbox-container' ).each( function () {
 					var $this = $( this );
-					if ( $this.parent().data( 'username' )  === username ) {
+					if ( $this.parent().data( 'username' ) === username ) {
 						$this.empty();
 						$this.append( ' &middot; (' + mw.msg( 'smitespam-blocked' ) + ')' );
 						$this.parent().find( '.trust-user-button-container' ).remove();
@@ -140,7 +142,7 @@
 				usersFailedToBlock.push( username );
 				$( '#smitespam-page-list .creator-card .block-checkbox-container' ).each( function () {
 					var $this = $( this );
-					if ( $this.parent().data( 'username' )  === username ) {
+					if ( $this.parent().data( 'username' ) === username ) {
 						$this.empty();
 						$this.append( ' &middot; (' + mw.msg( 'smitespam-block-failed' ) + ')' );
 						return false;
@@ -271,7 +273,8 @@
 			$userGroup.append( '<hr>' );
 			var $creatorCard = $( '<div>' )
 				.addClass( 'creator-card' )
-				.html( mw.msg(
+				.html(
+					mw.msg(
 						'smitespam-created-by',
 						users[groupCreator] ? users[groupCreator].link : groupCreator
 					)

@@ -5,13 +5,13 @@ global $wgAutoloadClasses;
 
 $wgAutoloadClasses += array(
 	'SmiteSpamAnalyzer' => __DIR__ . '/includes/SmiteSpamAnalyzer.php',
-	'SmiteSpamApiQuery' => __DIR__ . '/api/SmiteSpamApiQuery.php',
-	'SmiteSpamApiTrustUser' => __DIR__ . '/api/SmiteSpamApiTrustUser.php',
+	'SmiteSpamApiQuery' => __DIR__ . '/includes/api/SmiteSpamApiQuery.php',
+	'SmiteSpamApiTrustUser' => __DIR__ . '/includes/api/SmiteSpamApiTrustUser.php',
 	'SmiteSpamExternalLinksChecker' => __DIR__ . '/includes/checkers/SmiteSpamExternalLinksChecker.php',
-	'SmiteSpamHooks' => __DIR__ . '/SmiteSpam.hooks.php',
+	'SmiteSpamHooks' => __DIR__ . '/includes/SmiteSpamHooks.php',
 	'SmiteSpamRepeatedExternalLinksChecker' => __DIR__ . '/includes/checkers/SmiteSpamRepeatedExternalLinksChecker.php',
 	'SmiteSpamWikiPage' => __DIR__ . '/includes/SmiteSpamWikiPage.php',
 	'SmiteSpamWikitextChecker' => __DIR__ . '/includes/checkers/SmiteSpamWikitextChecker.php',
-	'SpecialSmiteSpam' => __DIR__ . '/SpecialSmiteSpam.php',
-	'SpecialSmiteSpamTrustedUsers' => __DIR__ . '/SpecialSmiteSpamTrustedUsers.php',
+	'SpecialSmiteSpam' => __DIR__ . '/includes/specials/SpecialSmiteSpam.php',
+	'SpecialSmiteSpamTrustedUsers' => __DIR__ . '/includes/specials/SpecialSmiteSpamTrustedUsers.php',
 );

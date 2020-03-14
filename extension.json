@@ -1,0 +1,124 @@
+{
+	"name": "SmiteSpam",
+	"namemsg": "smitespam-extensionname",
+	"version": "0.2",
+	"author": "Vivek Ghaisas",
+	"url": "https://www.mediawiki.org/wiki/Extension:SmiteSpam",
+	"descriptionmsg": "smitespam-desc",
+	"license-name": "GPL-2.0-only",
+	"type": "antispam",
+	"requires": {
+		"MediaWiki": ">= 1.29.0"
+	},
+	"APIModules": {
+		"smitespamanalyze": "SmiteSpamApiQuery",
+		"smitespamtrustuser": "SmiteSpamApiTrustUser"
+	},
+	"AvailableRights": [
+		"smitespam"
+	],
+	"GroupPermissions": {
+		"sysop": {
+			"smitespam": true
+		}
+	},
+	"SpecialPages": {
+		"SmiteSpam": "SpecialSmiteSpam",
+		"SmiteSpamTrustedUsers": "SpecialSmiteSpamTrustedUsers"
+	},
+	"MessagesDirs": {
+		"SmiteSpam": [
+			"i18n"
+		]
+	},
+	"ExtensionMessagesFiles": {
+		"SmiteSpamAlias": "SmiteSpam.alias.php"
+	},
+	"AutoloadClasses": {
+		"SmiteSpamAnalyzer": "includes/SmiteSpamAnalyzer.php",
+		"SmiteSpamApiQuery": "includes/api/SmiteSpamApiQuery.php",
+		"SmiteSpamApiTrustUser": "includes/api/SmiteSpamApiTrustUser.php",
+		"SmiteSpamExternalLinksChecker": "includes/checkers/SmiteSpamExternalLinksChecker.php",
+		"SmiteSpamHooks": "includes/SmiteSpamHooks.php",
+		"SmiteSpamRepeatedExternalLinksChecker": "includes/checkers/SmiteSpamRepeatedExternalLinksChecker.php",
+		"SmiteSpamWikiPage": "includes/SmiteSpamWikiPage.php",
+		"SmiteSpamWikitextChecker": "includes/checkers/SmiteSpamWikitextChecker.php",
+		"SpecialSmiteSpam": "includes/specials/SpecialSmiteSpam.php",
+		"SpecialSmiteSpamTrustedUsers": "includes/specials/SpecialSmiteSpamTrustedUsers.php"
+	},
+	"ResourceModules": {
+		"ext.SmiteSpam.retriever": {
+			"scripts": "js/ext.smitespam.js",
+			"styles": "css/smitespam.css",
+			"dependencies": [
+				"mediawiki.jqueryMsg",
+				"jquery.spinner"
+			],
+			"messages": [
+				"smitespam-block",
+				"smitespam-block-reason",
+				"smitespam-blocked",
+				"smitespam-block-failed",
+				"smitespam-created-by",
+				"smitespam-delete",
+				"smitespam-delete-page-failure-msg",
+				"smitespam-trust",
+				"smitespam-trusted",
+				"table_pager_next",
+				"table_pager_prev",
+				"smitespam-blocked-user-failure-msg",
+				"smitespam-blocked-user-success-msg",
+				"smitespam-delete-page-failure-msg",
+				"smitespam-delete-page-success-msg",
+				"smitespam-trusted-user-failure-msg",
+				"smitespam-trusted-user-success-msg",
+				"powersearch-toggleall",
+				"powersearch-togglenone",
+				"smitespam-deleted-reason",
+				"smitespam-probability-low",
+				"smitespam-probability-medium",
+				"smitespam-probability-high",
+				"smitespam-probability-very-high"
+			]
+		}
+	},
+	"ResourceFileModulePaths": {
+		"localBasePath": "static",
+		"remoteExtPath": "SmiteSpam/static"
+	},
+	"Hooks": {
+		"LoadExtensionSchemaUpdates": "SmiteSpamHooks::createTables",
+		"AdminLinks": "SmiteSpamHooks::addToAdminLinks"
+	},
+	"config": {
+		"SmiteSpamCheckers": {
+			"value": {
+				"ExternalLinks": 1,
+				"RepeatedExternalLinks": 1,
+				"Wikitext": 1
+			},
+			"description": "List of enabled checkers and respective weights."
+		},
+		"SmiteSpamThreshold": {
+			"value": 0.7,
+			"description": "Threshold (tolerance)\nPages analyzed as having a spam probability higher than this will be shown on special page."
+		},
+		"SmiteSpamIgnoreSmallPages": {
+			"value": true,
+			"description": "Ignore pages smaller than 500 characters?"
+		},
+		"SmiteSpamIgnorePagesWithNoExternalLinks": {
+			"value": true,
+			"description": "Should SmiteSpam ignore all pages that don't have any external links outside of template calls?"
+		},
+		"QueryPageSize": {
+			"value": 500,
+			"description": "Number of pages to analyze in one AJAX request."
+		},
+		"DisplayPageSize": {
+			"value": 250,
+			"description": "Number of pages to display in one paginated page."
+		}
+	},
+	"manifest_version": 2
+}

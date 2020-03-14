@@ -8,7 +8,7 @@ class SmiteSpamHooks {
 	 */
 	public static function createTables( DatabaseUpdater $updater ) {
 		$updater->addExtensionTable( 'smitespam_trusted_user',
-			__DIR__ . '/smitespam.sql' );
+			__DIR__ . '/../sql/smitespam.sql' );
 		return true;
 	}
 

@@ -83,8 +83,8 @@
 		}
 	},
 	"ResourceFileModulePaths": {
-		"localBasePath": "static",
-		"remoteExtPath": "SmiteSpam/static"
+		"localBasePath": "resources",
+		"remoteExtPath": "SmiteSpam/resources"
 	},
 	"Hooks": {
 		"LoadExtensionSchemaUpdates": "SmiteSpamHooks::createTables",

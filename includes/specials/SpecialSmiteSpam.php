@@ -56,11 +56,11 @@ class SpecialSmiteSpam extends SpecialPage {
 		$out->addHTML( Html::closeElement( 'form' ) );
 
 		$out->addModules( 'ext.SmiteSpam.retriever' );
-		global $wgQueryPageSize, $wgDisplayPageSize;
+		global $wgSmiteSpamQueryPageSize, $wgSmiteSpamDisplayPageSize;
 		$out->addJsConfigVars( [
 			'numPages' => $numPages,
-			'queryPageSize' => $wgQueryPageSize,
-			'displayPageSize' => $wgDisplayPageSize,
+			'queryPageSize' => $wgSmiteSpamQueryPageSize,
+			'displayPageSize' => $wgSmiteSpamDisplayPageSize,
 		] );
 	}
 

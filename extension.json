@@ -111,11 +111,11 @@
 			"value": true,
 			"description": "Should SmiteSpam ignore all pages that don't have any external links outside of template calls?"
 		},
-		"QueryPageSize": {
+		"SmiteSpamQueryPageSize": {
 			"value": 500,
 			"description": "Number of pages to analyze in one AJAX request."
 		},
-		"DisplayPageSize": {
+		"SmiteSpamDisplayPageSize": {
 			"value": 250,
 			"description": "Number of pages to display in one paginated page."
 		}

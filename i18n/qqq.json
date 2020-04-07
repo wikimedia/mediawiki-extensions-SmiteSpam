@@ -1,10 +1,10 @@
 {
 	"@metadata": {
 		"authors": [
-			"polybuildr",
 			"Liuxinyu970226",
 			"Robby",
-			"Umherirrender"
+			"Umherirrender",
+			"polybuildr"
 		]
 	},
 	"smitespam": "The name of the extension's entry in Special:SpecialPages. The word \"smite\" means to strike a heavy blow with a weapon or the hand.",

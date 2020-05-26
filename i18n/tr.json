@@ -23,7 +23,7 @@
 	"smitespam-probability-very-high": "Çok yüksek",
 	"smitespam-select": "Seçin",
 	"smitespamtrustedusers": "SmiteSpam güvenilir kullanıcıları",
-	"smitespam-already-trusted": "Kullanıcı \"$1\" zaten {{CİNSİYET:$1|güvenilir}}.",
+	"smitespam-already-trusted": "Kullanıcı \"$1\" zaten {{GENDER:$1|güvenilir}}.",
 	"smitespam-trusted-user-message": "Güvenilir {{GENDER:$1|kullanıcı}} \"$1\".",
 	"smitespam-userdoesnotexist": "{{GENDER:$1|User}} \"$1\" mevcut değil.",
 	"smitespam-add-user-label": "Kullanıcı ekle:",

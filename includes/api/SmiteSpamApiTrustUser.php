@@ -2,14 +2,13 @@
 
 class SmiteSpamApiTrustUser extends ApiBase {
 	public function execute() {
-		if ( !in_array( 'smitespam', $this->getUser()->getRights() ) ) {
-			$this->dieUsage( 'Permission error.', 'permissiondenied' );
-		}
+		$this->checkUserRightsAny( 'smitespam' );
+
 		$username = $this->getMain()->getVal( 'username' );
 
 		$user = User::newFromName( $username );
 		if ( !$user || $user->getId() === 0 ) {
-			$this->dieUsage( 'Not a valid username.', 'badparams' );
+			$this->dieWithError( [ 'apierror-invaliduser', wfEscapeWikiText( $username ) ] );
 		}
 
 		$dbr = wfGetDB( DB_REPLICA );
@@ -21,7 +20,7 @@ class SmiteSpamApiTrustUser extends ApiBase {
 		);
 
 		if ( $result ) {
-			$this->dieUsage( 'User already trusted.', 'duplicate' );
+			$this->dieWithError( 'apierror-smitespam-duplicate', 'duplicate' );
 		}
 
 		$dbw = wfGetDB( DB_MASTER );
@@ -31,7 +30,7 @@ class SmiteSpamApiTrustUser extends ApiBase {
 			[
 				'trusted_user_id' => $user->getId(),
 				'trusted_user_timestamp' => $dbw->timestamp(),
-				'trusted_user_admin_id' => $this->getUser()->getID()
+				'trusted_user_admin_id' => $this->getUser()->getId()
 			]
 		);
 

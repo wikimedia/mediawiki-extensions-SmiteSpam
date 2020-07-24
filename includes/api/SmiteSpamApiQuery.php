@@ -7,14 +7,6 @@ class SmiteSpamApiQuery extends ApiBase {
 		$offset = $this->getMain()->getVal( 'offset' );
 		$limit = $this->getMain()->getVal( 'limit', 500 );
 
-		if ( !ctype_digit( $offset ) && !is_int( $offset ) ) {
-			$this->dieUsage( 'Offset parameter must be integer.', 'badparams' );
-		}
-
-		if ( !ctype_digit( $limit ) && !is_int( $limit ) ) {
-			$this->dieUsage( 'Limit parameter must be integer.', 'badparams' );
-		}
-
 		$ss = new SmiteSpamAnalyzer( false );
 		$spamPages = $ss->run( $offset, $limit );
 

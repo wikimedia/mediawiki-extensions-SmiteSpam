@@ -50,5 +50,6 @@
 	"apihelp-smitespamanalyze-param-limit": "{{doc-apihelp-param|smitespamanalyze|limit}}",
 	"apihelp-smitespamtrustuser-description": "{{doc-apihelp-description|smitespamtrustuser}}",
 	"apihelp-smitespamtrustuser-summary": "{{doc-apihelp-summary|smitespamtrustuser}}",
-	"apihelp-smitespamtrustuser-param-username": "{{doc-apihelp-param|smitespamtrustuser|username}}"
+	"apihelp-smitespamtrustuser-param-username": "{{doc-apihelp-param|smitespamtrustuser|username}}",
+	"apierror-smitespam-duplicate": "{{doc-apierror}}"
 }

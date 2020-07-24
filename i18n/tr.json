@@ -22,7 +22,7 @@
 	"smitespam-probability-medium": "Orta",
 	"smitespam-probability-high": "Yüksek",
 	"smitespam-probability-very-high": "Çok yüksek",
-	"smitespam-select": "Seçin",
+	"smitespam-select": "Seç:",
 	"smitespamtrustedusers": "SmiteSpam güvenilir kullanıcıları",
 	"smitespam-already-trusted": "Kullanıcı \"$1\" zaten {{GENDER:$1|güvenilir}}.",
 	"smitespam-trusted-user-message": "Güvenilir {{GENDER:$1|kullanıcı}} \"$1\".",

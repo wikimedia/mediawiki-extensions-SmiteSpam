@@ -1,8 +1,10 @@
 {
 	"@metadata": {
 		"authors": [
-			"Guycn2"
+			"Guycn2",
+			"Shoham"
 		]
 	},
-	"action-smitespam": "להשתמש בהרחבה \"SmiteSpam\""
+	"action-smitespam": "להשתמש בהרחבה \"SmiteSpam\"",
+	"apierror-smitespam-duplicate": "המשתמש כבר אמין"
 }

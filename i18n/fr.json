@@ -51,5 +51,6 @@
 	"apihelp-smitespamanalyze-param-limit": "SQL <code>LIMIT</code> pour la liste des pages",
 	"apihelp-smitespamtrustuser-description": "Faire confiance à un utilisateur, de telle sorte que SmiteSpam ignore les pages créées par cet utilisateur.",
 	"apihelp-smitespamtrustuser-summary": "Faire confiance à un utilisateur pour que SmiteSpam ignore les pages créées par l’utilisateur.",
-	"apihelp-smitespamtrustuser-param-username": "Nom d'utilisateur de l'utilisateur de confiance."
+	"apihelp-smitespamtrustuser-param-username": "Nom d'utilisateur de l'utilisateur de confiance.",
+	"apierror-smitespam-duplicate": "L’utilisateur est déjà de confiance."
 }

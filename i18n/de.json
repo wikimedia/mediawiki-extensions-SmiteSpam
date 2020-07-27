@@ -48,5 +48,6 @@
 	"apihelp-smitespamanalyze-param-limit": "SQL-<code>LIMIT</code> für die Seitenliste",
 	"apihelp-smitespamtrustuser-description": "Vertraut einem Benutzer, so dass SmiteSpam Seiten ignoriert, die von diesem erstellt wurden.",
 	"apihelp-smitespamtrustuser-summary": "Vertraut einem Benutzer, so dass SmiteSpam von dem Benutzer erstellte Seiten ignoriert.",
-	"apihelp-smitespamtrustuser-param-username": "Name des Benutzers, dem vertraut werden soll."
+	"apihelp-smitespamtrustuser-param-username": "Name des Benutzers, dem vertraut werden soll.",
+	"apierror-smitespam-duplicate": "Benutzer ist bereits vertrauenswürdig."
 }

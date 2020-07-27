@@ -41,5 +41,6 @@
 	"smitespam-trusted-user-success-msg": "{{GENDER:$1|Użytkownik|Użytkowniczka}} „$1” pomyślnie {{GENDER:$1|został oznaczony jako zaufany|została oznaczona jako zaufana}}.",
 	"smitespam-trusted-user-failure-msg": "Oznaczanie {{GENDER:$1|użytkownika|użytkowniczki}} „$1” jako {{GENDER:$1|zaufanego|zaufanej}} nie powiodło się.",
 	"smitespam-view-trusted-users": "Zobacz zaufanych użytkowników",
-	"right-smitespam": "Administrowanie [[Special:SmiteSpam|SmiteSpam]]"
+	"right-smitespam": "Administrowanie [[Special:SmiteSpam|SmiteSpam]]",
+	"apierror-smitespam-duplicate": "Użytkownik jest już zaufany."
 }

@@ -2,7 +2,8 @@
 	"@metadata": {
 		"authors": [
 			"Eduardo Addad de Oliveira",
-			"Felipe L. Ewald"
+			"Felipe L. Ewald",
+			"Luk3"
 		]
 	},
 	"smitespam": "Eliminar spam",
@@ -47,5 +48,6 @@
 	"apihelp-smitespamanalyze-param-limit": "<code>LIMIT</code> (limite) de SQL para a lista de páginas",
 	"apihelp-smitespamtrustuser-description": "Confiar num usuário, de modo que a extensão SmiteSpam ignore as páginas criadas por esse usuário.",
 	"apihelp-smitespamtrustuser-summary": "Confiar num usuário, de modo que a extensão SmiteSpam ignore as páginas criadas por esse usuário.",
-	"apihelp-smitespamtrustuser-param-username": "Nome de usuário para confiar."
+	"apihelp-smitespamtrustuser-param-username": "Nome de usuário para confiar.",
+	"apierror-smitespam-duplicate": "Usuário já é confiável."
 }

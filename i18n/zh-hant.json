@@ -49,5 +49,6 @@
 	"apihelp-smitespamanalyze-param-limit": "用於頁面清單的 SQL <code>LIMIT</code>",
 	"apihelp-smitespamtrustuser-description": "信任一位使用者可讓 SmiteSpam 略過由該使用者建立的頁面。",
 	"apihelp-smitespamtrustuser-summary": "信任一位使用者可讓 SmiteSpam 略過由該使用者建立的頁面。",
-	"apihelp-smitespamtrustuser-param-username": "要信任的使用者之名稱。"
+	"apihelp-smitespamtrustuser-param-username": "要信任的使用者之名稱。",
+	"apierror-smitespam-duplicate": "使用者已被信任"
 }

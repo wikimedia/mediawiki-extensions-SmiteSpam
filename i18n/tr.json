@@ -51,5 +51,6 @@
 	"apihelp-smitespamanalyze-param-limit": "Sayfa listesi için SQL <code>LIMIT</code>",
 	"apihelp-smitespamtrustuser-description": "SmiteSpam'ın kullanıcı tarafından oluşturulan sayfaları yok sayması için bir kullanıcıya güvenin.",
 	"apihelp-smitespamtrustuser-summary": "SmiteSpam'ın kullanıcı tarafından oluşturulan sayfaları yok sayması için bir kullanıcıya güvenin.",
-	"apihelp-smitespamtrustuser-param-username": "Güvenilecek kullanıcının kullanıcı adı."
+	"apihelp-smitespamtrustuser-param-username": "Güvenilecek kullanıcının kullanıcı adı.",
+	"apierror-smitespam-duplicate": "Kullanıcı zaten güvenilir."
 }

@@ -28,5 +28,6 @@
 	"smitespam-block-failed": "Konnt net gespaart ginn",
 	"smitespam-blocked-user-success-msg": "{{GENDER:$1|Gespaarte Benotzer|Gespaart Benotzerin}} \"$1\".",
 	"smitespam-blocked-user-failure-msg": "{{GENDER:$1|De Benotzer|D'Benotzerin}} \"$1\" konnt net gespaart ginn.",
-	"smitespam-view-trusted-users": "Vertrauenswürdeg Benotzer weisen"
+	"smitespam-view-trusted-users": "Vertrauenswürdeg Benotzer weisen",
+	"apierror-smitespam-duplicate": "Benotzer ass scho vertrauensvoll"
 }

@@ -46,5 +46,6 @@
 	"apihelp-smitespamanalyze-param-limit": "SQL-<code>LIMIT</code> for listen over sider",
 	"apihelp-smitespamtrustuser-description": "Stol på en bruker så SmiteSpam ignorerer sider opprettet av den brukeren.",
 	"apihelp-smitespamtrustuser-summary": "Stol på en bruker så SmiteSpam ignorerer sider opprettet av den brukeren.",
-	"apihelp-smitespamtrustuser-param-username": "Brukernavnet til brukeren som skal stoles på."
+	"apihelp-smitespamtrustuser-param-username": "Brukernavnet til brukeren som skal stoles på.",
+	"apierror-smitespam-duplicate": "Brukeren stoles allerede på."
 }

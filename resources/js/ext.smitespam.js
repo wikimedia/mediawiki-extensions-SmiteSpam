@@ -458,7 +458,7 @@
 			return false;
 		} );
 
-		$( '#smitespam-select-options' ).append( 'Select: ' );
+		$( '#smitespam-select-options' ).append( mw.msg( 'smitespam-select' ) + ' ' );
 		$( '<a>', { href: '#' } )
 			.text( mw.msg( 'powersearch-toggleall' ) )
 			.on( 'click', function () {

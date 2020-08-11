@@ -18,7 +18,7 @@
 	"smitespam-probability-medium": "Medium",
 	"smitespam-probability-high": "High",
 	"smitespam-probability-very-high": "Very high",
-	"smitespam-select": "Select: ",
+	"smitespam-select": "Select:",
 	"smitespamtrustedusers": "SmiteSpam trusted users",
 	"smitespam-already-trusted": "User \"$1\" already {{GENDER:$1|trusted}}.",
 	"smitespam-trusted-user-message": "Trusted {{GENDER:$1|user}} \"$1\".",

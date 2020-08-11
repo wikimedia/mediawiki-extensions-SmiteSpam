@@ -64,6 +64,7 @@
 				"smitespam-delete-page-failure-msg",
 				"smitespam-trust",
 				"smitespam-trusted",
+				"smitespam-select",
 				"table_pager_next",
 				"table_pager_prev",
 				"smitespam-blocked-user-failure-msg",

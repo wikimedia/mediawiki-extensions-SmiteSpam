@@ -1,10 +1,10 @@
 {
 	"root": true,
 	"extends": [
-		"wikimedia/client"
+		"wikimedia/client",
+		"wikimedia/mediawiki"
 	],
 	"globals": {
-		"mw": false,
 		"jQuery": false
 	},
 	"rules": {

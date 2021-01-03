@@ -1,21 +1,22 @@
 {
-  "name": "mediwiki-smitespam",
-  "version": "0.0.0",
-  "description": "MediaWiki extension SmiteSpam",
-  "scripts": {
-    "test": "grunt test"
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://gerrit.wikimedia.org/r/mediawiki/extensions/SmiteSpam"
-  },
-  "author": "Vivek Ghaisas",
-  "license": "GPL-2.0-only",
-  "devDependencies": {
-    "grunt": "1.0.1",
-    "grunt-banana-checker": "0.5.0",
-    "grunt-contrib-jshint": "0.11.3",
-    "grunt-jscs": "2.1.0",
-    "grunt-jsonlint": "1.1.0"
-  }
+	"private": true,
+	"name": "mediwiki-smitespam",
+	"version": "0.0.0",
+	"description": "MediaWiki extension SmiteSpam",
+	"scripts": {
+		"test": "grunt test"
+	},
+	"repository": {
+		"type": "git",
+		"url": "https://gerrit.wikimedia.org/r/mediawiki/extensions/SmiteSpam"
+	},
+	"author": "Vivek Ghaisas",
+	"license": "GPL-2.0-only",
+	"devDependencies": {
+		"grunt": "1.3.0",
+		"grunt-banana-checker": "0.5.0",
+		"grunt-contrib-jshint": "0.11.3",
+		"grunt-jscs": "2.1.0",
+		"grunt-jsonlint": "1.1.0"
+	}
 }

@@ -103,7 +103,6 @@ class SmiteSpamWikiPage extends WikiPage {
 
 			default:
 				throw new MWException( "Cannot fetch metadata '$key'." );
-				break;
 		}
 
 		return $this->metadata[$key];

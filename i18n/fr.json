@@ -6,10 +6,12 @@
 			"Orlodrim",
 			"Thibaut120094",
 			"Urhixidur",
+			"Verdy p",
 			"Wladek92"
 		]
 	},
 	"smitespam": "Nettoyage du pollupostage",
+	"smitespam-extensionname": "SmiteSpam",
 	"smitespam-desc": "Fournit une [[Special:SmiteSpam|page spéciale]] pour aider les administrateurs à identifier et supprimer les pages créées par des polluposteurs.",
 	"smitespam-spam-pages-list-heading": "Pages pouvant être des pollupostages",
 	"smitespam-delete": "Supprimer",

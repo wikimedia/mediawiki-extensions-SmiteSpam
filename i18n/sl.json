@@ -4,5 +4,7 @@
 			"Eleassar"
 		]
 	},
+	"smitespam-probability-low": "Majhna",
+	"smitespam-probability-high": "Velika",
 	"smitespam-remove": "Odstrani"
 }

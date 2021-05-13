@@ -14,7 +14,7 @@ class SmiteSpamRepeatedExternalLinksChecker {
 
 		// Remove links occurring only once
 		$duplicateLinks = array_filter( $linkFrequencies,
-			function ( $value ) {
+			static function ( $value ) {
 				return $value > 1;
 			}
 		);
@@ -22,7 +22,7 @@ class SmiteSpamRepeatedExternalLinksChecker {
 		// Subtract one from the frequency of each link to represent only number of
 		// duplicates.
 		$numDuplicatesArray = array_map(
-			function ( $value ) {
+			static function ( $value ) {
 				return $value - 1;
 			},
 			$duplicateLinks

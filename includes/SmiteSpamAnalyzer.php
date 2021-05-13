@@ -123,7 +123,7 @@ class SmiteSpamAnalyzer {
 		if ( $this->config['sort'] ) {
 			usort(
 				$spamPages,
-				function ( $pageA, $pageB ) {
+				static function ( $pageA, $pageB ) {
 					return $pageA->spamProbability < $pageB->spamProbability;
 				}
 			);

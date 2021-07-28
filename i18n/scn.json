@@ -4,5 +4,7 @@
 			"Ajeje Brazorf"
 		]
 	},
-	"smitespam-delete": "Cancella"
+	"smitespam-delete": "Cancella",
+	"smitespam-probability-low": "Vascia",
+	"smitespam-probability-high": "Àutu"
 }

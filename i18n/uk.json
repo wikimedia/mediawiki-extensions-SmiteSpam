@@ -6,6 +6,7 @@
 		]
 	},
 	"smitespam": "Знищення спаму",
+	"smitespam-extensionname": "SmiteSpam",
 	"smitespam-desc": "Забезпечує [[Special:SmiteSpam|спеціальну сторінку]], що має допомагати адміністраторам виявляти та вилучати вікісторінки, що містять спам",
 	"smitespam-spam-pages-list-heading": "Сторінки із потенційним спамом",
 	"smitespam-delete": "Вилучити",

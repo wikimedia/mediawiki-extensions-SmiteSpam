@@ -1,0 +1,12 @@
+{
+	"@metadata": {
+		"authors": [
+			"Ajeje Brazorf"
+		]
+	},
+	"smitespam-delete": "Cancella",
+	"smitespam-probability-low": "Vascia",
+	"smitespam-probability-high": "Àutu",
+	"smitespam-add-user-label": "Agghiunci utenti:",
+	"smitespam-remove": "Leva"
+}

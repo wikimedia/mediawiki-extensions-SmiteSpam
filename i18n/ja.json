@@ -4,9 +4,11 @@
 			"Penn Station",
 			"Shirayuki",
 			"Sujiniku",
-			"Tmv"
+			"Tmv",
+			"Ajeje Brazorf"
 		]
 	},
+	"smitespam-delete": "削除",
 	"action-smitespam": "SmiteSpam 拡張機能の使用",
 	"smitespam-select": "選択:",
 	"smitespam-userdoesnotexist": "{{GENDER:$1|利用者}} 「$1」は存在しません。",

@@ -43,10 +43,13 @@ class SmiteSpamWikiPage extends WikiPage {
 		if ( isset( $this->metadata[$key] ) ) {
 			return $this->metadata[$key];
 		}
+		$text = $this->getContent();
+		/** @var TextContent $text */
+		$content = $text->getText();
 
 		switch ( $key ) {
 			case 'content':
-				$this->metadata['content'] = $this->getContent()->getNativeData();
+				$this->metadata['content'] = $content;
 				break;
 
 			case 'numWords':
@@ -78,14 +81,12 @@ class SmiteSpamWikiPage extends WikiPage {
 				break;
 
 			case 'headings':
-				$content = $this->getContent()->getNativeData();
 				$matches = [];
 				preg_match_all( '/^==?=?\s*(.*?)\s*==?=?\s*$/m', $content, $matches );
 				$this->metadata['headings'] = $matches[1];
 				break;
 
 			case 'templates':
-				$content = $this->getContent()->getNativeData();
 				$matches = [];
 				preg_match_all( '/{{(.*?)}}/s', $content, $matches );
 				$this->metadata['templates'] = $matches[1];

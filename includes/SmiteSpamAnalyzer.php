@@ -69,6 +69,8 @@ class SmiteSpamAnalyzer {
 
 		foreach ( $result as $row ) {
 			$page = new SmiteSpamWikiPage( $row->page_id );
+			/** @var TextContent $text */
+			$text = $page->getContent();
 
 			if ( !$page || !$page->exists() ) {
 				continue;
@@ -76,7 +78,7 @@ class SmiteSpamAnalyzer {
 
 			if ( $page->getTitle()->getContentModel() !== CONTENT_MODEL_WIKITEXT
 				|| !$page->getContent()
-				|| !method_exists( $page->getContent(), 'getNativeData' ) ) {
+				|| !method_exists( $text, 'getText' ) ) {
 				// Page does not contain regular wikitext
 				// or cannot get content
 				continue;

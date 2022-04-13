@@ -48,5 +48,6 @@
 	"apihelp-smitespamanalyze-param-limit": "<code>LIMIT</code> (limite) de SQL para a lista de páginas",
 	"apihelp-smitespamtrustuser-description": "Confiar num utilizador, de modo que a extensão SmiteSpam ignore as páginas criadas por esse utilizador.",
 	"apihelp-smitespamtrustuser-summary": "Confiar num utilizador, de modo que a extensão SmiteSpam ignore as páginas criadas por esse utilizador.",
-	"apihelp-smitespamtrustuser-param-username": "Nome do utilizador no qual confiar."
+	"apihelp-smitespamtrustuser-param-username": "Nome do utilizador no qual confiar.",
+	"apierror-smitespam-duplicate": "O utilizador já é de confiança."
 }

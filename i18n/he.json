@@ -1,8 +1,11 @@
 {
 	"@metadata": {
 		"authors": [
-			"Guycn2"
+			"Guycn2",
+			"Ex-Diktator",
+			"Shoham"
 		]
 	},
+	"smitespam-delete": "מחיקה",
 	"action-smitespam": "להשתמש בהרחבה \"SmiteSpam\""
 }

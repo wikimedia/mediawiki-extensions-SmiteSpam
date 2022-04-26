@@ -5,7 +5,8 @@
 			"Fitoschido",
 			"Jelou",
 			"Macofe",
-			"MarcoAurelio"
+			"MarcoAurelio",
+			"DiegoAmbrocio"
 		]
 	},
 	"smitespam": "Smite spam",
@@ -48,5 +49,6 @@
 	"apihelp-smitespamanalyze-param-offset": "SQL <code>DESPLAZAMIENTO</code> por la lista de páginas",
 	"apihelp-smitespamanalyze-param-limit": "SQL <code>LÍMITE</code> para la lista de páginas",
 	"apihelp-smitespamtrustuser-description": "Confiar en un usuario, de modo que SmiteSpam ignore las páginas creadas por él.",
-	"apihelp-smitespamtrustuser-param-username": "Nombre de usuario en el que confiar."
+	"apihelp-smitespamtrustuser-param-username": "Nombre de usuario en el que confiar.",
+	"apierror-smitespam-duplicate": "El usuario ya es de confianza."
 }

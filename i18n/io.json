@@ -4,7 +4,9 @@
 			"Joao Xavier"
 		]
 	},
+	"smitespam-delete": "Efacar",
 	"smitespam-timestamp": "Dato e horo",
+	"smitespam-remove": "Removar",
 	"smitespam-block": "Blokusar",
 	"smitespam-blocked": "Blokusita"
 }

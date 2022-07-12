@@ -82,7 +82,7 @@ class SmiteSpamAnalyzer {
 				continue;
 			}
 
-			$creatorID = $page->getOldestRevision()->getUser( Revision::RAW );
+			$creatorID = $page->getCreator()->getId();
 
 			if ( in_array( $creatorID, $trustedUsers ) ) {
 				continue;

@@ -23,7 +23,7 @@ class SmiteSpamApiQuery extends ApiBase {
 				[ 'target' => '_blank' ]
 			);
 
-			$oldestRevision = $page->getOldestRevision();
+			$oldestRevision = MediaWikiServices::getInstance()->getRevisionLookup()->getFirstRevision( $title );
 			$timestamp = '';
 
 			if ( $oldestRevision ) {
@@ -31,7 +31,7 @@ class SmiteSpamApiQuery extends ApiBase {
 					$oldestRevision->getTimestamp(),
 					$this->getUser()
 				);
-				$creator = $oldestRevision->getUserText( Revision::RAW );
+				$creator = $page->getCreator()->getName();
 				if ( $creator ) {
 					if ( !isset( $users[$creator] ) ) {
 						$blocked = false;

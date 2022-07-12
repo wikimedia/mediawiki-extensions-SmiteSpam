@@ -34,16 +34,6 @@ class SmiteSpamWikiPage extends WikiPage {
 	}
 
 	/**
-	 * @return Revision|null
-	 */
-	public function getOldestRevision() {
-		if ( !$this->oldestRevision ) {
-			$this->oldestRevision = parent::getOldestRevision();
-		}
-		return $this->oldestRevision;
-	}
-
-	/**
 	 * Return particular field of metadata
 	 * @param string $key
 	 * @throws MWException If an invalid key is passed

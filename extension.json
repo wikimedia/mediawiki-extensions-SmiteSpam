@@ -1,7 +1,7 @@
 {
 	"name": "SmiteSpam",
 	"namemsg": "smitespam-extensionname",
-	"version": "0.4-alpha",
+	"version": "0.4",
 	"author": "Vivek Ghaisas",
 	"url": "https://www.mediawiki.org/wiki/Extension:SmiteSpam",
 	"descriptionmsg": "smitespam-desc",

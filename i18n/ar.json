@@ -49,5 +49,6 @@
 	"apihelp-smitespamanalyze-param-limit": "SQL <code>OFFSET</code> لقائمة الصفحات",
 	"apihelp-smitespamtrustuser-description": "ثق في المستخدم بحيث يتجاهل SmiteSpam الصفحات التي أنشأها المستخدم.",
 	"apihelp-smitespamtrustuser-summary": "ثق في المستخدم بحيث يتجاهل SmiteSpam الصفحات التي أنشأها المستخدم.",
-	"apihelp-smitespamtrustuser-param-username": "اسم المستخدم للمستخدم الثقة."
+	"apihelp-smitespamtrustuser-param-username": "اسم المستخدم للمستخدم الثقة.",
+	"apierror-smitespam-duplicate": "المستخدم موثوق به بالفعل."
 }

@@ -1,8 +1,11 @@
 {
 	"@metadata": {
 		"authors": [
-			"Bada Kaji"
+			"Bada Kaji",
+			"पर्वत सुबेदी",
+			"बडा काजी"
 		]
 	},
+	"smitespam-delete": "मेट्ने",
 	"smitespam-block": "निषेध गर्नुहोस्"
 }

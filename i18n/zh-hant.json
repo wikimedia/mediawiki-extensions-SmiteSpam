@@ -4,7 +4,8 @@
 			"Cwlin0416",
 			"Kly",
 			"LNDDYL",
-			"Liuxinyu970226"
+			"Liuxinyu970226",
+			"捍粵者"
 		]
 	},
 	"smitespam": "打擊破壞",
@@ -50,5 +51,5 @@
 	"apihelp-smitespamtrustuser-description": "信任一位使用者可讓 SmiteSpam 略過由該使用者建立的頁面。",
 	"apihelp-smitespamtrustuser-summary": "信任一位使用者可讓 SmiteSpam 略過由該使用者建立的頁面。",
 	"apihelp-smitespamtrustuser-param-username": "要信任的使用者之名稱。",
-	"apierror-smitespam-duplicate": "使用者已被信任"
+	"apierror-smitespam-duplicate": "使用者已獲信任"
 }

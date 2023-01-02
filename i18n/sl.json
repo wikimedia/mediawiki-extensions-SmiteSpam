@@ -43,7 +43,7 @@
 	"right-smitespam": "Administrator [[Special:SmiteSpam|SmiteSpam]]",
 	"apihelp-smitespamanalyze-description": "Z razširitvijo Extension:SmiteSpam pridobi seznam možnih neželenih strani.",
 	"apihelp-smitespamanalyze-summary": "Z razširitvijo Extension:SmiteSpam pridobi seznam možnih neželenih strani.",
-	"apihelp-smitespamanalyze-param-offset": "SQL <code>OFFSET</code> za seznam strani.",
+	"apihelp-smitespamanalyze-param-offset": "SQL <code>OFFSET</code> za seznam strani",
 	"apihelp-smitespamanalyze-param-limit": "SQL <code>LIMIT</code> za seznam strani.",
 	"apihelp-smitespamtrustuser-description": "Potrdite zaupanje uporabniku, da bo razširitev SmiteSpam prezrla strani, ki jih bo ustvaril ta uporabnik.",
 	"apihelp-smitespamtrustuser-summary": "Potrdite zaupanje uporabniku, da bo razširitev SmiteSpam prezrla strani, ki jih bo ustvaril ta uporabnik.",

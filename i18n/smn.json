@@ -5,6 +5,8 @@
 		]
 	},
 	"smitespam-delete": "Siho",
+	"smitespam-select": "Valjii:",
+	"smitespam-add-user-label": "Lasseet kevttee:",
 	"smitespam-remove": "Siho",
 	"smitespam-block": "Eesti"
 }

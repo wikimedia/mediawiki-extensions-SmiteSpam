@@ -5,5 +5,7 @@
 		]
 	},
 	"smitespam-delete": "Sihko",
+	"smitespam-select": "Vállje:",
+	"smitespam-add-user-label": "Lasit geavaheaddji:",
 	"smitespam-remove": "Sihko"
 }

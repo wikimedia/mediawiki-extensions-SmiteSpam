@@ -4,7 +4,8 @@
 			"Liuxinyu970226",
 			"Robby",
 			"Umherirrender",
-			"polybuildr"
+			"polybuildr",
+			"Verdy p"
 		]
 	},
 	"smitespam": "The name of the extension's entry in Special:SpecialPages. The word \"smite\" means to strike a heavy blow with a weapon or the hand.",
@@ -16,7 +17,7 @@
 	"smitespam-delete-page-failure-msg": "Message to indicate failure to delete page. Page title passed as parameter.",
 	"smitespam-created-by": "The author of the first revision of a page.",
 	"smitespam-deleted-reason": "Reason to give for deletion of a page",
-	"action-smitespam": "Action for work done by Extesions:SmiteSpam\n\n{{doc-action|smitespam}}",
+	"action-smitespam": "Action for work done by Extension:SmiteSpam\n\n{{doc-action|smitespam}}",
 	"smitespam-probability-low": "Low probability\n{{Identical|Low}}",
 	"smitespam-probability-medium": "Medium probability\n{{Identical|Medium}}",
 	"smitespam-probability-high": "High probability\n{{Identical|High}}",

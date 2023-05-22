@@ -21,5 +21,5 @@
 	"smitespam-block": "ブロック",
 	"smitespam-blocked": "ブロック済",
 	"right-smitespam": "[[Special:SmiteSpam|SmiteSpam]] を管理",
-	"apierror-smitespam-duplicate": "ユーザーはすでに認証されています。"
+	"apierror-smitespam-duplicate": "利用者は既に認証されています。"
 }

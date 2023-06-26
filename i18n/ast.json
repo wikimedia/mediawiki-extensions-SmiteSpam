@@ -40,11 +40,9 @@
 	"smitespam-trusted-user-failure-msg": "Nun pudo confiase {{GENDER:$1|nel usuariu|na usuaria}} «$1».",
 	"smitespam-view-trusted-users": "Ver los usuarios d'enfotu",
 	"right-smitespam": "Alministrar [[Special:SmiteSpam|SmiteSpam]]",
-	"apihelp-smitespamanalyze-description": "Llograr una llista de posibles páxines de spam dende Estensión:SmiteSpam.",
 	"apihelp-smitespamanalyze-summary": "Llograr una llista de posibles páxines de spam dende Estensión:SmiteSpam.",
 	"apihelp-smitespamanalyze-param-offset": "SQL <code>OFFSET</code> pa la llista de páxines",
 	"apihelp-smitespamanalyze-param-limit": "SQL <code>LIMIT</code> pa la llista de páxines",
-	"apihelp-smitespamtrustuser-description": "Tener enfotu nun usuariu, de manera que SmiteSpam inore les páxines creaes por él.",
 	"apihelp-smitespamtrustuser-summary": "Tener enfotu nun usuariu, de manera que SmiteSpam inore les páxines creaes por él.",
 	"apihelp-smitespamtrustuser-param-username": "Nome d'usuariu nel que confiar."
 }

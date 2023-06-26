@@ -43,11 +43,9 @@
 	"smitespam-trusted-user-failure-msg": "O pedido para confiar {{GENDER:$1|no usuário|na usuária}} \"$1\" falhou.",
 	"smitespam-view-trusted-users": "Ver usuários de confiança",
 	"right-smitespam": "Administrar [[Special:SmiteSpam|SmiteSpam]]",
-	"apihelp-smitespamanalyze-description": "Obter uma lista de possíveis páginas de spam de Extensão:SmiteSpam.",
 	"apihelp-smitespamanalyze-summary": "Obter uma lista de possíveis páginas de spam de Extensão:SmiteSpam.",
 	"apihelp-smitespamanalyze-param-offset": "<code>OFFSET</code> (posição inicial) de SQL para a lista de páginas",
 	"apihelp-smitespamanalyze-param-limit": "<code>LIMIT</code> (limite) de SQL para a lista de páginas",
-	"apihelp-smitespamtrustuser-description": "Confiar num usuário, de modo que a extensão SmiteSpam ignore as páginas criadas por esse usuário.",
 	"apihelp-smitespamtrustuser-summary": "Confiar num usuário, de modo que a extensão SmiteSpam ignore as páginas criadas por esse usuário.",
 	"apihelp-smitespamtrustuser-param-username": "Nome de usuário para confiar.",
 	"apierror-smitespam-duplicate": "Usuário já é confiável."

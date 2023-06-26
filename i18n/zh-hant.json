@@ -44,11 +44,9 @@
 	"smitespam-trusted-user-failure-msg": "信任{{GENDER:$1|使用者}}「$1」失敗。",
 	"smitespam-view-trusted-users": "檢視已信任使用者",
 	"right-smitespam": "管理 [[Special:SmiteSpam|SmiteSpam]]",
-	"apihelp-smitespamanalyze-description": "從 Extension:SmiteSpam 取得可能是破壞頁面的清單。",
 	"apihelp-smitespamanalyze-summary": "從 Extension:SmiteSpam 取得可能是破壞頁面的清單。",
 	"apihelp-smitespamanalyze-param-offset": "用於頁面清單的 SQL <code>OFFSET</code>",
 	"apihelp-smitespamanalyze-param-limit": "用於頁面清單的 SQL <code>LIMIT</code>",
-	"apihelp-smitespamtrustuser-description": "信任一位使用者可讓 SmiteSpam 略過由該使用者建立的頁面。",
 	"apihelp-smitespamtrustuser-summary": "信任一位使用者可讓 SmiteSpam 略過由該使用者建立的頁面。",
 	"apihelp-smitespamtrustuser-param-username": "要信任的使用者之名稱。",
 	"apierror-smitespam-duplicate": "使用者已獲信任"

@@ -40,11 +40,9 @@
 	"smitespam-trusted-user-success-msg": "Confíase {{GENDER:$1|no usuario|na usuaria}} \"$1\".",
 	"smitespam-trusted-user-failure-msg": "Non se puido confiar {{GENDER:$1|no usuario|na usuaria}} \"$1\".",
 	"smitespam-view-trusted-users": "Ver usuarios de confianza",
-	"apihelp-smitespamanalyze-description": "Obter unha lista de posibles páxinas de spam de Extensión:SmiteSpam.",
 	"apihelp-smitespamanalyze-summary": "Obter unha lista de posibles páxinas de spam de Extensión:SmiteSpam.",
 	"apihelp-smitespamanalyze-param-offset": "SQL <code>OFFSET</code> para a lista de páxinas",
 	"apihelp-smitespamanalyze-param-limit": "SQL <code>LIMIT</code> para a lista de páxinas",
-	"apihelp-smitespamtrustuser-description": "Confiar nun usuario de forma que SmiteSpam ignore as páxinas creadas polo usuario.",
 	"apihelp-smitespamtrustuser-summary": "Confiar nun usuario de forma que SmiteSpam ignore as páxinas creadas polo usuario.",
 	"apihelp-smitespamtrustuser-param-username": "Nome de usuario do usuario no que confiar."
 }

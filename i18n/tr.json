@@ -45,11 +45,9 @@
 	"smitespam-trusted-user-failure-msg": "{{GENDER:$1|Kullanıcı}} \"$1\" güvenilemedi.",
 	"smitespam-view-trusted-users": "Güvenilir kullanıcılara bakın",
 	"right-smitespam": "Yönet [[Special:SmiteSpam|SmiteSpam]]",
-	"apihelp-smitespamanalyze-description": "Uzantı:SmiteSpam'dan olası spam sayfalarının bir listesini alın.",
 	"apihelp-smitespamanalyze-summary": "Uzantı:SmiteSpam'dan olası spam sayfalarının bir listesini alın.",
 	"apihelp-smitespamanalyze-param-offset": "Sayfa listesi için SQL <code>OFFSET</code>",
 	"apihelp-smitespamanalyze-param-limit": "Sayfa listesi için SQL <code>LIMIT</code>",
-	"apihelp-smitespamtrustuser-description": "SmiteSpam'ın kullanıcı tarafından oluşturulan sayfaları yok sayması için bir kullanıcıya güvenin.",
 	"apihelp-smitespamtrustuser-summary": "SmiteSpam'ın kullanıcı tarafından oluşturulan sayfaları yok sayması için bir kullanıcıya güvenin.",
 	"apihelp-smitespamtrustuser-param-username": "Güvenilecek kullanıcının kullanıcı adı.",
 	"apierror-smitespam-duplicate": "Kullanıcı zaten güvenilir."

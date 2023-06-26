@@ -10,6 +10,5 @@
 	"smitespam-delete-page-success-msg": "Poistettu sivu \"$1\".",
 	"smitespam-created-by": "{{GENDER:$1|Luonut}} $1",
 	"smitespam-select": "Valitse:",
-	"smitespam-add-user-label": "Lisää käyttäjä:",
-	"apihelp-smitespamtrustuser-description": "Luota käyttäjään niin, että SmiteSpam ohittaa käyttäjän luomat sivut."
+	"smitespam-add-user-label": "Lisää käyttäjä:"
 }

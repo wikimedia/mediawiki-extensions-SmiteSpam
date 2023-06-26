@@ -43,11 +43,9 @@
 	"smitespam-trusted-user-failure-msg": "فشل الوثوق ب{{GENDER:$1|المستخدم|المستخدمة}} \"$1\".",
 	"smitespam-view-trusted-users": "عرض المستخدمين الموثوقين",
 	"right-smitespam": "إدارة [[Special:SmiteSpam|اضرب السخام]]",
-	"apihelp-smitespamanalyze-description": "احصل على قائمة بصفحات السخام المحتملة من Extension:SmiteSpam.",
 	"apihelp-smitespamanalyze-summary": "احصل على قائمة بصفحات السخام المحتملة من Extension:SmiteSpam.",
 	"apihelp-smitespamanalyze-param-offset": "SQL <code>OFFSET</code> لقائمة الصفحات",
 	"apihelp-smitespamanalyze-param-limit": "SQL <code>OFFSET</code> لقائمة الصفحات",
-	"apihelp-smitespamtrustuser-description": "ثق في المستخدم بحيث يتجاهل SmiteSpam الصفحات التي أنشأها المستخدم.",
 	"apihelp-smitespamtrustuser-summary": "ثق في المستخدم بحيث يتجاهل SmiteSpam الصفحات التي أنشأها المستخدم.",
 	"apihelp-smitespamtrustuser-param-username": "اسم المستخدم للمستخدم الثقة.",
 	"apierror-smitespam-duplicate": "المستخدم موثوق به بالفعل."

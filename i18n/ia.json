@@ -40,11 +40,9 @@
 	"smitespam-trusted-user-failure-msg": "Non poteva marcar le {{GENDER:$1|usator}} \"$1\" como de confidentia.",
 	"smitespam-view-trusted-users": "Vider usatores de confidentia",
 	"right-smitespam": "Administrar [[Special:SmiteSpam|Eliminar Spam (SmiteSpam)]]",
-	"apihelp-smitespamanalyze-description": "Obtener un lista de paginas de spam possibile de Eliminar Spam (Extension:SmiteSpam).",
 	"apihelp-smitespamanalyze-summary": "Obtener un lista de paginas de spam possibile de Eliminar Spam (Extension:SmiteSpam).",
 	"apihelp-smitespamanalyze-param-offset": "<code>OFFSET</code> de SQL pro le lista de paginas",
 	"apihelp-smitespamanalyze-param-limit": "<code>LIMIT</code> de SQL pro le lista de paginas",
-	"apihelp-smitespamtrustuser-description": "Confider in un usator de maniera que Eliminar Spam (SmiteSpam) ignora paginas create per le usator.",
 	"apihelp-smitespamtrustuser-summary": "Confider in un usator de maniera que Eliminar Spam (SmiteSpam) ignora paginas create per le usator.",
 	"apihelp-smitespamtrustuser-param-username": "Le nomine del usator in le qual confider.",
 	"apierror-smitespam-duplicate": "Le usator es ja de confidentia."

@@ -40,11 +40,9 @@
 	"smitespam-trusted-user-failure-msg": "Kunne ikke stole på {{GENDER:$1|brukeren}} «$1».",
 	"smitespam-view-trusted-users": "Vis pålitelige brukere",
 	"right-smitespam": "Administrere [[Special:SmiteSpam|SmiteSpam]]",
-	"apihelp-smitespamanalyze-description": "Hent en liste over mulige spamsider fra Extension:SmiteSpam.",
 	"apihelp-smitespamanalyze-summary": "Hent en liste over mulige spamsider fra Extension:SmiteSpame.",
 	"apihelp-smitespamanalyze-param-offset": "SQL-<code>OFFSET</code> for listen over sider",
 	"apihelp-smitespamanalyze-param-limit": "SQL-<code>LIMIT</code> for listen over sider",
-	"apihelp-smitespamtrustuser-description": "Stol på en bruker så SmiteSpam ignorerer sider opprettet av den brukeren.",
 	"apihelp-smitespamtrustuser-summary": "Stol på en bruker så SmiteSpam ignorerer sider opprettet av den brukeren.",
 	"apihelp-smitespamtrustuser-param-username": "Brukernavnet til brukeren som skal stoles på.",
 	"apierror-smitespam-duplicate": "Brukeren stoles allerede på."

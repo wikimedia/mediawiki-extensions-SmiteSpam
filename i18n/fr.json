@@ -47,11 +47,9 @@
 	"smitespam-trusted-user-failure-msg": "Échec d’application de la confiance à l’utilisat{{GENDER:$1|eur|rice}} « $1 ».",
 	"smitespam-view-trusted-users": "Afficher les utilisateurs de confiance",
 	"right-smitespam": "Administrer [[Special:SmiteSpam|SmiteSpam]]",
-	"apihelp-smitespamanalyze-description": "Obtenir une liste des pages spammées avec Extension:SmiteSpam.",
 	"apihelp-smitespamanalyze-summary": "Obtenir avec Extension:SmiteSpam une liste des pages de pollupostage possible.",
 	"apihelp-smitespamanalyze-param-offset": "SQL <code>OFFSET</code> pour la liste des pages",
 	"apihelp-smitespamanalyze-param-limit": "SQL <code>LIMIT</code> pour la liste des pages",
-	"apihelp-smitespamtrustuser-description": "Faire confiance à un utilisateur, de telle sorte que SmiteSpam ignore les pages créées par cet utilisateur.",
 	"apihelp-smitespamtrustuser-summary": "Faire confiance à un utilisateur pour que SmiteSpam ignore les pages créées par l’utilisateur.",
 	"apihelp-smitespamtrustuser-param-username": "Nom d’utilisateur à qui accorder la confiance.",
 	"apierror-smitespam-duplicate": "L’utilisateur est déjà de confiance."

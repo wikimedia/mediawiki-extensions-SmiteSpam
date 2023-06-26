@@ -43,11 +43,9 @@
 	"smitespam-trusted-user-failure-msg": "Не вдалося позначити {{GENDER:$1|довіреним користувача|довіреною користувачку}} «$1».",
 	"smitespam-view-trusted-users": "Переглянути довірених користувачів",
 	"right-smitespam": "Адміністрування [[Special:SmiteSpam|SmiteSpam]]",
-	"apihelp-smitespamanalyze-description": "Отримати список ймовірних спам-сторінок із розширення SmiteSpam.",
 	"apihelp-smitespamanalyze-summary": "Отримати список ймовірних спам-сторінок з Extension:SmiteSpam.",
 	"apihelp-smitespamanalyze-param-offset": "SQL <code>OFFSET</code> для списку сторінок",
 	"apihelp-smitespamanalyze-param-limit": "SQL <code>LIMIT</code> для списку сторінок",
-	"apihelp-smitespamtrustuser-description": "Позначити користувача довіреним, щоб SmiteSpam ігнорував створювані ним сторінки.",
 	"apihelp-smitespamtrustuser-summary": "Зробити користувача довіреним, щоб розширення SmiteSpam ігнорувало сторінки, створені ним.",
 	"apihelp-smitespamtrustuser-param-username": "Ім'я користувача, якого треба позначити довіреним.",
 	"apierror-smitespam-duplicate": "Користувачу вже довіряють."

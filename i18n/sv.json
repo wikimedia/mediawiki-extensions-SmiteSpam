@@ -42,11 +42,9 @@
 	"smitespam-trusted-user-failure-msg": "Misslyckades att lita på {{GENDER:$1|användaren}} \"$1\".",
 	"smitespam-view-trusted-users": "Visa pålitliga användare",
 	"right-smitespam": "Administrera [[Special:SmiteSpam|SmiteSpam]]",
-	"apihelp-smitespamanalyze-description": "Hämta en lista över potentiella spamsidor från Extension:SmiteSpam.",
 	"apihelp-smitespamanalyze-summary": "Hämta en lista över möjliga spamsidor från Extension:SmiteSpam.",
 	"apihelp-smitespamanalyze-param-offset": "SQL <code>OFFSET</code> för listan över sidor",
 	"apihelp-smitespamanalyze-param-limit": "SQL <code>LIMIT</code> för listan över sidor",
-	"apihelp-smitespamtrustuser-description": "Lita på en användare så att SmiteSpam ignorerar sidor som skapas av användaren.",
 	"apihelp-smitespamtrustuser-summary": "Lita på en användare så att SmiteSpam ignorerar sidor som skapas av användaren.",
 	"apihelp-smitespamtrustuser-param-username": "Användarnamnet för användaren att lita på."
 }

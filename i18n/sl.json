@@ -1,7 +1,8 @@
 {
 	"@metadata": {
 		"authors": [
-			"Eleassar"
+			"Eleassar",
+			"Upwinxp"
 		]
 	},
 	"smitespam": "Čiščenje smetja",
@@ -21,8 +22,8 @@
 	"smitespam-select": "Izberi:",
 	"smitespamtrustedusers": "Zaupanja vredni uporabniki SmiteSpam",
 	"smitespam-already-trusted": "Uporabnik »$1« je že {{GENDER:$1|potrjen kot vreden zaupanja|potrjena kot vredna zaupanja|potrjen_a kot vreden_na zaupanja}}.",
-	"smitespam-trusted-user-message": "Zaupanja {{GENDER:$1|vredni uporabnik|vredna uporabnica|vreden_na uporabnik_ca}} »$1«.",
-	"smitespam-userdoesnotexist": "{{GENDER:$1|Uporabnik|Uporabnica|Uporabnik_ca}} »$1« ne obstaja.",
+	"smitespam-trusted-user-message": "Zaupanja {{GENDER:$1|vredni uporabnik|vredna uporabnica|vreden/na uporabnik/ca}} »$1«.",
+	"smitespam-userdoesnotexist": "{{GENDER:$1|Uporabnik|Uporabnica|Uporabnik/ca}} »$1« ne obstaja.",
 	"smitespam-add-user-label": "Dodaj uporabnika:",
 	"smitespam-trust": "Potrdi zaupanje",
 	"smitespam-trusted": "Zaupanja vreden",
@@ -35,10 +36,10 @@
 	"smitespam-block": "Blokiraj",
 	"smitespam-blocked": "Blokiran_a",
 	"smitespam-block-failed": "Blokiranje ni uspelo",
-	"smitespam-blocked-user-success-msg": "{{GENDER:$1|Uporabnik|Uporabnica|Uporabnik_ca}} »$1« {{GENDER:$1|blokiran|blokirana|blokiran_a}}.",
-	"smitespam-blocked-user-failure-msg": "Blokiranje {{GENDER:$1|uporabnika|uporabnice|uporabnika_ce}} »$1« ni uspelo.",
-	"smitespam-trusted-user-success-msg": "{{GENDER:$1|Uporabnik|Uporabnica|Uporabnik_ca}} »$1« {{GENDER:$1|potrjen kot vreden zaupanja|potrjena kot vredna zaupanja|potrjen_a kot vreden_na zaupanja}}.",
-	"smitespam-trusted-user-failure-msg": "Potrditev zaupanja {{GENDER:$1|uporabniku|uporabnici|uporabniku_ci}} »$1« ni uspela.",
+	"smitespam-blocked-user-success-msg": "{{GENDER:$1|Uporabnik|Uporabnica|Uporabnik/ca}} »$1« {{GENDER:$1|blokiran|blokirana|blokiran/a}}.",
+	"smitespam-blocked-user-failure-msg": "Blokiranje {{GENDER:$1|uporabnika|uporabnice|uporabnika/ce}} »$1« ni uspelo.",
+	"smitespam-trusted-user-success-msg": "{{GENDER:$1|Uporabnik|Uporabnica|Uporabnik/ca}} »$1« {{GENDER:$1|potrjen kot vreden zaupanja|potrjena kot vredna zaupanja|potrjen/a kot vreden/na zaupanja}}.",
+	"smitespam-trusted-user-failure-msg": "Potrditev zaupanja {{GENDER:$1|uporabniku|uporabnici|uporabniku/ci}} »$1« ni uspela.",
 	"smitespam-view-trusted-users": "Ogled zaupanja vrednih uporabnikov",
 	"right-smitespam": "Administrator [[Special:SmiteSpam|SmiteSpam]]",
 	"apihelp-smitespamanalyze-summary": "Z razširitvijo Extension:SmiteSpam pridobi seznam možnih neželenih strani.",

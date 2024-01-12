@@ -42,7 +42,7 @@ class SpecialSmiteSpamTrustedUsers extends SpecialPage {
 							'</div>'
 						);
 					} else {
-						$dbw = wfGetDB( DB_MASTER );
+						$dbw = wfGetDB( DB_PRIMARY );
 
 						$dbw->insert(
 							'smitespam_trusted_user',
@@ -70,7 +70,7 @@ class SpecialSmiteSpamTrustedUsers extends SpecialPage {
 				if ( $usernameToDelete ) {
 					$user = User::newFromName( $usernameToDelete );
 					if ( $user && $user->getId() !== 0 ) {
-						$dbw = wfGetDB( DB_MASTER );
+						$dbw = wfGetDB( DB_PRIMARY );
 						$dbw->delete(
 							'smitespam_trusted_user',
 							[ 'trusted_user_id = ' . $user->getId() ]

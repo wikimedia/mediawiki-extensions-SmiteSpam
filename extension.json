@@ -36,6 +36,7 @@
 	},
 	"AutoloadClasses": {
 		"SmiteSpamAnalyzer": "includes/SmiteSpamAnalyzer.php",
+		"SmiteSpamUtils": "includes/SmiteSpamUtils.php",
 		"SmiteSpamApiQuery": "includes/api/SmiteSpamApiQuery.php",
 		"SmiteSpamApiTrustUser": "includes/api/SmiteSpamApiTrustUser.php",
 		"SmiteSpamExternalLinksChecker": "includes/checkers/SmiteSpamExternalLinksChecker.php",

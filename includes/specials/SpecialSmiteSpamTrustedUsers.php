@@ -22,13 +22,13 @@ class SpecialSmiteSpamTrustedUsers extends SpecialPage {
 		$this->setHeaders();
 		$out = $this->getOutput();
 		$request = $this->getRequest();
+		$dbr = SmiteSpamUtils::getReadDB();
 
 		if ( $request->wasPosted() ) {
 			if ( $request->getVal( 'add' ) ) {
 				$username = $request->getText( 'username' );
 				$user = User::newFromName( $username );
 				if ( $user && $user->getId() !== 0 ) {
-					$dbr = wfGetDB( DB_REPLICA );
 					$result = $dbr->selectRow(
 						[ 'smitespam_trusted_user' ],
 						'trusted_user_id',
@@ -42,7 +42,7 @@ class SpecialSmiteSpamTrustedUsers extends SpecialPage {
 							'</div>'
 						);
 					} else {
-						$dbw = wfGetDB( DB_PRIMARY );
+						$dbw = SmiteSpamUtils::getWriteDB();
 
 						$dbw->insert(
 							'smitespam_trusted_user',
@@ -70,7 +70,7 @@ class SpecialSmiteSpamTrustedUsers extends SpecialPage {
 				if ( $usernameToDelete ) {
 					$user = User::newFromName( $usernameToDelete );
 					if ( $user && $user->getId() !== 0 ) {
-						$dbw = wfGetDB( DB_PRIMARY );
+						$dbw = SmiteSpamUtils::getWriteDB();
 						$dbw->delete(
 							'smitespam_trusted_user',
 							[ 'trusted_user_id = ' . $user->getId() ]
@@ -85,7 +85,6 @@ class SpecialSmiteSpamTrustedUsers extends SpecialPage {
 			}
 		}
 
-		$dbr = wfGetDB( DB_REPLICA );
 		$result = $dbr->select(
 			[ 'smitespam_trusted_user' ],
 			[ 'trusted_user_id', 'trusted_user_timestamp', 'trusted_user_admin_id' ],

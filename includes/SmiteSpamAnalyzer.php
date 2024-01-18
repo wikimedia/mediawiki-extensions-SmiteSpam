@@ -36,7 +36,7 @@ class SmiteSpamAnalyzer {
 	 * @return array
 	 */
 	public function run( $offset = 0, $limit = 500 ) {
-		$dbr = wfGetDB( DB_REPLICA );
+		$dbr = SmiteSpamUtils::getReadDB();
 
 		$usersResult = $dbr->select(
 			[ 'smitespam_trusted_user' ],

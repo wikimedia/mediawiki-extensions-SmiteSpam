@@ -11,7 +11,7 @@ class SmiteSpamApiTrustUser extends ApiBase {
 			$this->dieWithError( [ 'apierror-invaliduser', wfEscapeWikiText( $username ) ] );
 		}
 
-		$dbr = wfGetDB( DB_REPLICA );
+		$dbr = SmiteSpamUtils::getReadDB();
 
 		$result = $dbr->selectRow(
 			[ 'smitespam_trusted_user' ],
@@ -23,7 +23,7 @@ class SmiteSpamApiTrustUser extends ApiBase {
 			$this->dieWithError( 'apierror-smitespam-duplicate', 'duplicate' );
 		}
 
-		$dbw = wfGetDB( DB_PRIMARY );
+		$dbw = SmiteSpamUtils::getWriteDB();
 
 		$dbw->insert(
 			'smitespam_trusted_user',

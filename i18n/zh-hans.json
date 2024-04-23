@@ -2,7 +2,8 @@
 	"@metadata": {
 		"authors": [
 			"Liuxinyu970226",
-			"御坂美琴"
+			"御坂美琴",
+			"沈澄心"
 		]
 	},
 	"smitespam": "打击破坏",
@@ -40,11 +41,13 @@
 	"smitespam-trusted-user-success-msg": "已信任{{GENDER:$1|用户}}“$1”。",
 	"smitespam-trusted-user-failure-msg": "信任{{GENDER:$1|用户}}“$1”失败。",
 	"smitespam-view-trusted-users": "查看受信用户",
+	"right-smitespam": "管理[[Special:SmiteSpam|SmiteSpam]]",
 	"apihelp-smitespamanalyze-description": "从Extension:SmiteSpam获取可能是破坏页面的列表。",
 	"apihelp-smitespamanalyze-summary": "从Extension:SmiteSpam获取可能是破坏页面的列表。",
 	"apihelp-smitespamanalyze-param-offset": "用于页面列表的SQL <code>OFFSET</code>",
 	"apihelp-smitespamanalyze-param-limit": "用于页面列表的SQL <code>LIMIT</code>",
 	"apihelp-smitespamtrustuser-description": "信任一位用户，这样SmiteSpam会忽略由该用户创建的页面。",
 	"apihelp-smitespamtrustuser-summary": "信任一位用户，这样SmiteSpam会忽略由该用户创建的页面。",
-	"apihelp-smitespamtrustuser-param-username": "要信任的用户的用户名。"
+	"apihelp-smitespamtrustuser-param-username": "要信任的用户的用户名。",
+	"apierror-smitespam-duplicate": "用户已获得信任"
 }

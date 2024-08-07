@@ -84,7 +84,8 @@ class SmiteSpamAnalyzer {
 				continue;
 			}
 
-			$creatorID = $page->getCreator()->getId();
+			// Page creator can be null, if the user is hidden.
+			$creatorID = ( $page->getCreator() == null ) ? -1 : $page->getCreator()->getId();
 
 			if ( in_array( $creatorID, $trustedUsers ) ) {
 				continue;

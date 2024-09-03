@@ -1,5 +1,6 @@
 <?php
 
+use MediaWiki\Block\DatabaseBlock;
 use MediaWiki\MediaWikiServices;
 
 class SmiteSpamApiQuery extends ApiBase {
@@ -35,7 +36,7 @@ class SmiteSpamApiQuery extends ApiBase {
 				if ( $creator ) {
 					if ( !isset( $users[$creator] ) ) {
 						$blocked = false;
-						if ( Block::newFromTarget( $creator, $creator ) ) {
+						if ( DatabaseBlock::newFromTarget( $creator, $creator ) ) {
 							$blocked = true;
 						}
 						$users[$creator] = [

@@ -1,13 +1,14 @@
 {
 	"@metadata": {
 		"authors": [
-			"Robby"
+			"Robby",
+			"Volvox"
 		]
 	},
 	"smitespam-desc": "Weist eng [[Special:SmiteSpam|Spezialsäit]] déi den Administrateuren hëlleft fir Spamwikisäiten z'identifizéieren an ze läschen",
 	"smitespam-spam-pages-list-heading": "Méiglech Spamsäiten",
 	"smitespam-delete": "Läschen",
-	"smitespam-delete-page-success-msg": "Säit \"$1\" gouf geläscht.",
+	"smitespam-delete-page-success-msg": "Säit „$1“ gouf geläscht.",
 	"smitespam-delete-page-failure-msg": "D'Säit \"$1\" konnt net geläscht ginn",
 	"smitespam-deleted-reason": "Als Spam vun der Erweiderung SmiteSpam identifizéiert.",
 	"action-smitespam": "D'Erweiderung 'SmiteSpam' benotzen",

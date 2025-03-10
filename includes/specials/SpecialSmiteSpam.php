@@ -1,4 +1,7 @@
 <?php
+
+use MediaWiki\Html\Html;
+
 /**
  * Main special page for the SmiteSpam extension.
  */

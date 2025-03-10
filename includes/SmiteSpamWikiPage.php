@@ -1,4 +1,7 @@
 <?php
+
+use MediaWiki\Title\Title;
+
 /**
  * Class to represent a wiki page that can be evaluated by checkers.
  */

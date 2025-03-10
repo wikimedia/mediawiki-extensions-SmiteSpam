@@ -1,14 +1,14 @@
 {
 	"name": "SmiteSpam",
 	"namemsg": "smitespam-extensionname",
-	"version": "0.5",
+	"version": "0.6-alpha",
 	"author": "Vivek Ghaisas",
 	"url": "https://www.mediawiki.org/wiki/Extension:SmiteSpam",
 	"descriptionmsg": "smitespam-desc",
 	"license-name": "GPL-2.0-only",
 	"type": "antispam",
 	"requires": {
-		"MediaWiki": ">= 1.36.0"
+		"MediaWiki": ">= 1.40.0"
 	},
 	"APIModules": {
 		"smitespamanalyze": "SmiteSpamApiQuery",

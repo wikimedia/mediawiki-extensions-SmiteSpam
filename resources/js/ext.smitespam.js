@@ -1,22 +1,22 @@
 ( function ( $ ) {
 	// config options
-	var numPages = mw.config.get( 'numPages' );
-	var querySize = mw.config.get( 'queryPageSize' );
-	var displaySize = mw.config.get( 'displayPageSize' );
+	const numPages = mw.config.get( 'numPages' );
+	const querySize = mw.config.get( 'queryPageSize' );
+	const displaySize = mw.config.get( 'displayPageSize' );
 
 	// Data
-	var results = []; // pages
-	var displayOffset = 0;
-	var oldDisplayOffset = -1;
+	const results = []; // pages
+	let displayOffset = 0;
+	let oldDisplayOffset = -1;
 
-	var pagesToDelete = [];
-	var pagesToDeleteIndex = 0;
-	var pagesToDeleteTitleTexts = [];
-	var pagesFailedToDelete = [];
+	const pagesToDelete = [];
+	let pagesToDeleteIndex = 0;
+	const pagesToDeleteTitleTexts = [];
+	const pagesFailedToDelete = [];
 
-	var usersToBlock = [];
-	var usersToBlockIndex = 0;
-	var usersFailedToBlock = [];
+	const usersToBlock = [];
+	let usersToBlockIndex = 0;
+	const usersFailedToBlock = [];
 
 	/*
 	key value pairs of type:
@@ -25,16 +25,16 @@
 		link: ''
 	}
 	*/
-	var users = {};
+	const users = {};
 
-	var ajaxQueries = {}; // namespace for AJAX queries
+	const ajaxQueries = {}; // namespace for AJAX queries
 	ajaxQueries.baseUrl = mw.config.get( 'wgScriptPath' );
 	ajaxQueries.editToken = '';
 
 	ajaxQueries.pages = {
 		numSent: 0,
 		send: function () {
-			var url = ajaxQueries.baseUrl + '/api.php?action=smitespamanalyze&format=json';
+			const url = ajaxQueries.baseUrl + '/api.php?action=smitespamanalyze&format=json';
 			$.getJSON(
 				url +
 					'&offset=' + ajaxQueries.pages.numSent * querySize +
@@ -45,7 +45,7 @@
 		},
 		processResponse: function ( data ) {
 			if ( 'smitespamanalyze' in data ) {
-				var receivedPages = data.smitespamanalyze.pages;
+				const receivedPages = data.smitespamanalyze.pages;
 				$.extend( users, data.smitespamanalyze.users );
 				$.merge( results, receivedPages );
 				displayResults();
@@ -73,11 +73,11 @@
 			).done( ajaxQueries.deletePage.processResponse );
 		},
 		processResponse: function ( data ) {
-			var pageID = pagesToDelete[pagesToDeleteIndex];
-			var pageTitleText = pagesToDeleteTitleTexts[pagesToDeleteIndex];
-			var row = $( '#result-card-page-' + pageID );
+			const pageID = pagesToDelete[pagesToDeleteIndex];
+			const pageTitleText = pagesToDeleteTitleTexts[pagesToDeleteIndex];
+			const row = $( '#result-card-page-' + pageID );
 			if ( 'delete' in data ) {
-				for ( var i = 0; i < results.length; i++ ) {
+				for ( let i = 0; i < results.length; i++ ) {
 					// force both to string
 					if ( results[i].id.toString() === pageID.toString() ) {
 						results.splice( i, 1 );
@@ -124,11 +124,11 @@
 			).done( ajaxQueries.blockUser.processResponse );
 		},
 		processResponse: function ( data ) {
-			var username = usersToBlock[usersToBlockIndex];
+			const username = usersToBlock[usersToBlockIndex];
 			if ( 'block' in data ) {
 				users[username].blocked = true;
 				$( '#smitespam-page-list .creator-card .block-checkbox-container' ).each( function () {
-					var $this = $( this );
+					const $this = $( this );
 					if ( $this.parent().data( 'username' ) === username ) {
 						$this.empty();
 						$this.append( ' &middot; (' + mw.msg( 'smitespam-blocked' ) + ')' );
@@ -141,7 +141,7 @@
 			} else if ( 'error' in data ) {
 				usersFailedToBlock.push( username );
 				$( '#smitespam-page-list .creator-card .block-checkbox-container' ).each( function () {
-					var $this = $( this );
+					const $this = $( this );
 					if ( $this.parent().data( 'username' ) === username ) {
 						$this.empty();
 						$this.append( ' &middot; (' + mw.msg( 'smitespam-block-failed' ) + ')' );
@@ -161,9 +161,9 @@
 	};
 
 	function groupPagesByCreator( pages ) {
-		var creators = {};
-		for ( var i = 0; i < pages.length; ++i ) {
-			var page = pages[i];
+		const creators = {};
+		for ( let i = 0; i < pages.length; ++i ) {
+			const page = pages[i];
 			if ( !( page.creator in creators ) ) {
 				creators[page.creator] = {};
 				creators[page.creator].pages = [];
@@ -172,12 +172,10 @@
 			creators[page.creator].pages.push( page );
 			creators[page.creator].totalSpamValue += page['spam-probability-value'];
 		}
-		var groupedPages = [];
-		$.each( creators, function ( key, value ) {
+		const groupedPages = [];
+		$.each( creators, ( key, value ) => {
 			value.creator = key;
-			value.pages.sort( function ( a, b ) {
-				return b['spam-probability-value'] - a['spam-probability-value'];
-			} );
+			value.pages.sort( ( a, b ) => b['spam-probability-value'] - a['spam-probability-value'] );
 			groupedPages.push( value );
 		} );
 		return groupedPages;
@@ -197,57 +195,55 @@
 		$( '#smitespam-loading' ).hide();
 		$( '.smitespam-submit-button' ).show();
 
-		var resultsToDisplay = results.slice( displayOffset, displayOffset + displaySize );
+		const resultsToDisplay = results.slice( displayOffset, displayOffset + displaySize );
 
-		var i;
-		var page;
+		let i;
+		let page;
 
-		var groupedPages = groupPagesByCreator( resultsToDisplay );
+		const groupedPages = groupPagesByCreator( resultsToDisplay );
 
-		groupedPages.sort( function ( a, b ) {
-			return b.totalSpamValue - a.totalSpamValue;
-		} );
+		groupedPages.sort( ( a, b ) => b.totalSpamValue - a.totalSpamValue );
 
 		function onPageCheckboxChange() {
-			var id = $( this ).val();
+			const id = $( this ).val();
 			if ( this.checked ) {
 				pagesToDelete.push( id );
-				var titleText = $( this )
+				const titleText = $( this )
 					.closest( '.card' )
 					.find( '.smitespam-page-title a' )
 					.text();
 				pagesToDeleteTitleTexts.push( titleText );
 			} else {
-				var index = $.inArray( id, pagesToDelete );
+				const index = $.inArray( id, pagesToDelete );
 				pagesToDelete.splice( index, 1 );
 				pagesToDeleteTitleTexts.splice( index, 1 );
 			}
 		}
 
 		function onBlockCheckboxChange() {
-			var username = $( this ).val();
-			var $userCard = $( this ).closest( '.creator-card' ).next();
-			var $checkboxes = $userCard.nextUntil( ':not(.card)' )
+			const username = $( this ).val();
+			const $userCard = $( this ).closest( '.creator-card' ).next();
+			const $checkboxes = $userCard.nextUntil( ':not(.card)' )
 				.find( 'input[type=checkbox]' );
 			if ( this.checked ) {
 				usersToBlock.push( username );
 				$checkboxes.prop( 'checked', true ).change();
 			} else {
-				var index = $.inArray( username, usersToBlock );
+				const index = $.inArray( username, usersToBlock );
 				usersToBlock.splice( index, 1 );
 				$checkboxes.prop( 'checked', false ).change();
 			}
 		}
 
 		function onTrustUserButtonClick() {
-			var $this = $( this );
-			var username = $this
+			const $this = $( this );
+			const username = $this
 				.parent() // button container
 				.parent() // creator cell
 				.data( 'username' );
 
 			$.getJSON( mw.config.get( 'wgScriptPath' ) + '/api.php?action=smitespamtrustuser&format=json&username=' + username,
-				function ( data ) {
+				( data ) => {
 					if ( 'smitespamtrustuser' in data ) {
 						$this.parent().parent().find( '.block-checkbox-container' ).remove();
 						$this.parent().append( mw.msg( 'smitespam-trusted' ) );
@@ -267,11 +263,11 @@
 
 		$( '#smitespam-page-list' ).empty();
 		for ( i = 0; i < groupedPages.length; i++ ) {
-			var group = groupedPages[i].pages;
-			var groupCreator = groupedPages[i].creator;
-			var $userGroup = $( '<div>' ).addClass( 'user-group' );
+			const group = groupedPages[i].pages;
+			const groupCreator = groupedPages[i].creator;
+			const $userGroup = $( '<div>' ).addClass( 'user-group' );
 			$userGroup.append( '<hr>' );
-			var $creatorCard = $( '<div>' )
+			const $creatorCard = $( '<div>' )
 				.addClass( 'creator-card' )
 				.html(
 					mw.msg(
@@ -286,8 +282,8 @@
 				} else if ( $.inArray( groupCreator, usersFailedToBlock ) !== -1 ) {
 					$creatorCard.append( ' &middot; (' + mw.msg( 'smitespam-block-failed' ) + ')' );
 				} else {
-					var $blockCheckboxContainer = $( '<label>' ).addClass( 'block-checkbox-container' );
-					var $blockCheckbox = $( '<input>', {
+					const $blockCheckboxContainer = $( '<label>' ).addClass( 'block-checkbox-container' );
+					const $blockCheckbox = $( '<input>', {
 						type: 'checkbox',
 						value: groupCreator
 					} )
@@ -298,8 +294,8 @@
 					$blockCheckboxContainer.append( $blockCheckbox );
 					$blockCheckboxContainer.append( mw.msg( 'smitespam-block' ) );
 
-					var $trustUserButtonContainer = $( '<span>' ).addClass( 'trust-user-button-container' );
-					var $trustUserButton = $( '<button>' ).text( mw.msg( 'smitespam-trust' ) )
+					const $trustUserButtonContainer = $( '<span>' ).addClass( 'trust-user-button-container' );
+					const $trustUserButton = $( '<button>' ).text( mw.msg( 'smitespam-trust' ) )
 						.on( 'click', onTrustUserButtonClick );
 
 					$trustUserButtonContainer.append( $trustUserButton );
@@ -314,19 +310,19 @@
 			$userGroup.append( $creatorCard );
 			$userGroup.append( '<hr>' );
 			$( '#smitespam-page-list' ).append( $userGroup );
-			for ( var j = 0; j < group.length; j++ ) {
+			for ( let j = 0; j < group.length; j++ ) {
 				page = group[j];
-				var $card = $( '<div>' ).attr( 'id', 'result-card-page-' + page.id );
+				let $card = $( '<div>' ).attr( 'id', 'result-card-page-' + page.id );
 				$card.addClass( 'card' );
 				$card = $card.append( '<div>' ).addClass( 'row' );
-				var $cardInfoSection = $( '<div>' ).addClass( 'card-info-section' )
+				const $cardInfoSection = $( '<div>' ).addClass( 'card-info-section' )
 					.appendTo( $card );
-				var $cardDataSection = $( '<div>' ).addClass( 'card-data-section' )
+				const $cardDataSection = $( '<div>' ).addClass( 'card-data-section' )
 					.appendTo( $card );
 				$( '<h3>' ).addClass( 'smitespam-page-title' )
 					.html( page.link ).appendTo( $cardDataSection );
 				$( '<p>' ).text( page.preview ).appendTo( $cardDataSection );
-				var $spamLevelTag = $( '<span>' )
+				const $spamLevelTag = $( '<span>' )
 					.addClass( 'info-tag' )
 					.appendTo( $cardInfoSection );
 				if ( page['spam-probability-level'] === 0 ) {
@@ -356,7 +352,7 @@
 				if ( $.inArray( page.id.toString(), pagesFailedToDelete ) !== -1 ) {
 					$( '<td></td>' ).text( mw.msg( 'smitespam-delete-page-failure-msg' ) ).appendTo( $cardInfoSection );
 				} else {
-					var $checkbox = $( '<input>', {
+					const $checkbox = $( '<input>', {
 						type: 'checkbox',
 						value: page.id
 					} )
@@ -391,7 +387,7 @@
 		} else {
 			$( '<a>', { href: '#', id: 'smitespam-pager-prev' } )
 				.text( mw.msg( 'table_pager_prev' ) )
-				.on( 'click', function () {
+				.on( 'click', () => {
 					displayOffset -= displaySize;
 					if ( displayOffset < 0 ) {
 						displayOffset = 0;
@@ -411,8 +407,8 @@
 			// Next page pager link
 			$( '<a>', { href: '#', id: 'smitespam-pager-next' } )
 				.text( mw.msg( 'table_pager_next' ) )
-				.on( 'click', function () {
-					var jump = $( '#smitespam-page-list .card' ).length;
+				.on( 'click', () => {
+					const jump = $( '#smitespam-page-list .card' ).length;
 					displayOffset += jump;
 					displayResults();
 				} )
@@ -421,16 +417,16 @@
 	}
 
 	function refreshRangeDisplayer() {
-		var fromPageIndex = displayOffset + 1;
+		const fromPageIndex = displayOffset + 1;
 		$( '#smitespam-displayed-range-from' ).text( fromPageIndex );
-		var numDisplayed = $( '.card' ).length;
+		const numDisplayed = $( '.card' ).length;
 		$( '#smitespam-displayed-range-to' ).text( fromPageIndex + numDisplayed - 1 );
 		$( '#smitespam-displayed-range' ).show();
 	}
 
 	function createSuccessbox() {
 		if ( $( '#ajax-successbox' ).length === 0 ) {
-			var $successbox = $( '<div>', { id: 'ajax-successbox' } )
+			const $successbox = $( '<div>', { id: 'ajax-successbox' } )
 				.addClass( 'successbox' );
 			$( '#pagination' ).append( $successbox );
 			$( '#pagination' ).append( '<br>' );
@@ -439,7 +435,7 @@
 
 	function createErrorbox() {
 		if ( $( '#ajax-errorbox' ).length === 0 ) {
-			var $errorbox = $( '<div>', { id: 'ajax-errorbox' } )
+			const $errorbox = $( '<div>', { id: 'ajax-errorbox' } )
 				.addClass( 'errorbox' );
 			$( '#pagination' ).append( $errorbox );
 			$( '#pagination' ).append( '<br>' );
@@ -447,13 +443,13 @@
 	}
 
 	function init() {
-		var $pagination = $( '#pagination' );
+		const $pagination = $( '#pagination' );
 		// TODO i18n
-		var $submitButton = $( '<input>', { type: 'submit', value: 'Smite Spam!' } ).addClass( 'smitespam-submit-button' ).prependTo( '#smitespam-delete-pages' );
+		const $submitButton = $( '<input>', { type: 'submit', value: 'Smite Spam!' } ).addClass( 'smitespam-submit-button' ).prependTo( '#smitespam-delete-pages' );
 		$submitButton.clone().insertAfter( '#smitespam-page-list' );
 		$( '.smitespam-submit-button' ).hide();
 
-		$( '#smitespam-delete-pages' ).on( 'submit', function () {
+		$( '#smitespam-delete-pages' ).on( 'submit', () => {
 			ajaxQueries.blockUser.send();
 			return false;
 		} );
@@ -461,7 +457,7 @@
 		$( '#smitespam-select-options' ).append( mw.msg( 'smitespam-select' ) + ' ' );
 		$( '<a>', { href: '#' } )
 			.text( mw.msg( 'powersearch-toggleall' ) )
-			.on( 'click', function () {
+			.on( 'click', () => {
 				$( '.creator-card input[type="checkbox"]' ).prop( 'checked', true ).change();
 				$( '.card-info-section input[type="checkbox"]:not(:checked)' ).prop( 'checked', true ).change();
 			} )
@@ -469,14 +465,14 @@
 		$( '#smitespam-select-options' ).append( ' &middot; ' );
 		$( '<a>', { href: '#' } )
 			.text( mw.msg( 'powersearch-togglenone' ) )
-			.on( 'click', function () {
+			.on( 'click', () => {
 				$( '.creator-card input[type="checkbox"]' ).prop( 'checked', false ).change();
 				$( '.card-info-section input[type="checkbox"]:checked' ).prop( 'checked', false ).change();
 			} )
 			.appendTo( '#smitespam-select-options' );
 
 		// Display from (page) - to (page)
-		var $rangeDisplayer = $( '<span>', { id: 'smitespam-displayed-range' } ).hide();
+		const $rangeDisplayer = $( '<span>', { id: 'smitespam-displayed-range' } ).hide();
 		$( '<span>', { id: 'smitespam-displayed-range-from' } ).appendTo( $rangeDisplayer );
 		$rangeDisplayer.append( ' - ' );
 		$( '<span>', { id: 'smitespam-displayed-range-to' } ).appendTo( $rangeDisplayer );
@@ -487,7 +483,7 @@
 			.append( $.createSpinner() )
 			.appendTo( $pagination );
 
-		var $pager = $( '<p>' ).addClass( 'pager' );
+		const $pager = $( '<p>' ).addClass( 'pager' );
 		$( '<span>', { id: 'smitespam-pager-prev-container' } ).appendTo( $pager );
 		$pager.append( ' &middot; ' );
 		$( '<span>', { id: 'smitespam-pager-next-container' } ).appendTo( $pager );
@@ -495,7 +491,7 @@
 		refreshPager();
 
 		$.getJSON( mw.config.get( 'wgScriptPath' ) + '/api.php?action=query&meta=tokens&format=json',
-			function ( data ) {
+			( data ) => {
 				ajaxQueries.editToken = data.query.tokens.csrftoken;
 				ajaxQueries.pages.send();
 			}

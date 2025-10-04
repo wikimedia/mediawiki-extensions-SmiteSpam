@@ -1,5 +1,6 @@
 <?php
 
+use MediaWiki\MediaWikiServices;
 use MediaWiki\Title\Title;
 
 /**
@@ -11,12 +12,6 @@ class SmiteSpamWikiPage extends WikiPage {
 	 * @var array
 	 */
 	private $metadata;
-
-	/**
-	 * The Revision object of the oldest revision
-	 * @var Revision|null
-	 */
-	private $oldestRevision;
 
 	/**
 	 * A probability-like value representing how likely this page is a spam page.
@@ -50,6 +45,8 @@ class SmiteSpamWikiPage extends WikiPage {
 		/** @var TextContent $text */
 		$content = $text->getText();
 
+		$protocols = MediaWikiServices::getInstance()->getUrlUtils()->validProtocols();
+
 		switch ( $key ) {
 			case 'content':
 				$this->metadata['content'] = $content;
@@ -68,7 +65,7 @@ class SmiteSpamWikiPage extends WikiPage {
 					$content = str_replace( "{{$template}}", '', $content );
 				}
 				$matches = [];
-				preg_match_all( '/(' . wfUrlProtocols() . ')([^\s\]\"]*)/', $content, $matches );
+				preg_match_all( '/(' . $protocols . ')([^\s\]\"]*)/', $content, $matches );
 				$this->metadata['externalLinks'] = $matches[0];
 				break;
 

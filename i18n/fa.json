@@ -1,7 +1,8 @@
 {
 	"@metadata": {
 		"authors": [
-			"Reza1615"
+			"Reza1615",
+			"LordProfo"
 		]
 	},
 	"smitespam-delete": "حذف",
@@ -9,6 +10,7 @@
 	"smitespam-probability-medium": "تکنیک/سبک",
 	"smitespam-probability-high": "بالا",
 	"smitespam-select": "انتخاب:",
+	"smitespam-add-user-label": "افزودن کاربر:",
 	"smitespam-trusted": "مطمئن",
 	"smitespam-timestamp": "برچسب زمان",
 	"smitespam-remove": "حذف",

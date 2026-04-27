@@ -8,7 +8,12 @@ use MediaWiki\Html\Html;
 class SpecialSmiteSpam extends SpecialPage {
 
 	public function __construct() {
-		parent::__construct( 'SmiteSpam', 'smitespam' );
+		parent::__construct( 'SmiteSpam' );
+	}
+
+	/** @inheritDoc */
+	public function getRestriction(): string {
+		return 'smitespam';
 	}
 
 	/**

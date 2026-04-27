@@ -3,7 +3,12 @@
 class SpecialSmiteSpamTrustedUsers extends SpecialPage {
 
 	public function __construct() {
-		parent::__construct( 'SmiteSpamTrustedUsers', 'smitespam' );
+		parent::__construct( 'SmiteSpamTrustedUsers' );
+	}
+
+	/** @inheritDoc */
+	public function getRestriction(): string {
+		return 'smitespam';
 	}
 
 	/** @inheritDoc */

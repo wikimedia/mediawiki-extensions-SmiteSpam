@@ -7,11 +7,6 @@ class SpecialSmiteSpamTrustedUsers extends SpecialPage {
 	}
 
 	/** @inheritDoc */
-	public function getRestriction(): string {
-		return 'smitespam';
-	}
-
-	/** @inheritDoc */
 	public function doesWrites() {
 		return true;
 	}
@@ -20,10 +15,11 @@ class SpecialSmiteSpamTrustedUsers extends SpecialPage {
 	 * @param string|null $subPage
 	 */
 	public function execute( $subPage ) {
-		if ( !$this->userCanExecute( $this->getUser() ) ) {
+		// Check permissions.
+		if ( !$this->getUser()->isAllowed( 'smitespam' ) ) {
 			$this->displayRestrictionError();
-			return;
 		}
+
 		$this->setHeaders();
 		$out = $this->getOutput();
 		$request = $this->getRequest();

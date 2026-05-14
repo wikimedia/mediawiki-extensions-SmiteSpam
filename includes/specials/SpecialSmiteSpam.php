@@ -11,19 +11,15 @@ class SpecialSmiteSpam extends SpecialPage {
 		parent::__construct( 'SmiteSpam' );
 	}
 
-	/** @inheritDoc */
-	public function getRestriction(): string {
-		return 'smitespam';
-	}
-
 	/**
 	 * @param string|null $subPage
 	 */
 	public function execute( $subPage ) {
-		if ( !$this->userCanExecute( $this->getUser() ) ) {
+		// Check permissions.
+		if ( !$this->getUser()->isAllowed( 'smitespam' ) ) {
 			$this->displayRestrictionError();
-			return;
 		}
+
 		$this->setHeaders();
 		$out = $this->getOutput();
 		$out->setPageTitle( $this->msg( 'smitespam' )->text() );

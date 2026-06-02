@@ -2,9 +2,11 @@
 	"@metadata": {
 		"authors": [
 			"An13sa",
-			"Subi"
+			"Subi",
+			"Xabier Armendaritz"
 		]
 	},
 	"smitespam-delete": "Ezabatu",
-	"smitespam-delete-page-success-msg": " \"$1\" orria ezabatu da."
+	"smitespam-delete-page-success-msg": " \"$1\" orria ezabatu da.",
+	"smitespam-block-reason": "Spam egitea"
 }

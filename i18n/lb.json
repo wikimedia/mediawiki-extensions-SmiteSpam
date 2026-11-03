@@ -20,8 +20,8 @@
 	"smitespam-userdoesnotexist": "{{GENDER:$1|De Benotzer|D'Benotzerin}} \"$1\" gëtt et net.",
 	"smitespam-add-user-label": "Benotzer dobäisetzen",
 	"smitespam-trust": "Trauen",
-	"smitespam-trusted": "Deem een traue kann",
-	"smitespam-trusted-user": "Benotzer deem een traue kann",
+	"smitespam-trusted": "Vertrauenswierdeg",
+	"smitespam-trusted-user": "Vertrauenswierdege Benotzer",
 	"smitespam-timestamp": "Zäitstempel",
 	"smitespam-remove": "Ewechhuelen",
 	"smitespam-block": "Spären",
@@ -30,5 +30,5 @@
 	"smitespam-blocked-user-success-msg": "{{GENDER:$1|Gespaarte Benotzer|Gespaart Benotzerin}} \"$1\".",
 	"smitespam-blocked-user-failure-msg": "{{GENDER:$1|De Benotzer|D'Benotzerin}} \"$1\" konnt net gespaart ginn.",
 	"smitespam-view-trusted-users": "Vertrauenswürdeg Benotzer weisen",
-	"apierror-smitespam-duplicate": "Benotzer ass scho vertrauensvoll"
+	"apierror-smitespam-duplicate": "De Benotzer ass scho vertrauenswierdeg."
 }
